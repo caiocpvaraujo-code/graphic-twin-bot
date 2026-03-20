@@ -160,6 +160,18 @@ const WorkSection = () => {
             num: "02",
             title: "Marca E-commerce",
             desc: "Identidade visual e direção de fotografia para marca de acessórios femininos."
+          },
+          {
+            img: workFreela3,
+            num: "03",
+            title: "Identidade Corporativa",
+            desc: "Criação de papelaria e identidade visual completa para escritório de consultoria."
+          },
+          {
+            img: workFreela4,
+            num: "04",
+            title: "Campanha Digital",
+            desc: "Estratégia e criação de conteúdo para campanha de lançamento de produto nas redes sociais."
           }].
           map((project) =>
           <FadeIn key={project.num}>
