@@ -75,6 +75,9 @@ const WorkSection = () => {
             <p className="text-[0.86rem] leading-[1.8] text-muted-foreground max-w-[680px] mb-5">
               Logos para times regionais, peças de endomarketing, design de uniformes e infográficos institucionais para engajamento de colaboradores.
             </p>
+            <div className="img-frame">
+              <img src={workVivo2} alt="VIVO - Endomarketing" className="art aspect-video" />
+            </div>
             <div className="flex flex-wrap gap-2 mt-4">
               {["Endomarketing", "Branding", "Identidade Visual", "Infográficos"].map((tag) => <span key={tag}
               className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm">
