@@ -2,9 +2,9 @@ import FadeIn from "./FadeIn";
 import aboutPhoto from "@/assets/about-photo.jpg";
 
 const stats = [
-{ value: "2+", label: "Anos em Comunicação" },
-{ value: "50+", label: "Projetos Entregues" },
-{ value: "3", label: "Empresas" }];
+{ value: "4+", label: "Anos em Comunicação" },
+{ value: "20+", label: "Projetos Entregues" },
+{ value: "2", label: "Empresas" }];
 
 
 const AboutSection = () => {
