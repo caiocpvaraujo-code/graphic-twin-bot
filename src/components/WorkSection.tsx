@@ -1,8 +1,11 @@
 import FadeIn from "./FadeIn";
 import workVivo from "@/assets/work-vivo-1.jpg";
+import workVivo2 from "@/assets/work-vivo-2.jpg";
 import workTarea from "@/assets/work-tarea-1.jpg";
 import workFreela1 from "@/assets/work-freela-1.jpg";
 import workFreela2 from "@/assets/work-freela-2.jpg";
+import workFreela3 from "@/assets/work-freela-3.jpg";
+import workFreela4 from "@/assets/work-freela-4.jpg";
 
 const WorkSection = () => {
   return (
@@ -72,6 +75,9 @@ const WorkSection = () => {
             <p className="text-[0.86rem] leading-[1.8] text-muted-foreground max-w-[680px] mb-5">
               Logos para times regionais, peças de endomarketing, design de uniformes e infográficos institucionais para engajamento de colaboradores.
             </p>
+            <div className="img-frame">
+              <img src={workVivo2} alt="VIVO - Endomarketing" className="art aspect-video" />
+            </div>
             <div className="flex flex-wrap gap-2 mt-4">
               {["Endomarketing", "Branding", "Identidade Visual", "Infográficos"].map((tag) => <span key={tag}
               className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm">
@@ -154,6 +160,18 @@ const WorkSection = () => {
             num: "02",
             title: "Marca E-commerce",
             desc: "Identidade visual e direção de fotografia para marca de acessórios femininos."
+          },
+          {
+            img: workFreela3,
+            num: "03",
+            title: "Identidade Corporativa",
+            desc: "Criação de papelaria e identidade visual completa para escritório de consultoria."
+          },
+          {
+            img: workFreela4,
+            num: "04",
+            title: "Campanha Digital",
+            desc: "Estratégia e criação de conteúdo para campanha de lançamento de produto nas redes sociais."
           }].
           map((project) =>
           <FadeIn key={project.num}>
