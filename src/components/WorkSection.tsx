@@ -44,7 +44,7 @@ const WorkSection = () => {
           <div className="mb-20">
             <div className="flex items-baseline gap-4 mb-4">
               <span className="font-serif italic text-primary text-[0.85rem]">01</span>
-              <h4 className="font-display text-[1.6rem] tracking-[0.04em]">Criação de peças para canais externos — posts, stories, banners — e ativação de marca offline. Do briefing à entrega, identidade visual da maior telecom do Brasil.</h4>
+              <h4 className="font-display text-[1.6rem] tracking-[0.04em]">Publicidade Externa offline e online</h4>
             </div>
             <p className="text-[0.86rem] leading-[1.8] text-muted-foreground max-w-[680px] mb-5">
               Criação de conteúdo multiplataforma para a VIVO — Instagram, TikTok e LinkedIn. Estratégia editorial, copywriting e direção de arte para campanhas de engajamento.
