@@ -32,7 +32,9 @@ const WorkSection = () => {
               </div>
             </div>
             <div className="text-left md:text-right mt-4 md:mt-0">
-              <span className="text-[0.8rem] text-muted-foreground tracking-[0.06em]">São Paulo, SP</span>
+              <span className="text-[0.8rem] text-muted-foreground tracking-[0.06em]">Brasília, DF
+
+              </span>
               <p className="font-serif italic text-[1.05rem] text-warm mt-1">2024</p>
             </div>
           </div>
@@ -42,7 +44,7 @@ const WorkSection = () => {
           <div className="mb-20">
             <div className="flex items-baseline gap-4 mb-4">
               <span className="font-serif italic text-primary text-[0.85rem]">01</span>
-              <h4 className="font-display text-[1.6rem] tracking-[0.04em]">Social Media & Conteúdo</h4>
+              <h4 className="font-display text-[1.6rem] tracking-[0.04em]">Criação de peças para canais externos — posts, stories, banners — e ativação de marca offline. Do briefing à entrega, identidade visual da maior telecom do Brasil.</h4>
             </div>
             <p className="text-[0.86rem] leading-[1.8] text-muted-foreground max-w-[680px] mb-5">
               Criação de conteúdo multiplataforma para a VIVO — Instagram, TikTok e LinkedIn. Estratégia editorial, copywriting e direção de arte para campanhas de engajamento.
@@ -51,14 +53,12 @@ const WorkSection = () => {
               <img src={workVivo} alt="Trabalho VIVO - Social Media" className="art aspect-video" />
             </div>
             <div className="flex flex-wrap gap-2 mt-4">
-              {["Social Media", "Copywriting", "Design", "Instagram"].map((tag) => (
-                <span
-                  key={tag}
-                  className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm"
-                >
+              {["Social Media", "Copywriting", "Design", "Instagram"].map((tag) => <span key={tag}
+              className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm">
+                  
                   {tag}
                 </span>
-              ))}
+              )}
             </div>
           </div>
         </FadeIn>
@@ -96,14 +96,14 @@ const WorkSection = () => {
               <img src={workTarea} alt="Trabalho TAREA" className="art aspect-video" />
             </div>
             <div className="flex flex-wrap gap-2 mt-4">
-              {["Endomarketing", "Branding", "Kit de Mídia"].map((tag) => (
-                <span
-                  key={tag}
-                  className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm"
-                >
+              {["Endomarketing", "Branding", "Kit de Mídia"].map((tag) =>
+              <span
+                key={tag}
+                className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm">
+                
                   {tag}
                 </span>
-              ))}
+              )}
             </div>
           </div>
         </FadeIn>
@@ -124,27 +124,27 @@ const WorkSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5 px-7 md:px-[60px] max-w-[1300px] mx-auto">
           {[
-            {
-              img: workFreela1,
-              num: "01",
-              title: "Portfólio Digital",
-              desc: "Design e desenvolvimento de portfólio pessoal com foco em experiência visual e storytelling.",
-            },
-            {
-              img: workFreela2,
-              num: "02",
-              title: "Marca E-commerce",
-              desc: "Identidade visual e direção de fotografia para marca de acessórios femininos.",
-            },
-          ].map((project) => (
-            <FadeIn key={project.num}>
+          {
+            img: workFreela1,
+            num: "01",
+            title: "Portfólio Digital",
+            desc: "Design e desenvolvimento de portfólio pessoal com foco em experiência visual e storytelling."
+          },
+          {
+            img: workFreela2,
+            num: "02",
+            title: "Marca E-commerce",
+            desc: "Identidade visual e direção de fotografia para marca de acessórios femininos."
+          }].
+          map((project) =>
+          <FadeIn key={project.num}>
               <div className="freela-card bg-bg3 overflow-hidden border border-transparent hover:border-border transition-colors duration-300 group">
                 <div className="overflow-hidden">
                   <img
-                    src={project.img}
-                    alt={project.title}
-                    className="w-full aspect-video object-cover brightness-75 saturate-[0.8] group-hover:brightness-[0.9] group-hover:saturate-100 transition-all duration-500"
-                  />
+                  src={project.img}
+                  alt={project.title}
+                  className="w-full aspect-video object-cover brightness-75 saturate-[0.8] group-hover:brightness-[0.9] group-hover:saturate-100 transition-all duration-500" />
+                
                 </div>
                 <div className="p-8">
                   <span className="font-serif italic text-[2.8rem] text-primary/20 leading-none block mb-3.5">
@@ -160,11 +160,11 @@ const WorkSection = () => {
                 </div>
               </div>
             </FadeIn>
-          ))}
+          )}
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default WorkSection;

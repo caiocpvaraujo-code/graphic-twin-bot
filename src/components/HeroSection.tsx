@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section className="min-h-screen grid grid-cols-1 md:grid-cols-2 relative overflow-hidden">
       <div className="flex flex-col justify-end p-[100px_28px_60px] md:p-[120px_60px_80px] relative z-[2]">
         <FadeIn>
-          <p className="text-[0.68rem] tracking-[0.22em] uppercase text-primary mb-7 flex items-center gap-3">
+          <p className="text-[0.68rem] tracking-[0.22em] uppercase text-primary mb-7 flex items-center gap-3">SEU PRÓXIMO PUBLICITÁRIO
             <span className="w-8 h-px bg-primary inline-block" />
             Publicidade · UnB · Brasília
           </p>
@@ -29,14 +29,14 @@ const HeroSection = () => {
         </FadeIn>
         <FadeIn delay={0.3}>
           <div className="flex flex-wrap gap-2.5">
-            {chips.map((chip) => (
-              <span
-                key={chip}
-                className="chip border border-border px-[18px] py-[7px] rounded-full text-[0.68rem] tracking-[0.12em] uppercase text-muted-foreground hover:border-primary hover:text-foreground transition-all duration-300 cursor-default"
-              >
+            {chips.map((chip) =>
+            <span
+              key={chip}
+              className="chip border border-border px-[18px] py-[7px] rounded-full text-[0.68rem] tracking-[0.12em] uppercase text-muted-foreground hover:border-primary hover:text-foreground transition-all duration-300 cursor-default">
+              
                 {chip}
               </span>
-            ))}
+            )}
           </div>
         </FadeIn>
       </div>
@@ -44,15 +44,15 @@ const HeroSection = () => {
         <img
           src={heroPhoto}
           alt="Caio Vinícios"
-          className="w-full h-full object-cover object-top brightness-[0.92] contrast-[1.08] grayscale-[15%]"
-        />
+          className="w-full h-full object-cover object-top brightness-[0.92] contrast-[1.08] grayscale-[15%]" />
+        
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to right, hsl(var(--background)) 0%, transparent 30%), linear-gradient(to top, hsl(var(--background)) 0%, transparent 25%)",
-          }}
-        />
+            "linear-gradient(to right, hsl(var(--background)) 0%, transparent 30%), linear-gradient(to top, hsl(var(--background)) 0%, transparent 25%)"
+          }} />
+        
       </div>
       {/* Scroll indicator */}
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2.5 z-[3] opacity-60">
@@ -61,12 +61,12 @@ const HeroSection = () => {
           className="w-px h-14"
           style={{
             background: "linear-gradient(hsl(var(--terra)), transparent)",
-            animation: "scrollPulse 2.2s infinite",
-          }}
-        />
+            animation: "scrollPulse 2.2s infinite"
+          }} />
+        
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;

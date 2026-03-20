@@ -2,10 +2,10 @@ import FadeIn from "./FadeIn";
 import aboutPhoto from "@/assets/about-photo.jpg";
 
 const stats = [
-  { value: "2+", label: "Anos em Comunicação" },
-  { value: "50+", label: "Projetos Entregues" },
-  { value: "3", label: "Empresas" },
-];
+{ value: "2+", label: "Anos em Comunicação" },
+{ value: "50+", label: "Projetos Entregues" },
+{ value: "3", label: "Empresas" }];
+
 
 const AboutSection = () => {
   return (
@@ -16,8 +16,8 @@ const AboutSection = () => {
             <img
               src={aboutPhoto}
               alt="Caio Vinícios"
-              className="w-full aspect-[3/4] object-cover object-top grayscale-[10%] contrast-[1.08]"
-            />
+              className="w-full aspect-[3/4] object-cover object-top grayscale-[10%] contrast-[1.08]" />
+            
             <div className="absolute top-4 left-4 right-[-16px] bottom-[-16px] border border-border z-[-1]" />
           </div>
         </FadeIn>
@@ -36,8 +36,8 @@ const AboutSection = () => {
           </FadeIn>
           <FadeIn delay={0.2}>
             <div className="space-y-5">
-              <p className="text-base leading-[1.9] text-warm">
-                Estudante de <strong className="text-foreground font-medium">Publicidade e Propaganda na UnB</strong>, 
+              <p className="text-base leading-[1.9] text-warm">Formado em Publicidade e Propaganda na UnB, apaixonado por comunicação que faz sentido. De social media a endomarketing, de copywriting a edição de vídeo — meu trabalho vive na interseção entre estratégia e criatividade.
+                <strong className="text-foreground font-medium">Publicidade e Propaganda na UnB</strong>, 
                 apaixonado por comunicação que faz sentido. De social media a endomarketing, de copywriting a edição de vídeo — 
                 meu trabalho vive na interseção entre <strong className="text-foreground font-medium">estratégia e criatividade</strong>.
               </p>
@@ -54,23 +54,23 @@ const AboutSection = () => {
           </FadeIn>
           <FadeIn delay={0.35}>
             <div className="grid grid-cols-3 gap-0.5 mt-12">
-              {stats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="bg-bg3 p-7 border border-transparent hover:border-border transition-colors duration-300"
-                >
+              {stats.map((stat) =>
+              <div
+                key={stat.label}
+                className="bg-bg3 p-7 border border-transparent hover:border-border transition-colors duration-300">
+                
                   <span className="font-display text-[3rem] text-primary leading-none block">{stat.value}</span>
                   <span className="text-[0.68rem] tracking-[0.12em] uppercase text-muted-foreground mt-1 block">
                     {stat.label}
                   </span>
                 </div>
-              ))}
+              )}
             </div>
           </FadeIn>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default AboutSection;
