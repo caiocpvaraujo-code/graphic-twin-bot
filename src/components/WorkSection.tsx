@@ -62,6 +62,25 @@ const WorkSection = () => {
             </div>
           </div>
         </FadeIn>
+
+        <FadeIn delay={0.2}>
+          <div className="mb-20">
+            <div className="flex items-baseline gap-4 mb-4">
+              <span className="font-serif italic text-primary text-[0.85rem]">02</span>
+              <h4 className="font-display text-[1.6rem] tracking-[0.04em]">Endomarketing & Identidade Interna</h4>
+            </div>
+            <p className="text-[0.86rem] leading-[1.8] text-muted-foreground max-w-[680px] mb-5">
+              Logos para times regionais, peças de endomarketing, design de uniformes e infográficos institucionais para engajamento de colaboradores.
+            </p>
+            <div className="flex flex-wrap gap-2 mt-4">
+              {["Endomarketing", "Branding", "Identidade Visual", "Infográficos"].map((tag) => <span key={tag}
+              className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm">
+                  {tag}
+                </span>
+              )}
+            </div>
+          </div>
+        </FadeIn>
       </div>
 
       {/* TAREA */}
