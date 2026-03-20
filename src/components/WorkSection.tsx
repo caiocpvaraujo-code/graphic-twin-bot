@@ -35,7 +35,7 @@ const WorkSection = () => {
               <span className="text-[0.8rem] text-muted-foreground tracking-[0.06em]">Brasília, DF
 
               </span>
-              <p className="font-serif italic text-[1.05rem] text-warm mt-1">2024</p>
+              <p className="font-serif italic text-[1.05rem] text-warm mt-1">2023 - 2024</p>
             </div>
           </div>
         </FadeIn>
