@@ -1,8 +1,11 @@
 import FadeIn from "./FadeIn";
 import workVivo from "@/assets/work-vivo-1.jpg";
+import workVivo2 from "@/assets/work-vivo-2.jpg";
 import workTarea from "@/assets/work-tarea-1.jpg";
 import workFreela1 from "@/assets/work-freela-1.jpg";
 import workFreela2 from "@/assets/work-freela-2.jpg";
+import workFreela3 from "@/assets/work-freela-3.jpg";
+import workFreela4 from "@/assets/work-freela-4.jpg";
 
 const WorkSection = () => {
   return (
