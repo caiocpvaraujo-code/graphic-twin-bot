@@ -26,13 +26,13 @@ Se tem um desafio criativo, me conta.<br />
         <FadeIn delay={0.2}>
           <div className="flex justify-center gap-5 flex-wrap">
             <a
-              href="mailto:caio.araujo@tarea.com.br"
+              href="mailto:caio-cpv.araujo@hotmail.com"
               className="bg-primary text-primary-foreground px-11 py-4 text-[0.75rem] tracking-[0.15em] uppercase inline-flex items-center gap-2.5 hover:bg-accent hover:-translate-y-0.5 transition-all duration-300 active:scale-[0.97]">
               
               ✉ Enviar e-mail
             </a>
             <a
-              href="https://www.linkedin.com/in/caio-vinicios"
+              href="https://www.linkedin.com/in/caio-vin%C3%ADcios-de-ara%C3%BAjo/"
               target="_blank"
               rel="noopener noreferrer"
               className="border border-border text-warm px-9 py-4 text-[0.75rem] tracking-[0.15em] uppercase hover:border-primary hover:text-foreground hover:-translate-y-0.5 transition-all duration-300 active:scale-[0.97]">
@@ -40,7 +40,7 @@ Se tem um desafio criativo, me conta.<br />
               LinkedIn
             </a>
             <a
-              href="https://www.instagram.com/caio.vinicios"
+              href="https://wa.me/5561982801908"
               target="_blank"
               rel="noopener noreferrer"
               className="border border-border text-warm px-9 py-4 text-[0.75rem] tracking-[0.15em] uppercase hover:border-primary hover:text-foreground hover:-translate-y-0.5 transition-all duration-300 active:scale-[0.97]">WHATSAPP
