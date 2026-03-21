@@ -114,8 +114,7 @@ const WorkSection = () => {
           <div className="mb-20">
             <div className="flex items-baseline gap-4 mb-4">
               <span className="font-serif italic text-primary text-[0.85rem]">01</span>
-              <h4 className="font-display text-[1.6rem] tracking-[0.04em]">
-</h4>
+              <h4 className="font-display text-[1.6rem] tracking-[0.04em]">Social media e endomarketing</h4>
             </div>
             <p className="text-[0.86rem] leading-[1.8] text-muted-foreground max-w-[680px] mb-5">Construí o perfil institucional do zero — identidade visual, tom de voz, calendário editorial e todos os formatos de conteúdo para vagas, cultura e posicionamento da marca. Datas comemorativas, comunicados internos e kit completo de mídia para colaboradores: assinatura de e-mail personalizada, crachá, thumbnail LinkedIn e fundo de tela.
 
