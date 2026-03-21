@@ -52,7 +52,7 @@ const WorkSection = () => {
             <p className="text-[0.86rem] leading-[1.8] text-muted-foreground max-w-[680px] mb-5">Criação de peças para canais externos — posts, stories, banners — e ativação de marca offline. Do briefing à entrega, identidade visual da maior telecom do Brasil.
 
             </p>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="img-frame block">
+            <a href="https://caio-portifolio.my.canva.site/vivo" target="_blank" rel="noopener noreferrer" className="img-frame block">
               {/* TODO: substituir href="#" pelo link real do projeto */}
               <img src={workVivo} alt="Trabalho VIVO - Social Media" className="art aspect-video" />
             </a>
@@ -76,7 +76,7 @@ const WorkSection = () => {
             <p className="text-[0.86rem] leading-[1.8] text-muted-foreground max-w-[680px] mb-5">
               Logos para times regionais, peças de endomarketing, design de uniformes e infográficos institucionais para engajamento de colaboradores.
             </p>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="img-frame block">
+            <a href="https://caio-portifolio.my.canva.site/vivo" target="_blank" rel="noopener noreferrer" className="img-frame block">
               {/* TODO: substituir href="#" pelo link real do projeto */}
               <img src={workVivo2} alt="VIVO - Endomarketing" className="art aspect-video" />
             </a>
@@ -119,7 +119,7 @@ const WorkSection = () => {
             <p className="text-[0.86rem] leading-[1.8] text-muted-foreground max-w-[680px] mb-5">Construí o perfil institucional do zero — identidade visual, tom de voz, calendário editorial e todos os formatos de conteúdo para vagas, cultura e posicionamento da marca. Datas comemorativas, comunicados internos e kit completo de mídia para colaboradores: assinatura de e-mail personalizada, crachá, thumbnail LinkedIn e fundo de tela.
 
             </p>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="img-frame block">
+            <a href="https://caio-portifolio.my.canva.site/tarea" target="_blank" rel="noopener noreferrer" className="img-frame block">
               {/* TODO: substituir href="#" pelo link real do projeto */}
               <img src={workTarea} alt="Trabalho TAREA" className="art aspect-video" />
             </a>
@@ -156,28 +156,28 @@ const WorkSection = () => {
             num: "01",
             title: "editor de vídeo",
             desc: "Do curta \"Luz da Meia Noite\" (12min, UnB) ao vídeo motivacional do KickOff 2024. Storytelling audiovisual com narrativa, ritmo e impacto emocional.",
-            link: "#" // TODO: substituir pelo link real do projeto
+            link: "https://caio-portifolio.my.canva.site/freela-1" // TODO: substituir pelo link real do projeto
           },
           {
             img: workFreela2,
             num: "02",
             title: "Identidade visual",
             desc: "Liderança criativa e identidade visual 2024 do Instituto Verbo da Vida Brasília Asa Sul — conceito, paleta, tipografia e aplicações para o movimento jovem.",
-            link: "#" // TODO: substituir pelo link real do projeto
+            link: "https://www.canva.com/design/DAHEnmL5UHE/ptT6InKZA5p6f_cV6VOBbw/view?utm_content=DAHEnmL5UHE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he5ec969b8c" // TODO: substituir pelo link real do projeto
           },
           {
             img: workFreela3,
             num: "03",
             title: "Transmissão ao Vivo",
             desc: "Estruturei transmissões do zero: câmera, switcher, OBS/StreamYard, mesa de som e luz. Do talk show \"Culto On Us\" a eventos completos ao vivo.",
-            link: "#" // TODO: substituir pelo link real do projeto
+            link: "https://caio-portifolio.my.canva.site/freela-2" // TODO: substituir pelo link real do projeto
           },
           {
             img: workFreela4,
             num: "04",
             title: "Storymaker & Mobile Creator",
             desc: "Coordenei a cobertura do maior evento de publicidade da história da UnB. Planejamento, roteiros, manual de cobertura e templates. iPhone 15 Pro Max + CapCut Pro.",
-            link: "#" // TODO: substituir pelo link real do projeto
+            link: "https://www.canva.com/design/DAHEnkRvV7c/JJfE0xnkCWQhrCER3oxTpQ/view?utm_content=DAHEnkRvV7c&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=haefa44b335" // TODO: substituir pelo link real do projeto
           }].
           map((project) =>
           <FadeIn key={project.num}>
