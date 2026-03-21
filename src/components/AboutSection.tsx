@@ -36,12 +36,12 @@ const AboutSection = () => {
           </FadeIn>
           <FadeIn delay={0.2}>
             <div className="space-y-5">
-              <p className="text-base leading-[1.9] text-warm">Formado em Publicidade e Propaganda na UnB, apaixonado por comunicação que faz sentido. De social media ao marketing, da redação publicitária a edição de vídeo — meu trabalho vive na interseção entre estratégia e criatividade.
+              <p className="text-base leading-[1.9] text-warm">Formado em Publicidade e Propaganda na UnB, apaixonado por comunicação que faz sentido. De social media ao marketing, da redação publicitária a edição de vídeo — meu trabalho vive na interseção entre estratégia e criatividade.
                 <strong className="text-foreground font-medium">Publicidade e Propaganda na UnB</strong>, 
                 apaixonado por comunicação que faz sentido. De social media a endomarketing, de copywriting a edição de vídeo — 
                 meu trabalho vive na interseção entre <strong className="text-foreground font-medium">estratégia e criatividade</strong>.
               </p>
-              <p className="text-base leading-[1.9] text-warm">Já passei pela VIVO e pela Tarea Management, onde transformei briefings em peças que engajam, convertem e impactam.
+              <p className="text-base leading-[1.9] text-warm">Passei pela VIVO e pela Tarea Management, onde transformei briefings em peças que engajam, convertem e impactam.
                 <strong className="text-foreground font-medium">VIVO</strong> e pela <strong className="text-foreground font-medium">Tarea Management</strong>, 
                 onde transformei briefings em peças que engajam, convertem e constroem marca.
               </p>
