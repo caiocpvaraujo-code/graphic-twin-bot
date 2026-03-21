@@ -36,7 +36,7 @@ const AboutSection = () => {
           </FadeIn>
           <FadeIn delay={0.2}>
             <div className="space-y-5">
-              <p className="text-base leading-[1.9] text-warm">Formado em Publicidade e Propaganda na UnB, apaixonado por comunicação que faz sentido. De social media a endomarketing, de copywriting a edição de vídeo — meu trabalho vive na interseção entre estratégia e criatividade.
+              <p className="text-base leading-[1.9] text-warm">Formado em Publicidade e Propaganda na UnB, apaixonado por comunicação que faz sentido. De social media a endomarketing, de copywriting a edição de vídeo — meu trabalho vive na interseção entre estratégia e criatividade.
                 <strong className="text-foreground font-medium">Publicidade e Propaganda na UnB</strong>, 
                 apaixonado por comunicação que faz sentido. De social media a endomarketing, de copywriting a edição de vídeo — 
                 meu trabalho vive na interseção entre <strong className="text-foreground font-medium">estratégia e criatividade</strong>.
