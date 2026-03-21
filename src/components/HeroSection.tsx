@@ -1,7 +1,7 @@
 import FadeIn from "./FadeIn";
 import heroPhoto from "@/assets/hero-photo.jpg";
 
-const chips = ["Social Media", "Copywriting", "Design", "Vídeo", "Endomarketing", "Mobile Creator"];
+const chips = ["Social Media", "Copywriting", "Design", "EDIÇÃO DE VÍDEO", "Endomarketing", "Mobile Creator"];
 
 const HeroSection = () => {
   return (
