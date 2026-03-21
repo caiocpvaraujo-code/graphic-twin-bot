@@ -154,29 +154,29 @@ const WorkSection = () => {
           {
             img: workFreela1,
             num: "01",
-            title: "Portfólio Digital",
-            desc: "Design e desenvolvimento de portfólio pessoal com foco em experiência visual e storytelling.",
+            title: "editor de vídeo",
+            desc: "Do curta \"Luz da Meia Noite\" (12min, UnB) ao vídeo motivacional do KickOff 2024. Storytelling audiovisual com narrativa, ritmo e impacto emocional.",
             link: "#" // TODO: substituir pelo link real do projeto
           },
           {
             img: workFreela2,
             num: "02",
-            title: "Marca E-commerce",
-            desc: "Identidade visual e direção de fotografia para marca de acessórios femininos.",
+            title: "Identidade visual",
+            desc: "Liderança criativa e identidade visual 2024 do Instituto Verbo da Vida Brasília Asa Sul — conceito, paleta, tipografia e aplicações para o movimento jovem.",
             link: "#" // TODO: substituir pelo link real do projeto
           },
           {
             img: workFreela3,
             num: "03",
-            title: "Identidade Corporativa",
-            desc: "Criação de papelaria e identidade visual completa para escritório de consultoria.",
+            title: "Transmissão ao Vivo",
+            desc: "Estruturei transmissões do zero: câmera, switcher, OBS/StreamYard, mesa de som e luz. Do talk show \"Culto On Us\" a eventos completos ao vivo.",
             link: "#" // TODO: substituir pelo link real do projeto
           },
           {
             img: workFreela4,
             num: "04",
-            title: "Campanha Digital",
-            desc: "Estratégia e criação de conteúdo para campanha de lançamento de produto nas redes sociais.",
+            title: "Storymaker & Mobile Creator",
+            desc: "Coordenei a cobertura do maior evento de publicidade da história da UnB. Planejamento, roteiros, manual de cobertura e templates. iPhone 15 Pro Max + CapCut Pro.",
             link: "#" // TODO: substituir pelo link real do projeto
           }].
           map((project) =>

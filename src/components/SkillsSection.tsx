@@ -13,9 +13,9 @@ const skills = [
 ];
 
 const tools = [
-  "Canva Pro", "Adobe Lightroom", "CapCut Pro", "OBS Studio", "StreamYard",
-  "Adobe Premiere", "Figma", "Meta Business Suite", "FlipBook",
-  "iPhone 15 Pro Max", "Google Workspace",
+  "Canva Pro", "Adobe Lightroom / Photoshop", "CapCut Pro", "OBS Studio", "Adobe Illustrator",
+  "Adobe Premiere", "Google e Meta ADS", "Especialista em I.A", "Pacote Office",
+  "iPhone 15 Pro Max", "Google e Microsoft Workspace",
 ];
 
 const SkillBar = ({ level }: { level: number }) => {
