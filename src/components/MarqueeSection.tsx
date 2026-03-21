@@ -1,6 +1,6 @@
 const items = [
-  "Social Media", "Copywriting", "Direção Criativa", "Endomarketing",
-  "Branding", "Vídeo", "Fotografia", "Identidade Visual",
+  "Social Media", "Copywriting", "Direção Criativa", "marketing",
+  "Redação publicitária", "MOBILE CREATOR", "STORYMAKER", "Identidade Visual",
 ];
 
 const MarqueeSection = () => {
