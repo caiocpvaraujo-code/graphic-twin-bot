@@ -182,7 +182,7 @@ const WorkSection = () => {
           }].
           map((project) =>
           <FadeIn key={project.num}>
-              <div className="freela-card bg-bg3 overflow-hidden border border-transparent hover:border-border transition-colors duration-300 group">
+              <a href={project.link} target="_blank" rel="noopener noreferrer" className="freela-card bg-bg3 overflow-hidden border border-transparent hover:border-border transition-colors duration-300 group block">
                 <div className="overflow-hidden">
                   <img
                   src={project.img}
