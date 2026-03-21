@@ -156,25 +156,29 @@ const WorkSection = () => {
             img: workFreela1,
             num: "01",
             title: "Portfólio Digital",
-            desc: "Design e desenvolvimento de portfólio pessoal com foco em experiência visual e storytelling."
+            desc: "Design e desenvolvimento de portfólio pessoal com foco em experiência visual e storytelling.",
+            link: "#" // TODO: substituir pelo link real do projeto
           },
           {
             img: workFreela2,
             num: "02",
             title: "Marca E-commerce",
-            desc: "Identidade visual e direção de fotografia para marca de acessórios femininos."
+            desc: "Identidade visual e direção de fotografia para marca de acessórios femininos.",
+            link: "#" // TODO: substituir pelo link real do projeto
           },
           {
             img: workFreela3,
             num: "03",
             title: "Identidade Corporativa",
-            desc: "Criação de papelaria e identidade visual completa para escritório de consultoria."
+            desc: "Criação de papelaria e identidade visual completa para escritório de consultoria.",
+            link: "#" // TODO: substituir pelo link real do projeto
           },
           {
             img: workFreela4,
             num: "04",
             title: "Campanha Digital",
-            desc: "Estratégia e criação de conteúdo para campanha de lançamento de produto nas redes sociais."
+            desc: "Estratégia e criação de conteúdo para campanha de lançamento de produto nas redes sociais.",
+            link: "#" // TODO: substituir pelo link real do projeto
           }].
           map((project) =>
           <FadeIn key={project.num}>
