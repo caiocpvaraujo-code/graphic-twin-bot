@@ -202,7 +202,7 @@ const WorkSection = () => {
                     Ver projeto →
                   </span>
                 </div>
-              </div>
+              </a>
             </FadeIn>
           )}
         </div>
