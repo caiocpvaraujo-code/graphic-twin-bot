@@ -52,9 +52,10 @@ const WorkSection = () => {
             <p className="text-[0.86rem] leading-[1.8] text-muted-foreground max-w-[680px] mb-5">
               Criação de conteúdo multiplataforma para a VIVO — Instagram, TikTok e LinkedIn. Estratégia editorial, copywriting e direção de arte para campanhas de engajamento.
             </p>
-            <div className="img-frame">
+            <a href="#" target="_blank" rel="noopener noreferrer" className="img-frame block">
+              {/* TODO: substituir href="#" pelo link real do projeto */}
               <img src={workVivo} alt="Trabalho VIVO - Social Media" className="art aspect-video" />
-            </div>
+            </a>
             <div className="flex flex-wrap gap-2 mt-4">
               {["Social Media", "Copywriting", "Design", "Instagram"].map((tag) => <span key={tag}
               className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm">
@@ -75,9 +76,10 @@ const WorkSection = () => {
             <p className="text-[0.86rem] leading-[1.8] text-muted-foreground max-w-[680px] mb-5">
               Logos para times regionais, peças de endomarketing, design de uniformes e infográficos institucionais para engajamento de colaboradores.
             </p>
-            <div className="img-frame">
+            <a href="#" target="_blank" rel="noopener noreferrer" className="img-frame block">
+              {/* TODO: substituir href="#" pelo link real do projeto */}
               <img src={workVivo2} alt="VIVO - Endomarketing" className="art aspect-video" />
-            </div>
+            </a>
             <div className="flex flex-wrap gap-2 mt-4">
               {["Endomarketing", "Branding", "Identidade Visual", "Infográficos"].map((tag) => <span key={tag}
               className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm">
@@ -117,9 +119,10 @@ const WorkSection = () => {
             <p className="text-[0.86rem] leading-[1.8] text-muted-foreground max-w-[680px] mb-5">
               Construí o perfil institucional do zero — identidade visual, tom de voz, calendário editorial e todos os formatos de conteúdo para vagas, cultura e posicionamento da marca.
             </p>
-            <div className="img-frame">
+            <a href="#" target="_blank" rel="noopener noreferrer" className="img-frame block">
+              {/* TODO: substituir href="#" pelo link real do projeto */}
               <img src={workTarea} alt="Trabalho TAREA" className="art aspect-video" />
-            </div>
+            </a>
             <div className="flex flex-wrap gap-2 mt-4">
               {["Endomarketing", "Branding", "Kit de Mídia"].map((tag) =>
               <span
@@ -153,29 +156,33 @@ const WorkSection = () => {
             img: workFreela1,
             num: "01",
             title: "Portfólio Digital",
-            desc: "Design e desenvolvimento de portfólio pessoal com foco em experiência visual e storytelling."
+            desc: "Design e desenvolvimento de portfólio pessoal com foco em experiência visual e storytelling.",
+            link: "#" // TODO: substituir pelo link real do projeto
           },
           {
             img: workFreela2,
             num: "02",
             title: "Marca E-commerce",
-            desc: "Identidade visual e direção de fotografia para marca de acessórios femininos."
+            desc: "Identidade visual e direção de fotografia para marca de acessórios femininos.",
+            link: "#" // TODO: substituir pelo link real do projeto
           },
           {
             img: workFreela3,
             num: "03",
             title: "Identidade Corporativa",
-            desc: "Criação de papelaria e identidade visual completa para escritório de consultoria."
+            desc: "Criação de papelaria e identidade visual completa para escritório de consultoria.",
+            link: "#" // TODO: substituir pelo link real do projeto
           },
           {
             img: workFreela4,
             num: "04",
             title: "Campanha Digital",
-            desc: "Estratégia e criação de conteúdo para campanha de lançamento de produto nas redes sociais."
+            desc: "Estratégia e criação de conteúdo para campanha de lançamento de produto nas redes sociais.",
+            link: "#" // TODO: substituir pelo link real do projeto
           }].
           map((project) =>
           <FadeIn key={project.num}>
-              <div className="freela-card bg-bg3 overflow-hidden border border-transparent hover:border-border transition-colors duration-300 group">
+              <a href={project.link} target="_blank" rel="noopener noreferrer" className="freela-card bg-bg3 overflow-hidden border border-transparent hover:border-border transition-colors duration-300 group block">
                 <div className="overflow-hidden">
                   <img
                   src={project.img}
@@ -195,7 +202,7 @@ const WorkSection = () => {
                     Ver projeto →
                   </span>
                 </div>
-              </div>
+              </a>
             </FadeIn>
           )}
         </div>
