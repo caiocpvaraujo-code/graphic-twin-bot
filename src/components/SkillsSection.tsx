@@ -3,13 +3,13 @@ import FadeIn from "./FadeIn";
 
 const skills = [
   { icon: "✍️", name: "Copywriting", sub: "Redação publicitária & conteúdo", level: 88 },
-  { icon: "🎨", name: "Design Visual", sub: "Canva Pro · identidade visual", level: 85 },
+  { icon: "🎨", name: "Design Visual", sub: "Canva Pro · Adobe Illustrator", level: 85 },
   { icon: "📱", name: "Social Media", sub: "Estratégia & criação", level: 90 },
   { icon: "🎬", name: "Edição de Vídeo", sub: "CapCut Pro · Premiere", level: 80 },
   { icon: "📣", name: "Endomarketing", sub: "Comunicação interna", level: 85 },
-  { icon: "📸", name: "Mobile Creator", sub: "iPhone 15 Pro · Lightroom", level: 82 },
+  { icon: "📸", name: "Mobile Creator e storymaker", sub: "iPhone 15 Pro · Lightroom", level: 82 },
   { icon: "🎙️", name: "Live Streaming", sub: "OBS · StreamYard", level: 75 },
-  { icon: "🧠", name: "Estratégia Criativa", sub: "Planejamento & briefing", level: 83 },
+  { icon: "🧠", name: "Inteligência ARTIFICIAL", sub: "Planejamento & briefing", level: 83 },
 ];
 
 const tools = [
