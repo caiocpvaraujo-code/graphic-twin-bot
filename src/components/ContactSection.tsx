@@ -18,15 +18,15 @@ const ContactSection = () => {
           </h2>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <p className="font-serif italic text-[1.3rem] text-warm max-w-[480px] mx-auto mb-16">
-            Aberto a projetos, freelas, trainee e oportunidades..Se tem um desafio criativo, me conta.
+          <p className="font-serif italic text-[1.3rem] text-warm max-w-[480px] mx-auto mb-16">Aberto a projetos, freelas, trainee e oportunidades.
+ Se tem um desafio criativo, me conta.
+
+
           </p>
         </FadeIn>
         <FadeIn delay={0.2}>
           <div className="flex justify-center gap-5 flex-wrap">
-            <a
-              href="mailto:caio-cpv.araujo@hotmail.com"
-              className="bg-primary text-primary-foreground px-11 py-4 text-[0.75rem] tracking-[0.15em] uppercase inline-flex items-center gap-2.5 hover:bg-accent hover:-translate-y-0.5 transition-all duration-300 active:scale-[0.97]">
+            <a href="mailto:caio-cpv.araujo@hotmail.com" className="bg-primary text-primary-foreground px-11 py-4 text-[0.75rem] tracking-[0.15em] uppercase inline-flex items-center gap-2.5 hover:bg-accent hover:-translate-y-0.5 transition-all duration-300 active:scale-[0.97]">
               
               ✉ Enviar e-mail
             </a>
