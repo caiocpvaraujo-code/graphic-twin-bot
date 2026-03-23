@@ -1,14 +1,18 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const CustomCursor = () => {
   const curRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
+  const [isTouch, setIsTouch] = useState(false);
 
   useEffect(() => {
-    // Only show on non-touch devices
-    if ('ontouchstart' in window) return;
+    if ('ontouchstart' in window) {
+      setIsTouch(true);
+      return;
+    }
 
     let mx = 0, my = 0, rx = 0, ry = 0;
+    let animId: number;
 
     const onMove = (e: MouseEvent) => {
       mx = e.clientX;
@@ -26,14 +30,9 @@ const CustomCursor = () => {
         ringRef.current.style.left = rx + "px";
         ringRef.current.style.top = ry + "px";
       }
-      requestAnimationFrame(loop);
+      animId = requestAnimationFrame(loop);
     };
 
-    document.addEventListener("mousemove", onMove);
-    loop();
-
-    // Hover effects
-    const interactives = document.querySelectorAll("a,button,.chip,.tool,.sk,.freela-card,.img-frame");
     const onEnter = () => {
       if (ringRef.current) {
         ringRef.current.style.width = "60px";
@@ -46,21 +45,34 @@ const CustomCursor = () => {
         ringRef.current.style.height = "40px";
       }
     };
-    interactives.forEach((el) => {
-      el.addEventListener("mouseenter", onEnter);
-      el.addEventListener("mouseleave", onLeave);
-    });
+
+    const onPointerOver = (e: PointerEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.closest("a,button,.chip,.tool,.sk,.freela-card,.img-frame")) {
+        onEnter();
+      }
+    };
+    const onPointerOut = (e: PointerEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.closest("a,button,.chip,.tool,.sk,.freela-card,.img-frame")) {
+        onLeave();
+      }
+    };
+
+    document.addEventListener("mousemove", onMove);
+    document.addEventListener("pointerover", onPointerOver);
+    document.addEventListener("pointerout", onPointerOut);
+    animId = requestAnimationFrame(loop);
 
     return () => {
       document.removeEventListener("mousemove", onMove);
-      interactives.forEach((el) => {
-        el.removeEventListener("mouseenter", onEnter);
-        el.removeEventListener("mouseleave", onLeave);
-      });
+      document.removeEventListener("pointerover", onPointerOver);
+      document.removeEventListener("pointerout", onPointerOut);
+      cancelAnimationFrame(animId);
     };
   }, []);
 
-  if (typeof window !== 'undefined' && 'ontouchstart' in window) return null;
+  if (isTouch) return null;
 
   return (
     <>
