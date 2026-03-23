@@ -17,7 +17,7 @@ const WorkSection = () => {
           02 — Trabalhos
         </p>
         <FadeIn>
-          <h2 className="font-display text-[clamp(3rem,7vw,7rem)] leading-[0.9]">Portfólio</h2>
+          <h2 className="font-display text-[clamp(3rem,7vw,7rem)] leading-[0.9]">Portifólio</h2>
         </FadeIn>
         <div className="flex-1 h-px bg-border mb-1.5 hidden md:block" />
       </div>
@@ -125,8 +125,8 @@ const WorkSection = () => {
             </a>
             <div className="flex flex-wrap gap-2 mt-4">
               {["Endomarketing", "Branding", "Kit de Mídia"].map((tag) => <span
-                  key={tag}
-                  className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm">
+                key={tag}
+                className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm">
                 
                   {tag}
                 </span>
