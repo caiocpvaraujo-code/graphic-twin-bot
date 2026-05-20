@@ -146,8 +146,8 @@ const Design = () => {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-2 md:gap-3 mb-6">
           {[
             { img: gdfStory1, label: "EXPOMIX Planaltina" },
-            { img: gdfStory2, label: "Autódromo é do Pedal" },
-            { img: gdfStory3, label: "OPERADF — Hospital" },
+            { img: gdfStory2, label: "Dia de Avanço na Saúde" },
+            { img: gdfStory3, label: "ONU — Missões de Paz" },
             { img: gdfStory4, label: "Startup Mãe Borboleta" },
             { img: gdfStory5, label: "Circuito Candangão" },
           ].map(({ img, label }, i) => (

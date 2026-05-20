@@ -9,6 +9,11 @@ import pizzamar4 from "@/assets/work-pizzamar-4.jpg";
 import pizzamar5 from "@/assets/work-pizzamar-5.jpg";
 import workFreela4 from "@/assets/work-freela-4.jpg";
 
+import guardiao1 from "@/assets/work-guardiao-1.jpg";
+import guardiao2 from "@/assets/work-guardiao-2.jpg";
+import guardiao3 from "@/assets/work-guardiao-3.jpg";
+import guardiao4 from "@/assets/work-guardiao-4.jpg";
+
 const HoverImg = ({ src, alt, className }: { src: string; alt: string; className?: string }) => (
   <motion.div className="overflow-hidden w-full h-full" whileHover="hover">
     <motion.img
@@ -35,7 +40,7 @@ const Storymaker = () => {
           {[
             { label: "Câmera", value: "iPhone 16 Pro Max" },
             { label: "Edição", value: "CapCut Pro · Lightroom" },
-            { label: "Formatos", value: "Reels · Stories · BTS · Cobertura ao vivo" },
+            { label: "Formatos", value: "Reels · Stories · Cobertura ao vivo" },
           ].map((item) => (
             <div key={item.label}>
               <p className="text-[0.62rem] tracking-[0.18em] uppercase text-muted-foreground mb-1">
@@ -55,7 +60,7 @@ const Storymaker = () => {
               Guardiões
             </h2>
             <p className="text-[0.8rem] text-muted-foreground tracking-[0.06em] mt-1.5">
-              Cobertura completa · Evento institucional · BTS + Conteúdo ao vivo
+              Cobertura completa · Evento institucional · Conteúdo ao vivo
             </p>
           </div>
           <div className="text-left md:text-right mt-4 md:mt-0">
@@ -77,29 +82,23 @@ const Storymaker = () => {
       </FadeIn>
 
       <FadeIn delay={0.15}>
-        {/* Cinematic placeholder — vídeos disponíveis, não há frames estáticos */}
-        <div className="relative bg-bg3 border border-border aspect-video mb-4 flex flex-col items-center justify-center overflow-hidden">
-          <div
-            className="absolute inset-0 opacity-20"
-            style={{
-              background: "radial-gradient(ellipse at 30% 50%, hsl(var(--terra)) 0%, transparent 60%), radial-gradient(ellipse at 70% 50%, hsl(var(--amber)) 0%, transparent 60%)",
-            }}
-          />
-          <span className="font-display text-[clamp(4rem,12vw,10rem)] text-foreground/10 leading-none select-none absolute">
-            GUARDIÕES
-          </span>
-          <div className="relative text-center">
-            <p className="text-[0.6rem] tracking-[0.25em] uppercase text-primary mb-3">Conteúdo em vídeo</p>
-            <p className="font-serif italic text-[1.1rem] text-warm">
-              Frames do evento disponíveis em breve
-            </p>
-            <p className="text-[0.72rem] text-muted-foreground mt-2">
-              iPhone 16 Pro Max · CapCut Pro · Publicação ao vivo
-            </p>
-          </div>
+        {/* 4 frames reais dos vídeos do evento */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-1.5 mb-2">
+          {[guardiao2, guardiao3, guardiao4, guardiao1].map((img, i) => (
+            <div key={i} className="img-frame aspect-[9/16] overflow-hidden">
+              <HoverImg
+                src={img}
+                alt={`Guardiões — Frame ${i + 1}`}
+                className="art w-full h-full object-cover"
+              />
+            </div>
+          ))}
         </div>
+        <p className="text-[0.65rem] tracking-[0.14em] uppercase text-muted-foreground mb-4">
+          Frames extraídos dos Reels e Stories produzidos ao vivo
+        </p>
         <div className="flex flex-wrap gap-2 mb-20">
-          {["Storymaker", "Cobertura ao Vivo", "BTS", "Reels", "iPhone 16 Pro Max", "CapCut Pro"].map((tag) => (
+          {["Storymaker", "Cobertura ao Vivo", "Reels", "iPhone 16 Pro Max", "CapCut Pro"].map((tag) => (
             <span
               key={tag}
               className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm"
