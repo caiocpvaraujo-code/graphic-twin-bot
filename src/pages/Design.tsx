@@ -79,23 +79,60 @@ const Design = () => {
         </div>
       </FadeIn>
 
-      {/* Feed Grid */}
+      {/* Feed Grid — Phone Mockup Style */}
       <FadeIn delay={0.2}>
         <p className="text-[0.65rem] tracking-[0.18em] uppercase text-muted-foreground mb-4">
           Feed — Posts institucionais
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
           {[
-            { img: gdfFeed1, label: "Proteção da Biodiversidade" },
-            { img: gdfFeed2, label: "Fim do Dinheiro nos Ônibus" },
-            { img: gdfFeed3, label: "Mais Segurança e Lazer" },
+            { img: gdfFeed1, label: "Turmas em Todo o DF" },
+            { img: gdfFeed2, label: "Ambientes que Estimulam Aprender" },
+            { img: gdfFeed3, label: "Onde Está Disponível?" },
           ].map(({ img, label }, i) => (
-            <div key={i} className="img-frame aspect-[4/5] overflow-hidden">
-              <HoverImg
-                src={img}
-                alt={`Feed VGDF — ${label}`}
-                className="art w-full h-full object-cover"
-              />
+            <div key={i} className="flex flex-col items-center">
+              {/* Phone mockup shell */}
+              <div
+                className="relative w-full max-w-[260px] mx-auto"
+                style={{
+                  filter: "drop-shadow(0 24px 48px rgba(0,0,0,0.55))",
+                }}
+              >
+                {/* Phone frame */}
+                <div
+                  className="relative rounded-[2.2rem] overflow-hidden bg-[#111]"
+                  style={{
+                    padding: "10px 8px",
+                    boxShadow: "inset 0 0 0 1.5px rgba(255,255,255,0.08), 0 0 0 2px #1a1a1a",
+                  }}
+                >
+                  {/* Notch / Dynamic island */}
+                  <div className="absolute top-[13px] left-1/2 -translate-x-1/2 w-[72px] h-[18px] bg-black rounded-full z-10" />
+                  {/* Screen */}
+                  <div className="rounded-[1.7rem] overflow-hidden aspect-[9/19.5] relative">
+                    <HoverImg
+                      src={img}
+                      alt={`Feed VGDF — ${label}`}
+                      className="art w-full h-full object-cover"
+                    />
+                    {/* Screen glare */}
+                    <div
+                      className="absolute inset-0 pointer-events-none"
+                      style={{
+                        background: "linear-gradient(135deg, rgba(255,255,255,0.07) 0%, transparent 50%)",
+                      }}
+                    />
+                  </div>
+                  {/* Home indicator */}
+                  <div className="flex justify-center pt-2 pb-0.5">
+                    <div className="w-20 h-[3px] bg-white/20 rounded-full" />
+                  </div>
+                </div>
+                {/* Phone side buttons */}
+                <div className="absolute left-[-3px] top-[80px] w-[3px] h-8 bg-[#2a2a2a] rounded-l-sm" />
+                <div className="absolute left-[-3px] top-[124px] w-[3px] h-7 bg-[#2a2a2a] rounded-l-sm" />
+                <div className="absolute right-[-3px] top-[100px] w-[3px] h-10 bg-[#2a2a2a] rounded-r-sm" />
+              </div>
             </div>
           ))}
         </div>
