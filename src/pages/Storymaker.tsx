@@ -1,10 +1,26 @@
+import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
 import FadeIn from "@/components/FadeIn";
 
 import pizzamar1 from "@/assets/work-pizzamar-1.jpg";
 import pizzamar2 from "@/assets/work-pizzamar-2.jpg";
 import pizzamar3 from "@/assets/work-pizzamar-3.jpg";
+import pizzamar4 from "@/assets/work-pizzamar-4.jpg";
+import pizzamar5 from "@/assets/work-pizzamar-5.jpg";
 import workFreela4 from "@/assets/work-freela-4.jpg";
+
+const HoverImg = ({ src, alt, className }: { src: string; alt: string; className?: string }) => (
+  <motion.div className="overflow-hidden w-full h-full" whileHover="hover">
+    <motion.img
+      src={src}
+      alt={alt}
+      className={className}
+      variants={{
+        hover: { scale: 1.07, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } },
+      }}
+    />
+  </motion.div>
+);
 
 const Storymaker = () => {
   return (
@@ -31,7 +47,72 @@ const Storymaker = () => {
         </div>
       </FadeIn>
 
-      {/* Case 01 — COLLAB UnB */}
+      {/* Case 01 — Guardiões */}
+      <FadeIn>
+        <div className="flex flex-col md:flex-row justify-between md:items-end border-b border-border pb-7 mb-14">
+          <div>
+            <h2 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.88] text-foreground">
+              Guardiões
+            </h2>
+            <p className="text-[0.8rem] text-muted-foreground tracking-[0.06em] mt-1.5">
+              Cobertura completa · Evento institucional · BTS + Conteúdo ao vivo
+            </p>
+          </div>
+          <div className="text-left md:text-right mt-4 md:mt-0">
+            <span className="text-[0.8rem] text-muted-foreground tracking-[0.06em]">
+              Brasília, DF
+            </span>
+            <p className="font-serif italic text-[1.05rem] text-warm mt-1">2026</p>
+          </div>
+        </div>
+      </FadeIn>
+
+      <FadeIn delay={0.1}>
+        <p className="text-[0.9rem] leading-[1.9] text-warm max-w-[720px] mb-10">
+          Uma das maiores entregas de storymaking já feitas. Cobertura completa do evento Guardiões —
+          captação ao vivo com iPhone 16 Pro Max, edição e publicação em tempo real para Stories
+          e Reels. Planejamento de pauta, roteiro visual e coordenação de toda a comunicação
+          audiovisual do evento do início ao fim.
+        </p>
+      </FadeIn>
+
+      <FadeIn delay={0.15}>
+        {/* Cinematic placeholder — vídeos disponíveis, não há frames estáticos */}
+        <div className="relative bg-bg3 border border-border aspect-video mb-4 flex flex-col items-center justify-center overflow-hidden">
+          <div
+            className="absolute inset-0 opacity-20"
+            style={{
+              background: "radial-gradient(ellipse at 30% 50%, hsl(var(--terra)) 0%, transparent 60%), radial-gradient(ellipse at 70% 50%, hsl(var(--amber)) 0%, transparent 60%)",
+            }}
+          />
+          <span className="font-display text-[clamp(4rem,12vw,10rem)] text-foreground/10 leading-none select-none absolute">
+            GUARDIÕES
+          </span>
+          <div className="relative text-center">
+            <p className="text-[0.6rem] tracking-[0.25em] uppercase text-primary mb-3">Conteúdo em vídeo</p>
+            <p className="font-serif italic text-[1.1rem] text-warm">
+              Frames do evento disponíveis em breve
+            </p>
+            <p className="text-[0.72rem] text-muted-foreground mt-2">
+              iPhone 16 Pro Max · CapCut Pro · Publicação ao vivo
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-wrap gap-2 mb-20">
+          {["Storymaker", "Cobertura ao Vivo", "BTS", "Reels", "iPhone 16 Pro Max", "CapCut Pro"].map((tag) => (
+            <span
+              key={tag}
+              className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      </FadeIn>
+
+      <div className="border-t border-border mb-20" />
+
+      {/* Case 02 — COLLAB UnB */}
       <FadeIn>
         <div className="flex flex-col md:flex-row justify-between md:items-end border-b border-border pb-7 mb-14">
           <div>
@@ -60,8 +141,8 @@ const Storymaker = () => {
       </FadeIn>
 
       <FadeIn delay={0.15}>
-        <div className="img-frame mb-4 aspect-video">
-          <img
+        <div className="img-frame mb-4 aspect-video overflow-hidden">
+          <HoverImg
             src={workFreela4}
             alt="COLLAB UnB — Storymaker"
             className="art w-full h-full object-cover"
@@ -81,7 +162,7 @@ const Storymaker = () => {
 
       <div className="border-t border-border mb-20" />
 
-      {/* Case 02 — Pizza Mar */}
+      {/* Case 03 — Pizza Mar */}
       <FadeIn>
         <div className="flex flex-col md:flex-row justify-between md:items-end border-b border-border pb-7 mb-14">
           <div>
@@ -89,13 +170,11 @@ const Storymaker = () => {
               Pizza Mar
             </h2>
             <p className="text-[0.8rem] text-muted-foreground tracking-[0.06em] mt-1.5">
-              Restaurante premium · Conteúdo Mobile
+              Restaurante premium · Conteúdo Mobile · Food Photography
             </p>
           </div>
           <div className="text-left md:text-right mt-4 md:mt-0">
-            <span className="text-[0.8rem] text-muted-foreground tracking-[0.06em]">
-              Brasília, DF
-            </span>
+            <span className="text-[0.8rem] text-muted-foreground tracking-[0.06em]">Brasília, DF</span>
           </div>
         </div>
       </FadeIn>
@@ -104,15 +183,16 @@ const Storymaker = () => {
         <p className="text-[0.9rem] leading-[1.9] text-warm max-w-[720px] mb-10">
           Produção de conteúdo mobile para restaurante premium em Brasília. Fotografia e vídeo
           no iPhone 16 Pro Max — explorando composição, luz ambiente e detalhes que fazem
-          o prato ter apetite visual. Conteúdo pensado para feed e stories.
+          o prato ganhar apetite visual. Conteúdo pensado para feed e stories.
         </p>
       </FadeIn>
 
       <FadeIn delay={0.15}>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-0.5 mb-6">
+        {/* 5 photos: 3 portrait + 2 landscape */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-1.5 mb-2">
           {[pizzamar1, pizzamar2, pizzamar3].map((img, i) => (
-            <div key={i} className="img-frame aspect-[9/16]">
-              <img
+            <div key={i} className="img-frame aspect-[9/16] overflow-hidden">
+              <HoverImg
                 src={img}
                 alt={`Pizza Mar — Mobile Content ${i + 1}`}
                 className="art w-full h-full object-cover"
@@ -120,8 +200,19 @@ const Storymaker = () => {
             </div>
           ))}
         </div>
+        <div className="grid grid-cols-2 gap-1.5 mb-6">
+          {[pizzamar4, pizzamar5].map((img, i) => (
+            <div key={i} className="img-frame aspect-video overflow-hidden">
+              <HoverImg
+                src={img}
+                alt={`Pizza Mar — Ambiente ${i + 4}`}
+                className="art w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
         <div className="flex flex-wrap gap-2 mb-16">
-          {["Storymaker", "Food Photography", "Reels", "iPhone 16 Pro Max"].map((tag) => (
+          {["Storymaker", "Food Photography", "Reels", "iPhone 16 Pro Max", "Lightroom"].map((tag) => (
             <span
               key={tag}
               className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm"
@@ -129,18 +220,6 @@ const Storymaker = () => {
               {tag}
             </span>
           ))}
-        </div>
-      </FadeIn>
-
-      {/* Coming Soon */}
-      <FadeIn>
-        <div className="border border-border p-10 text-center">
-          <p className="text-[0.65rem] tracking-[0.22em] uppercase text-muted-foreground mb-3">
-            Em construção
-          </p>
-          <p className="font-serif italic text-[1.1rem] text-warm">
-            Cases de Storymaker para Vivo e outros eventos chegando em breve.
-          </p>
         </div>
       </FadeIn>
     </PageLayout>

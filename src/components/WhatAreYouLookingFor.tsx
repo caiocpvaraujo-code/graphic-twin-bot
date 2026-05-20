@@ -47,14 +47,14 @@ const destinations = [
   },
 ];
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 32 },
+const rowVariants = {
+  hidden: { opacity: 0, x: -24 },
   visible: (i: number) => ({
     opacity: 1,
-    y: 0,
+    x: 0,
     transition: {
-      duration: 0.7,
-      delay: i * 0.08,
+      duration: 0.65,
+      delay: i * 0.07,
       ease: [0.16, 1, 0.3, 1],
     },
   }),
@@ -62,77 +62,79 @@ const cardVariants = {
 
 const WhatAreYouLookingFor = () => {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
+  const inView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section ref={ref} className="py-20 md:py-28 px-7 md:px-[60px] border-b border-border">
+    <section ref={ref} className="py-20 md:py-28 border-b border-border">
       <div className="max-w-[1300px] mx-auto">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-14 md:mb-16"
+          className="px-7 md:px-[60px] mb-12 md:mb-16 flex items-end justify-between"
         >
-          <p className="text-[0.65rem] tracking-[0.22em] uppercase text-primary flex items-center gap-2.5 mb-5">
-            <span className="w-6 h-px bg-primary inline-block" />
-            O que você procura?
+          <div>
+            <p className="text-[0.65rem] tracking-[0.22em] uppercase text-primary flex items-center gap-2.5 mb-5">
+              <span className="w-6 h-px bg-primary inline-block" />
+              O que você procura?
+            </p>
+            <h2 className="font-display text-[clamp(3rem,7vw,7rem)] leading-[0.88]">
+              Escolha seu<br />
+              <span className="text-outline">caminho</span>
+            </h2>
+          </div>
+          <p className="hidden md:block font-serif italic text-[0.9rem] text-muted-foreground text-right max-w-[200px] leading-relaxed">
+            Cada link leva direto ao que você precisa
           </p>
-          <h2 className="font-display text-[clamp(3rem,7vw,7rem)] leading-[0.88]">
-            Escolha seu<br />
-            <span className="text-outline">caminho</span>
-          </h2>
         </motion.div>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0.5">
+        {/* Editorial List */}
+        <div className="border-t border-border">
           {destinations.map((dest, i) => (
             <motion.div
               key={dest.num}
               custom={i}
-              variants={cardVariants}
+              variants={rowVariants}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
-              className={i === destinations.length - 1 && destinations.length % 3 === 1 ? "lg:col-start-2" : ""}
             >
               <Link
                 to={dest.path}
                 className="
-                  group block bg-bg3 p-8 md:p-10
-                  border border-transparent
-                  hover:border-primary/40
-                  hover:bg-bg2
-                  transition-all duration-500
-                  relative overflow-hidden
+                  group relative flex items-center justify-between
+                  px-7 md:px-[60px]
+                  py-7 md:py-9
+                  border-b border-border
+                  overflow-hidden
+                  transition-colors duration-400
                 "
               >
-                {/* Animated bottom border */}
+                {/* Hover fill from left */}
                 <div
-                  className="absolute bottom-0 left-0 h-px w-0 group-hover:w-full transition-all duration-500"
-                  style={{
-                    background: "linear-gradient(90deg, hsl(var(--terra)), hsl(var(--amber)))",
-                  }}
+                  className="absolute inset-0 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                  style={{ background: "linear-gradient(90deg, hsl(var(--bg2)) 0%, transparent 100%)" }}
                 />
 
-                {/* Number */}
-                <span className="font-serif italic text-[3.5rem] text-primary/15 group-hover:text-primary/30 leading-none block mb-4 transition-colors duration-500">
-                  {dest.num}
-                </span>
-
-                {/* Title + Arrow */}
-                <div className="flex items-end justify-between gap-4 mb-2">
-                  <h3 className="font-display text-[1.6rem] md:text-[1.8rem] tracking-[0.04em] leading-none">
-                    {dest.title}
-                  </h3>
-                  <span className="text-primary text-[1.2rem] translate-x-0 group-hover:translate-x-1.5 transition-transform duration-400 flex-shrink-0 mb-0.5">
-                    →
+                {/* Left: number + title */}
+                <div className="relative flex items-baseline gap-6 md:gap-10">
+                  <span className="font-serif italic text-[1.1rem] md:text-[1.4rem] text-primary/25 group-hover:text-primary/60 transition-colors duration-400 flex-shrink-0 w-8 text-right">
+                    {dest.num}
                   </span>
+                  <div>
+                    <h3 className="font-display text-[clamp(1.8rem,4.5vw,4rem)] leading-none tracking-[0.02em] group-hover:text-primary transition-colors duration-300">
+                      {dest.title}
+                    </h3>
+                    <p className="text-[0.7rem] tracking-[0.1em] uppercase text-muted-foreground group-hover:text-warm transition-colors duration-300 mt-2 md:mt-2.5">
+                      {dest.sub}
+                    </p>
+                  </div>
                 </div>
 
-                {/* Subtitle */}
-                <p className="text-[0.72rem] tracking-[0.06em] text-muted-foreground group-hover:text-warm transition-colors duration-300 leading-relaxed">
-                  {dest.sub}
-                </p>
+                {/* Right: animated arrow */}
+                <span className="relative text-primary text-[1.4rem] md:text-[1.8rem] translate-x-0 group-hover:translate-x-3 transition-transform duration-400 flex-shrink-0 ml-4">
+                  →
+                </span>
               </Link>
             </motion.div>
           ))}

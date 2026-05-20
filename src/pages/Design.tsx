@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
 import FadeIn from "@/components/FadeIn";
 
@@ -5,10 +6,28 @@ import gdfLogo from "@/assets/work-gdf-logo.jpg";
 import gdfFeed1 from "@/assets/work-gdf-feed-1.jpg";
 import gdfFeed2 from "@/assets/work-gdf-feed-2.jpg";
 import gdfFeed3 from "@/assets/work-gdf-feed-3.jpg";
-import gdfFeed4 from "@/assets/work-gdf-feed-4.jpg";
 import gdfStory1 from "@/assets/work-gdf-story-1.jpg";
 import gdfStory2 from "@/assets/work-gdf-story-2.jpg";
+import gdfStory3 from "@/assets/work-gdf-story-3.jpg";
+import gdfStory4 from "@/assets/work-gdf-story-4.jpg";
+import gdfStory5 from "@/assets/work-gdf-story-5.jpg";
 import apbc1 from "@/assets/work-apbc-1.png";
+
+const HoverImg = ({ src, alt, className }: { src: string; alt: string; className?: string }) => (
+  <motion.div
+    className="overflow-hidden w-full h-full"
+    whileHover="hover"
+  >
+    <motion.img
+      src={src}
+      alt={alt}
+      className={className}
+      variants={{
+        hover: { scale: 1.06, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } },
+      }}
+    />
+  </motion.div>
+);
 
 const Design = () => {
   return (
@@ -46,12 +65,12 @@ const Design = () => {
 
       {/* Logo */}
       <FadeIn delay={0.15}>
-        <div className="mb-12">
+        <div className="mb-14">
           <p className="text-[0.65rem] tracking-[0.18em] uppercase text-muted-foreground mb-4">
             Logo VGDF
           </p>
-          <div className="img-frame inline-block w-full max-w-[300px]">
-            <img
+          <div className="img-frame inline-block w-full max-w-[280px] overflow-hidden">
+            <HoverImg
               src={gdfLogo}
               alt="Logo VGDF — Vice-Governadoria do DF"
               className="art w-full object-contain"
@@ -62,17 +81,19 @@ const Design = () => {
 
       {/* Feed Grid */}
       <FadeIn delay={0.2}>
-        <div className="mb-4">
-          <p className="text-[0.65rem] tracking-[0.18em] uppercase text-muted-foreground mb-4">
-            Feed — Posts institucionais
-          </p>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-0.5 mb-14">
-          {[gdfFeed1, gdfFeed2, gdfFeed3, gdfFeed4].map((img, i) => (
-            <div key={i} className="img-frame aspect-[4/5]">
-              <img
+        <p className="text-[0.65rem] tracking-[0.18em] uppercase text-muted-foreground mb-4">
+          Feed — Posts institucionais
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-14">
+          {[
+            { img: gdfFeed1, label: "Proteção da Biodiversidade" },
+            { img: gdfFeed2, label: "Fim do Dinheiro nos Ônibus" },
+            { img: gdfFeed3, label: "Mais Segurança e Lazer" },
+          ].map(({ img, label }, i) => (
+            <div key={i} className="img-frame aspect-[4/5] overflow-hidden">
+              <HoverImg
                 src={img}
-                alt={`Feed VGDF ${i + 1}`}
+                alt={`Feed VGDF — ${label}`}
                 className="art w-full h-full object-cover"
               />
             </div>
@@ -82,17 +103,21 @@ const Design = () => {
 
       {/* Story Grid */}
       <FadeIn delay={0.25}>
-        <div className="mb-4">
-          <p className="text-[0.65rem] tracking-[0.18em] uppercase text-muted-foreground mb-4">
-            Stories
-          </p>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-0.5 mb-6">
-          {[gdfStory1, gdfStory2].map((img, i) => (
-            <div key={i} className="img-frame aspect-[9/16]">
-              <img
+        <p className="text-[0.65rem] tracking-[0.18em] uppercase text-muted-foreground mb-4">
+          Stories — 5 publicações
+        </p>
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-2 md:gap-3 mb-6">
+          {[
+            { img: gdfStory1, label: "EXPOMIX Planaltina" },
+            { img: gdfStory2, label: "Autódromo é do Pedal" },
+            { img: gdfStory3, label: "OPERADF — Hospital" },
+            { img: gdfStory4, label: "Startup Mãe Borboleta" },
+            { img: gdfStory5, label: "Circuito Candangão" },
+          ].map(({ img, label }, i) => (
+            <div key={i} className="img-frame aspect-[9/16] overflow-hidden">
+              <HoverImg
                 src={img}
-                alt={`Story VGDF ${i + 1}`}
+                alt={`Story VGDF — ${label}`}
                 className="art w-full h-full object-cover"
               />
             </div>
@@ -102,7 +127,7 @@ const Design = () => {
 
       <FadeIn delay={0.28}>
         <div className="flex flex-wrap gap-2 mb-20">
-          {["Direção de Arte", "Identidade Visual", "Social Media", "Comunicação Gov.", "Figma", "Canva Pro"].map((tag) => (
+          {["Direção de Arte", "Identidade Visual", "Social Media", "Comunicação Gov.", "Canva Pro"].map((tag) => (
             <span
               key={tag}
               className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm"
@@ -142,8 +167,8 @@ const Design = () => {
       </FadeIn>
 
       <FadeIn delay={0.15}>
-        <div className="img-frame mb-6 max-w-[700px]">
-          <img src={apbc1} alt="APBC Evolução — Identidade Visual" className="art w-full" />
+        <div className="img-frame mb-6 max-w-[700px] overflow-hidden">
+          <HoverImg src={apbc1} alt="APBC Evolução — Identidade Visual" className="art w-full" />
         </div>
         <div className="flex flex-wrap gap-2 mb-16">
           {["Identidade Visual", "Logo", "Evento", "Agronegócio"].map((tag) => (
@@ -164,7 +189,7 @@ const Design = () => {
             Em construção
           </p>
           <p className="font-serif italic text-[1.1rem] text-warm">
-            Mais cases de design chegando em breve — Identidade Verbo da Vida, Vivo Endomarketing e outros.
+            Mais cases chegando — Identidade Verbo da Vida, Vivo Endomarketing e outros.
           </p>
         </div>
       </FadeIn>
