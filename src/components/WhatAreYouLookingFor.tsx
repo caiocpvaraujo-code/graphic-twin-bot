@@ -93,6 +93,7 @@ const WhatAreYouLookingFor = () => {
               variants={cardVariants}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
+              className={i === destinations.length - 1 && destinations.length % 3 === 1 ? "lg:col-start-2" : ""}
             >
               <Link
                 to={dest.path}
