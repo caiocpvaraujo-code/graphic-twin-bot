@@ -5,61 +5,31 @@ import gdfLogo from "@/assets/work-gdf-logo.jpg";
 import workVivo from "@/assets/work-vivo-1.jpg";
 import workVivo2 from "@/assets/work-vivo-2.jpg";
 import workTarea from "@/assets/work-tarea-1.jpg";
-
-/* ─── Brand Logo Components ─── */
-const VivoLogo = () => (
-  <div
-    className="flex items-center justify-center w-[72px] h-[72px] rounded-full flex-shrink-0"
-    style={{ background: "linear-gradient(135deg, #6E0AD6 0%, #9B30FF 100%)" }}
-  >
-    <span
-      style={{
-        fontFamily: "system-ui, sans-serif",
-        fontWeight: 900,
-        fontSize: "1.1rem",
-        color: "#fff",
-        letterSpacing: "-0.03em",
-      }}
-    >
-      vivo
-    </span>
-  </div>
-);
-
-const TareaLogo = () => (
-  <div
-    className="flex items-center justify-center w-[72px] h-[72px] border border-border flex-shrink-0"
-    style={{ background: "hsl(var(--bg2))" }}
-  >
-    <span className="font-display text-[0.9rem] tracking-[0.18em] text-foreground">
-      TAREA
-    </span>
-  </div>
-);
-
-const UnbLogo = () => (
-  <div
-    className="flex items-center justify-center w-[72px] h-[72px] flex-shrink-0"
-    style={{ background: "#003366" }}
-  >
-    <span
-      style={{
-        fontFamily: "Georgia, serif",
-        fontWeight: 700,
-        fontSize: "1.3rem",
-        color: "#fff",
-        fontStyle: "italic",
-        letterSpacing: "-0.02em",
-      }}
-    >
-      UnB
-    </span>
-  </div>
-);
+import logoVivo from "@/assets/logo-vivo.jpeg";
+import logoTarea from "@/assets/logo-tarea.png";
+import logoUnb from "@/assets/logo-unb.jpeg";
 
 const GdfLogo = () => (
   <div className="w-[72px] h-[72px] flex-shrink-0 overflow-hidden">
     <img src={gdfLogo} alt="VGDF Logo" className="w-full h-full object-contain" />
+  </div>
+);
+
+const VivoLogo = () => (
+  <div className="w-[72px] h-[72px] flex-shrink-0 overflow-hidden rounded-full">
+    <img src={logoVivo} alt="Vivo Logo" className="w-full h-full object-cover" />
+  </div>
+);
+
+const TareaLogo = () => (
+  <div className="w-[72px] h-[72px] flex-shrink-0 overflow-hidden">
+    <img src={logoTarea} alt="Tarea Logo" className="w-full h-full object-contain" />
+  </div>
+);
+
+const UnbLogo = () => (
+  <div className="w-[72px] h-[72px] flex-shrink-0 overflow-hidden">
+    <img src={logoUnb} alt="UnB Logo" className="w-full h-full object-contain" />
   </div>
 );
 
