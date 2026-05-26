@@ -304,16 +304,22 @@ const Storymaker = () => {
       </FadeIn>
 
       <FadeIn delay={0.15}>
-        {/* 3 portrait photos only */}
+        {/* 3 portrait photos — clicáveis */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-1.5 mb-6">
           {[pizzamar1, pizzamar2, pizzamar3].map((img, i) => (
-            <div key={i} className="img-frame aspect-[9/16] overflow-hidden">
+            <a
+              key={i}
+              href="https://drive.google.com/drive/folders/1yGXuVojwBo9W1gOx4tu9A_IzLLsR0YSc?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="img-frame aspect-[9/16] overflow-hidden block"
+            >
               <HoverImg
                 src={img}
                 alt={`Pizza Mar — Mobile Content ${i + 1}`}
                 className="art w-full h-full object-cover"
               />
-            </div>
+            </a>
           ))}
         </div>
         <div className="flex flex-wrap gap-2 mb-16">
