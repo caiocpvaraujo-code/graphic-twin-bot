@@ -2,6 +2,7 @@ import PageLayout from "@/components/PageLayout";
 import FadeIn from "@/components/FadeIn";
 import workFreela1 from "@/assets/work-freela-1.jpg";
 import workFreela3 from "@/assets/work-freela-3.jpg";
+import videoRedesSociais from "@/assets/video-redes-sociais.jpeg";
 
 const Video = () => {
   return (
@@ -108,8 +109,8 @@ const Video = () => {
             className="img-frame block aspect-video mb-4 overflow-hidden"
           >
             <img
-              src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=1280&q=80"
-              alt="Edição de vídeo para Redes Sociais"
+              src={videoRedesSociais}
+              alt="Edição de vídeo para Redes Sociais — CapCut"
               className="art w-full h-full object-cover"
             />
           </a>
