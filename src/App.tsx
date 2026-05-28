@@ -10,7 +10,6 @@ import Storymaker from "./pages/Storymaker.tsx";
 import Copywriting from "./pages/Copywriting.tsx";
 import Design from "./pages/Design.tsx";
 import Video from "./pages/Video.tsx";
-import SocialMedia from "./pages/SocialMedia.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
 
@@ -31,7 +30,6 @@ const App = () => (
           <Route path="/copywriting" element={<Copywriting />} />
           <Route path="/design" element={<Design />} />
           <Route path="/video" element={<Video />} />
-          <Route path="/social" element={<SocialMedia />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

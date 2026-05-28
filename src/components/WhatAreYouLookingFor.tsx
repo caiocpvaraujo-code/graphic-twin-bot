@@ -39,12 +39,6 @@ const destinations = [
     sub: "Reels · Motion · Storytelling audiovisual",
     path: "/video",
   },
-  {
-    num: "07",
-    title: "Social Media",
-    sub: "Gestão · Estratégia · Calendário editorial",
-    path: "/social",
-  },
 ];
 
 const rowVariants = {
