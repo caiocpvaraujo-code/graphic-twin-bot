@@ -3,15 +3,33 @@ import { motion, AnimatePresence } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
 import FadeIn from "@/components/FadeIn";
 
-import padaria1 from "@/assets/padaria-preview-1.jpg";
-import padaria2 from "@/assets/padaria-preview-2.jpg";
-import padaria3 from "@/assets/padaria-preview-3.jpg";
-import padaria4 from "@/assets/padaria-preview-4.jpg";
+import padaria1 from "@/assets/padaria-p1.jpg";
+import padaria2 from "@/assets/padaria-p2.jpg";
+import padaria3 from "@/assets/padaria-p3.jpg";
+import padaria4 from "@/assets/padaria-p4.jpg";
+import padaria5 from "@/assets/padaria-p5.jpg";
+import padaria6 from "@/assets/padaria-p6.jpg";
+import padaria7 from "@/assets/padaria-p7.jpg";
+import padaria8 from "@/assets/padaria-p8.jpg";
+import padaria9 from "@/assets/padaria-p9.jpg";
+import padaria10 from "@/assets/padaria-p10.jpg";
+import padaria11 from "@/assets/padaria-p11.jpg";
+import padaria12 from "@/assets/padaria-p12.jpg";
 
-import saving1 from "@/assets/saving-preview-1.jpg";
-import saving2 from "@/assets/saving-preview-2.jpg";
-import saving3 from "@/assets/saving-preview-3.jpg";
-import saving4 from "@/assets/saving-preview-4.jpg";
+import saving1 from "@/assets/saving-p1.jpg";
+import saving2 from "@/assets/saving-p2.jpg";
+import saving3 from "@/assets/saving-p3.jpg";
+import saving4 from "@/assets/saving-p4.jpg";
+import saving5 from "@/assets/saving-p5.jpg";
+import saving6 from "@/assets/saving-p6.jpg";
+import saving7 from "@/assets/saving-p7.jpg";
+import saving8 from "@/assets/saving-p8.jpg";
+import saving9 from "@/assets/saving-p9.jpg";
+import saving10 from "@/assets/saving-p10.jpg";
+import saving11 from "@/assets/saving-p11.jpg";
+import saving12 from "@/assets/saving-p12.jpg";
+import saving13 from "@/assets/saving-p13.jpg";
+import saving14 from "@/assets/saving-p14.jpg";
 
 /* ─── PDF Modal ─── */
 interface ModalDoc {
@@ -154,10 +172,7 @@ const PdfModal = ({
             ))}
           </div>
           <span className="text-[0.65rem] tracking-[0.12em] text-white/35">
-            {current + 1} / {doc.pages.length} prévia
-            {doc.totalPages > doc.pages.length && (
-              <span> · {doc.totalPages} páginas totais</span>
-            )}
+            {current + 1} / {doc.pages.length}
           </span>
         </div>
       </motion.div>
@@ -229,13 +244,13 @@ const DocCard = ({
 const DOCS = {
   padaria: {
     title: "O Cheiro das Boas Lembranças — Padaria das Famílias",
-    pages: [padaria1, padaria2, padaria3, padaria4],
+    pages: [padaria1, padaria2, padaria3, padaria4, padaria5, padaria6, padaria7, padaria8, padaria9, padaria10, padaria11, padaria12],
     totalPages: 12,
     pdfUrl: "/docs/padaria-familias.pdf",
   },
   saving: {
     title: "Saving Our Planet",
-    pages: [saving1, saving2, saving3, saving4],
+    pages: [saving1, saving2, saving3, saving4, saving5, saving6, saving7, saving8, saving9, saving10, saving11, saving12, saving13, saving14],
     totalPages: 14,
     pdfUrl: "/docs/saving-our-planet.pdf",
   },
