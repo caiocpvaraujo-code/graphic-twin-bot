@@ -48,7 +48,7 @@ import abpc5 from "@/assets/abpc/abpc-5.jpeg";
 
 const GDF_FEED   = [feed1,feed2,feed3,feed4,feed5,feed6,feed7,feed8,feed9,feed10,feed11,feed12,feed13,feed14,feed15];
 const GDF_STORY  = [story1,story2,story3,story4,story5,story6,story7,story8,story9,story10,story11,story12,story13,story14,story15];
-const ABPC_IMGS  = [abpc1,abpc2,abpc3,abpc4,abpc5];
+const ABPC_IMGS  = [abpc1,abpc2,abpc5];
 
 /* ─── Lightbox ─── */
 interface LightboxProps {
