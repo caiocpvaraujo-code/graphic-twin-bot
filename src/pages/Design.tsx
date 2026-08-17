@@ -80,7 +80,7 @@ const Lightbox = ({ images, startIndex, onClose }: LightboxProps) => {
 
   return (
     <motion.div
-      className="fixed inset-0 z-50 flex flex-col items-center justify-center"
+      className="fixed inset-0 z-[600] flex flex-col items-center justify-center"
       style={{ background: "rgba(0,0,0,0.94)" }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

@@ -73,7 +73,7 @@ const PdfModal = ({
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 z-50 flex flex-col"
+        className="fixed inset-0 z-[600] flex flex-col"
         style={{ background: "rgba(0,0,0,0.92)" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -240,6 +240,80 @@ const DocCard = ({
   </motion.button>
 );
 
+
+/* ─── Peça de copy: o texto em si, grande e legível ─── */
+const CopyPiece = ({
+  num,
+  client,
+  context,
+  kicker,
+  lines,
+  note,
+  tags,
+}: {
+  num: string;
+  client: string;
+  context: string;
+  kicker?: string;
+  lines: string[];
+  note: string;
+  tags: string[];
+}) => (
+  <FadeIn>
+    <article className="border-t border-border pt-10 pb-14">
+      {/* Cabeçalho da peça */}
+      <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 mb-8">
+        <div className="flex items-baseline gap-4">
+          <span className="font-serif italic text-primary text-[0.9rem]">{num}</span>
+          <h3 className="font-display text-[1.9rem] md:text-[2.4rem] tracking-[0.03em] leading-none">
+            {client}
+          </h3>
+        </div>
+        <span className="text-[0.68rem] tracking-[0.16em] uppercase text-muted-foreground">
+          {context}
+        </span>
+      </div>
+
+      {/* O texto */}
+      <div className="max-w-[760px]">
+        {kicker && (
+          <p className="text-[0.7rem] tracking-[0.2em] uppercase text-amber mb-5">{kicker}</p>
+        )}
+
+        <div className="space-y-4">
+          {lines.map((line, i) => (
+            <p
+              key={i}
+              className="font-serif text-[1.35rem] md:text-[1.6rem] leading-[1.5] text-cream"
+            >
+              {line}
+            </p>
+          ))}
+        </div>
+
+        {/* Nota do redator */}
+        <div className="mt-9 pl-5 border-l border-primary/40">
+          <p className="text-[0.62rem] tracking-[0.2em] uppercase text-primary mb-2">
+            Por que funciona
+          </p>
+          <p className="text-[0.85rem] leading-[1.8] text-muted-foreground">{note}</p>
+        </div>
+
+        <div className="flex flex-wrap gap-1.5 mt-7">
+          {tags.map((tag) => (
+            <span
+              key={tag}
+              className="bg-primary/10 border border-primary/20 text-amber text-[0.6rem] tracking-[0.1em] uppercase px-2 py-0.5 rounded-sm"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    </article>
+  </FadeIn>
+);
+
 /* ─── Page ─── */
 const DOCS = {
   padaria: {
@@ -263,62 +337,60 @@ const Copywriting = () => {
     <PageLayout
       eyebrow="04 — Copywriting"
       title="Redação"
-      subtitle="Texto que convence, engaja e constrói marca."
+      subtitle="As peças, não a descrição delas."
     >
-      {/* ── Skill grid ── */}
+      {/* ── Peças de copy ── */}
       <FadeIn>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5 mb-16">
-          {[
-            {
-              num: "01",
-              title: "Copy para Social Media",
-              desc: "Legendas, CTAs, roteiros de Reels e copies de campanhas para marcas como Vivo e Tarea. Tom adaptado ao posicionamento de cada cliente.",
-              tags: ["Instagram", "LinkedIn", "Campanhas"],
-            },
-            {
-              num: "02",
-              title: "Redação Institucional",
-              desc: "Textos para comunicação governamental na Vice-Governadoria do DF. Linguagem clara, inclusiva e alinhada à identidade do GDF.",
-              tags: ["Comunicação Gov.", "Institucional"],
-            },
-            {
-              num: "03",
-              title: "Roteiros Audiovisuais",
-              desc: "Roteiros para Reels, vídeos motivacionais e curtas-metragens. Do brief ao texto final, com atenção a ritmo, narrativa e impacto emocional.",
-              tags: ["Roteiro", "Reels", "Curta"],
-            },
-            {
-              num: "04",
-              title: "Endomarketing & Comunicação Interna",
-              desc: "Comunicados, campanhas internas e kit de mídia para colaboradores. Texto alinhado à cultura organizacional.",
-              tags: ["Endomarketing", "Comunicação Interna"],
-            },
-          ].map((item) => (
-            <div
-              key={item.num}
-              className="bg-bg3 p-10 border border-transparent hover:border-border transition-colors duration-300 group"
-            >
-              <span className="font-serif italic text-[2.8rem] text-primary/20 group-hover:text-primary/40 leading-none block mb-4 transition-colors duration-500">
-                {item.num}
-              </span>
-              <h3 className="font-display text-[1.6rem] tracking-[0.04em] mb-3">{item.title}</h3>
-              <p className="text-[0.84rem] leading-[1.78] text-muted-foreground group-hover:text-warm transition-colors mb-5">
-                {item.desc}
-              </p>
-              <div className="flex flex-wrap gap-1.5">
-                {item.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="bg-primary/10 border border-primary/20 text-amber text-[0.6rem] tracking-[0.1em] uppercase px-2 py-0.5 rounded-sm"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
+        <div className="flex items-center gap-4 mb-10">
+          <p className="text-[0.65rem] tracking-[0.22em] uppercase text-primary flex items-center gap-2.5">
+            <span className="w-6 h-px bg-primary inline-block" />
+            Peças
+          </p>
+          <div className="flex-1 h-px bg-border" />
         </div>
       </FadeIn>
+
+      <div className="mb-16">
+        <CopyPiece
+          num="01"
+          client="Mirá Pet & Co"
+          context="Redação · Bluehook #45 · 2026"
+          kicker="Assinatura de campanha"
+          lines={[
+            "Não basta amar, tem que Mirá.",
+          ]}
+          note="A Mirá vende coleira personalizada numa categoria em que todo mundo vende acessório. O problema não era produto, era posicionamento: toda relação importante já tem um símbolo — a aliança, a fotografia, a medalha — menos a relação com o pet. A plataforma virou transformar vínculos em símbolos, e a assinatura faz três coisas de uma vez: transforma a marca em verbo, coloca o nome no ponto de maior atenção da frase e provoca afetivamente — amar não basta, tem que registrar."
+          tags={["Assinatura", "Posicionamento", "Campanha"]}
+        />
+
+        <CopyPiece
+          num="02"
+          client="Bela Via"
+          context="Redação e direção de arte · 2026"
+          kicker="Headlines de posicionamento"
+          lines={[
+            "Quem constrói uma cidade nem sempre aparece. Mas está presente em cada caminho percorrido todos os dias.",
+            "O que sustenta um grande viaduto? Muito mais do que concreto.",
+            "Por trás de toda grande obra, existem grandes equipes.",
+          ]}
+          note="Construtora pesada quase sempre fala de si mesma: capacidade, prazo, metro quadrado. Inverti o sujeito. A obra some e aparece quem passa por ela — o viaduto deixa de ser entrega e vira caminho de outra pessoa. A pergunta da segunda headline abre uma lacuna que só a peça fecha, e a resposta desvia do óbvio material para o humano."
+          tags={["Headline", "Institucional", "Construção civil"]}
+        />
+
+        <CopyPiece
+          num="03"
+          client="Incine Comunicação"
+          context="Roteiro de vídeo · Tráfego pago · 2026"
+          kicker="Ganchos de abertura"
+          lines={[
+            "Naquela caixa velha embaixo da cama.",
+            "Ele virou noite estudando. Passou. E envelheceu numa fila.",
+          ]}
+          note="Em tráfego pago você tem três segundos antes do polegar decidir. Nenhum dos dois ganchos apresenta o candidato, e é de propósito: quem abre se apresentando perde. O primeiro é puro objeto — a caixa cria pergunta sem prometer nada. O segundo usa a frase curta como batida: três verbos, três pontos finais, e o anticlímax no último. A promessa cumprida e o resultado injusto na mesma respiração."
+          tags={["Roteiro", "Reels", "Tráfego pago"]}
+        />
+
+      </div>
 
       {/* ── Section divider ── */}
       <FadeIn delay={0.05}>
