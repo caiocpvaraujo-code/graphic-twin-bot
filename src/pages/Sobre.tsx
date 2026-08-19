@@ -7,7 +7,7 @@ const Sobre = () => {
     <PageLayout
       eyebrow="01 — Sobre"
       title="Quem é Caio?"
-      subtitle="Publicidade que faz sentido. Criatividade com propósito."
+      subtitle="Redator e diretor de arte. Escrevo, dirijo e edito — geralmente a mesma peça."
     >
       <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-12 md:gap-[100px] items-start">
         {/* Photo */}
@@ -27,48 +27,64 @@ const Sobre = () => {
           <FadeIn>
             <div className="space-y-5">
               <p className="text-base leading-[1.9] text-warm">
-                Formado em{" "}
+                Formando em{" "}
                 <strong className="text-foreground font-medium">
                   Publicidade e Propaganda na UnB
                 </strong>
-                , apaixonado por comunicação que faz sentido. De social media a
-                endomarketing, de copywriting a edição de vídeo — meu trabalho vive na
-                interseção entre{" "}
-                <strong className="text-foreground font-medium">estratégia e criatividade</strong>.
-              </p>
-              <p className="text-base leading-[1.9] text-warm">
-                Passei pela{" "}
-                <strong className="text-foreground font-medium">VIVO</strong> e pela{" "}
-                <strong className="text-foreground font-medium">Tarea Management</strong>,
-                onde transformei briefings em peças que engajam, convertem e constroem marca.
-                Hoje atuo como{" "}
+                , nascido no meio do caminho entre a redação e a direção de arte. Nunca
+                consegui escolher um lado, e virou vantagem: entrego{" "}
                 <strong className="text-foreground font-medium">
-                  Diretor de Arte na Vice-Governadoria do Distrito Federal
-                </strong>
-                , criando comunicação institucional para o governo do DF.
+                  conceito, texto e execução visual
+                </strong>{" "}
+                no mesmo pacote.
               </p>
               <p className="text-base leading-[1.9] text-warm">
-                Sou também{" "}
-                <strong className="text-foreground font-medium">Mobile Creator e Storymaker</strong>{" "}
-                — cubro eventos e produzo conteúdo audiovisual no iPhone 16 Pro Max com
-                workflow profissional de captação, edição e publicação.
+                Hoje sou{" "}
+                <strong className="text-foreground font-medium">
+                  redator e copywriter na Incine Comunicação
+                </strong>
+                , atuando com três pré-candidatos do Distrito Federal — roteiro de vídeo e
+                Reels, copy de carrossel, design das peças estáticas e edição de vídeos
+                curtos com criação por IA.
+              </p>
+              <p className="text-base leading-[1.9] text-warm">
+                Antes disso, na{" "}
+                <strong className="text-foreground font-medium">
+                  Vice-Governadoria do Distrito Federal
+                </strong>
+                , criei peças institucionais e desenvolvi a logo da VGDF a partir da nova
+                identidade visual do GDF. Passei também pela{" "}
+                <strong className="text-foreground font-medium">VIVO</strong>, onde
+                participei da campanha "Coração do Brasil" com a Ana Castela, e pela{" "}
+                <strong className="text-foreground font-medium">Tarea</strong>, com
+                endomarketing e marca empregadora.
+              </p>
+              <p className="text-base leading-[1.9] text-warm">
+                Produzo audiovisual{" "}
+                <strong className="text-foreground font-medium">desde 2016</strong> —
+                comecei fazendo conteúdo curto no celular e nunca parei. Como voluntário no
+                Jovens Líderes pela Paz, fiz criação e mídia num projeto que{" "}
+                <strong className="text-foreground font-medium">
+                  venceu o Prêmio LED, da TV Globo
+                </strong>
+                .
               </p>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.1}>
             <blockquote className="font-serif italic text-[1.4rem] leading-[1.5] text-amber border-l-2 border-primary pl-7 my-8">
-              "Acredito que a melhor comunicação é a que faz as pessoas sentirem antes de
-              pensarem."
+              "Inspiração sem pesquisa é palpite. Pesquisa sem inspiração é planilha. Meu
+              eureka acontece quando os dois param de brigar."
             </blockquote>
           </FadeIn>
 
           <FadeIn delay={0.2}>
             <div className="grid grid-cols-3 gap-0.5">
               {[
-                { value: "4+", label: "Anos em Comunicação" },
+                { value: "10", label: "Anos em Audiovisual" },
                 { value: "20+", label: "Projetos Entregues" },
-                { value: "3", label: "Empresas" },
+                { value: "5", label: "Empresas" },
               ].map((stat) => (
                 <div
                   key={stat.label}

@@ -166,6 +166,12 @@ const Thumb = ({
   </motion.button>
 );
 
+const BELAVIA_IMGS = [
+  "/img/belavia/belavia-1.jpg",
+  "/img/belavia/belavia-2.jpg",
+  "/img/belavia/belavia-3.jpg",
+];
+
 /* ─── Page ─── */
 const Design = () => {
   const [lightbox, setLightbox] = useState<{ images: string[]; index: number } | null>(null);
@@ -314,6 +320,62 @@ const Design = () => {
         </div>
         <div className="flex flex-wrap gap-2 mb-16">
           {["Identidade Visual", "Logo", "Evento", "Agronegócio", "Illustrator"].map((tag) => (
+            <span key={tag} className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </FadeIn>
+
+
+      {/* ══ Case 03 — BELA VIA ══ */}
+      <FadeIn>
+        <div className="flex flex-col md:flex-row justify-between md:items-end border-b border-border pb-7 mb-14">
+          <div>
+            <h2 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.88] text-foreground">
+              Bela Via
+            </h2>
+            <p className="text-[0.8rem] text-muted-foreground tracking-[0.06em] mt-1.5">
+              Bela Via Comércio e Construções · Direção de Arte
+            </p>
+          </div>
+          <div className="text-left md:text-right mt-4 md:mt-0">
+            <span className="text-[0.8rem] text-muted-foreground tracking-[0.06em]">Brasília, DF</span>
+            <p className="font-serif italic text-[1.05rem] text-warm mt-1">2026</p>
+          </div>
+        </div>
+      </FadeIn>
+
+      <FadeIn delay={0.1}>
+        <p className="text-[0.9rem] leading-[1.9] text-warm max-w-[720px] mb-10">
+          A Bela Via faz recapeamento de asfalto e viadutos em Brasília. Quando o projeto chegou
+          até mim, existia uma logo — e só. Sem paleta, tipografia, grid, tratamento de imagem ou
+          regra de aplicação. Construí o sistema visual inteiro a partir do material da própria obra.
+          O preto não é preto de design: é asfalto, a cor do produto que a empresa entrega. O amarelo
+          veio da sinalização viária, a cor que existe para ser vista antes de todas as outras, e
+          virou o destaque — sempre em um único ponto por peça, nunca em dois. Fotografia em preto e
+          branco com o amarelo entrando só onde a informação importa: um grifo, uma linha, o diagrama
+          técnico sobre a foto aérea. A engenharia aparece como camada gráfica em cima do real.
+        </p>
+      </FadeIn>
+
+      <FadeIn delay={0.15}>
+        <p className="text-[0.65rem] tracking-[0.18em] uppercase text-muted-foreground mb-4">
+          Peças para redes · clique para ampliar
+        </p>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
+          {BELAVIA_IMGS.map((img, i) => (
+            <Thumb
+              key={i}
+              src={img}
+              alt={`Bela Via — peça ${i + 1}`}
+              className="aspect-[4/5]"
+              onClick={() => openLightbox(BELAVIA_IMGS, i)}
+            />
+          ))}
+        </div>
+        <div className="flex flex-wrap gap-2 mb-16">
+          {["Direção de Arte", "Identidade Visual", "Social Media", "Construção Civil"].map((tag) => (
             <span key={tag} className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm">
               {tag}
             </span>

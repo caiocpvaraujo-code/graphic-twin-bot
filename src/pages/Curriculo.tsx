@@ -9,6 +9,12 @@ import logoVivo from "@/assets/logo-vivo.jpeg";
 import logoTarea from "@/assets/logo-tarea.png";
 import logoUnb from "@/assets/logo-unb.jpeg";
 
+const IncineLogo = () => (
+  <div className="w-[72px] h-[72px] flex-shrink-0 flex items-center justify-center border border-primary/30 bg-primary/10">
+    <span className="font-display text-[1.6rem] text-primary leading-none tracking-[0.04em]">IN</span>
+  </div>
+);
+
 const GdfLogo = () => (
   <div className="w-[72px] h-[72px] flex-shrink-0 overflow-hidden">
     <img src={gdfLogo} alt="VGDF Logo" className="w-full h-full object-contain" />
@@ -40,7 +46,7 @@ const education = [
     orgShort: "UnB",
     logo: <UnbLogo />,
     course: "Publicidade e Propaganda",
-    period: "2021 — 2025",
+    period: "2022 — 2026",
     detail:
       "Centro de Excelência em Comunicação. Coordenação de cobertura audiovisual de eventos, produção de curta-metragem, pesquisa em comunicação estratégica.",
   },
@@ -54,8 +60,57 @@ const Curriculo = () => {
       subtitle="Do briefing à entrega — estratégia e execução em comunicação."
     >
 
-      {/* ── GDF ── */}
+      {/* ── INCINE ── */}
       <FadeIn>
+        <div className="py-14 border-b border-border">
+          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-8">
+            <div className="flex items-start gap-5">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.85 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+                className="mt-1"
+              >
+                <IncineLogo />
+              </motion.div>
+              <div>
+                <div className="flex items-center gap-3 mb-1">
+                  <h2 className="font-display text-[clamp(2rem,5vw,5rem)] leading-[0.88] tracking-[0.02em]">
+                    Incine Comunicação
+                  </h2>
+                  <span className="text-[0.6rem] tracking-[0.18em] uppercase bg-primary/20 text-primary border border-primary/30 px-2.5 py-1 rounded-sm self-center">
+                    Atual
+                  </span>
+                </div>
+                <p className="text-[0.85rem] text-muted-foreground tracking-[0.04em]">
+                  Redator de Conteúdo e Copywriter · Comunicação política
+                </p>
+              </div>
+            </div>
+            <div className="text-left md:text-right flex-shrink-0">
+              <p className="font-serif italic text-[1.05rem] text-warm">2026 — atual</p>
+              <p className="text-[0.8rem] text-muted-foreground tracking-[0.06em] mt-0.5">Brasília, DF</p>
+            </div>
+          </div>
+
+          <p className="text-[0.9rem] leading-[1.9] text-warm max-w-[720px] mb-6">
+            Atuação com três pré-candidatos do Distrito Federal. Responsável pelo conteúdo de redes:
+            roteiro de vídeo e Reels, copy de carrossel e legenda de post. Também assino o design das
+            peças de post estático e a edição de vídeos curtos com criação por IA, combinando geração
+            generativa ao acervo da própria agência.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {["Copywriting", "Roteiro", "Edição de Vídeo", "IA Generativa", "Comunicação Política"].map((tag) => (
+              <span key={tag} className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </FadeIn>
+
+      {/* ── GDF ── */}
+      <FadeIn delay={0.1}>
         <div className="py-14 border-b border-border">
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-8">
             <div className="flex items-start gap-5">
@@ -72,9 +127,6 @@ const Curriculo = () => {
                   <h2 className="font-display text-[clamp(2rem,5vw,5rem)] leading-[0.88] tracking-[0.02em]">
                     Vice-Governadoria do DF
                   </h2>
-                  <span className="text-[0.6rem] tracking-[0.18em] uppercase bg-primary/20 text-primary border border-primary/30 px-2.5 py-1 rounded-sm self-center">
-                    Atual
-                  </span>
                 </div>
                 <p className="text-[0.85rem] text-muted-foreground tracking-[0.04em]">
                   Diretor de Arte / Designer · Assessoria de Comunicação — Palácio do Buriti
@@ -82,7 +134,7 @@ const Curriculo = () => {
               </div>
             </div>
             <div className="text-left md:text-right flex-shrink-0">
-              <p className="font-serif italic text-[1.05rem] text-warm">2026 — atual</p>
+              <p className="font-serif italic text-[1.05rem] text-warm">2026</p>
               <p className="text-[0.8rem] text-muted-foreground tracking-[0.06em] mt-0.5">Brasília, DF</p>
             </div>
           </div>
