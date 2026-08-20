@@ -34,7 +34,7 @@ const Sobre = () => {
                 , nascido no meio do caminho entre a redação e a direção de arte. Nunca
                 consegui escolher um lado, e virou vantagem: entrego{" "}
                 <strong className="text-foreground font-medium">
-                  conceito, texto e execução visual
+                  o conceito e também a peça pronta
                 </strong>{" "}
                 no mesmo pacote.
               </p>

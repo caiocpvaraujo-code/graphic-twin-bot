@@ -9,7 +9,7 @@ const Video = () => {
     <PageLayout
       eyebrow="06 — Edição de Vídeo"
       title="Vídeo"
-      subtitle="Do roteiro ao corte final — narrativa, ritmo e impacto emocional."
+      subtitle="Escrevo o que vou filmar. Depois corto o que filmei."
     >
       <div className="space-y-20">
 
@@ -26,11 +26,10 @@ const Video = () => {
             </div>
           </div>
           <p className="text-[0.9rem] leading-[1.9] text-warm max-w-[720px] mb-8">
-            Cada cena conta uma história antes de qualquer palavra. A cinematografia não é apenas
-            técnica — é ponto de vista, é luz escolhida, é silêncio editado no lugar certo.
-            Do curta "Luz da Meia Noite" (12 min, UnB) ao vídeo motivacional do KickOff 2024,
-            o trabalho começa no roteiro e termina no color grading: construção de tensão,
-            transições orgânicas e unidade visual que fazem o espectador sentir antes de pensar.
+            Luz da Meia Noite tem 12 minutos e foi rodado na UnB. Foi ali que eu aprendi
+            que a decisão mais cara de uma cena costuma ser o que fica de fora dela: o
+            silêncio que você não corta, a luz que você recusa. Do curta ao vídeo do
+            KickOff 2024, eu pego o projeto no roteiro e só largo no color grading.
           </p>
           <a
             href="https://caio-portifolio.my.canva.site/freela-1"
@@ -96,11 +95,10 @@ const Video = () => {
             </div>
           </div>
           <p className="text-[0.9rem] leading-[1.9] text-warm max-w-[720px] mb-8">
-            Vídeo nas redes não tem pausa. Os primeiros três segundos definem tudo — e é aí
-            que entra o corte certeiro, a trilha que bate junto com a virada de cena e o texto
-            que aparece no momento exato. Edição no CapCut Pro com foco em ritmo, engajamento
-            e identidade visual: Reels, TikToks e conteúdo para Stories que param o scroll.
-            Cada transição tem motivo. Cada corte tem intenção.
+            Vídeo nas redes não tem pausa. Os três primeiros segundos decidem tudo: o
+            corte, a trilha entrando junto com a virada, o texto aparecendo no frame
+            exato. Edito no CapCut Pro para Reels, TikTok e Stories. Se uma transição não
+            tiver motivo pra existir, ela sai.
           </p>
           <a
             href="https://drive.google.com/drive/folders/1rfZfoMhUr2QhpgjHAUXOGXVlk7IfSaDT?usp=sharing"

@@ -57,7 +57,7 @@ const Curriculo = () => {
     <PageLayout
       eyebrow="02 — Currículo"
       title="Experiência"
-      subtitle="Do briefing à entrega — estratégia e execução em comunicação."
+      subtitle="Cinco empresas. Dez anos de câmera na mão."
     >
 
       {/* ── INCINE ── */}
@@ -94,10 +94,11 @@ const Curriculo = () => {
           </div>
 
           <p className="text-[0.9rem] leading-[1.9] text-warm max-w-[720px] mb-6">
-            Atuação com três pré-candidatos do Distrito Federal. Responsável pelo conteúdo de redes:
-            roteiro de vídeo e Reels, copy de carrossel e legenda de post. Também assino o design das
-            peças de post estático e a edição de vídeos curtos com criação por IA, combinando geração
-            generativa ao acervo da própria agência.
+            Trabalho com três pré-candidatos do Distrito Federal, cuidando do conteúdo de
+            redes: roteiro de vídeo e Reels, copy de carrossel, legenda de post. Também
+            assino o design das peças estáticas e edito os vídeos curtos, misturando
+            geração por IA com o acervo da própria agência — porque quando todo mundo usa
+            o mesmo banco de imagem, todo mundo entrega a mesma peça.
           </p>
           <div className="flex flex-wrap gap-2">
             {["Copywriting", "Roteiro", "Edição de Vídeo", "IA Generativa", "Comunicação Política"].map((tag) => (
@@ -140,11 +141,11 @@ const Curriculo = () => {
           </div>
 
           <p className="text-[0.9rem] leading-[1.9] text-warm max-w-[720px] mb-6">
-            Atuação na Assessoria de Comunicação da Vice-Governadoria do Distrito Federal junto à então
-            Vice-Governadora Celina Leão, hoje Governadora do DF. Criação de peças para redes sociais —
-            feed, story e materiais institucionais. Desenvolveu a logo da Vice-Governadoria (VGDF) a
-            partir da nova identidade visual do GDF, adaptando paleta, elementos e aplicações para o
-            contexto da assessoria.
+            Trabalhei na Assessoria de Comunicação da Vice-Governadoria do DF, com a então
+            Vice-Governadora Celina Leão, hoje Governadora. Fiz peça para redes — feed,
+            story, material institucional — e desenvolvi a logo da VGDF a partir da nova
+            identidade do GDF, adaptando paleta, elementos e aplicações para o contexto da
+            assessoria.
           </p>
           <div className="flex flex-wrap gap-2">
             {["Direção de Arte", "Identidade Visual", "Social Media", "Comunicação Gov."].map((tag) => (
@@ -192,8 +193,9 @@ const Curriculo = () => {
               <h4 className="font-display text-[1.6rem] tracking-[0.04em]">Publicidade Externa offline e online</h4>
             </div>
             <p className="text-[0.86rem] leading-[1.8] text-muted-foreground max-w-[680px] mb-5">
-              Criação de peças para canais externos — posts, stories, banners — e ativação de marca
-              offline. Do briefing à entrega, identidade visual da maior telecom do Brasil.
+              Fiz peça para canal externo — post, story, banner — e ativação de marca
+            offline. Trabalhar dentro da identidade da maior telecom do país ensina uma
+            coisa rápido: a régua já existe e ela não se dobra ao seu gosto.
             </p>
             <a
               href="https://caio-portifolio.my.canva.site/vivo"
@@ -219,8 +221,8 @@ const Curriculo = () => {
               <h4 className="font-display text-[1.6rem] tracking-[0.04em]">Endomarketing & Identidade Interna</h4>
             </div>
             <p className="text-[0.86rem] leading-[1.8] text-muted-foreground max-w-[680px] mb-5">
-              Logos para times regionais, peças de endomarketing, design de uniformes e infográficos
-              institucionais para engajamento de colaboradores.
+              Logo para time regional, peça de endomarketing, design de uniforme e
+            infográfico interno.
             </p>
             <a
               href="https://caio-portifolio.my.canva.site/vivo"

@@ -18,8 +18,8 @@ const ContactSection = () => {
           </h2>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <p className="font-serif italic text-[1.3rem] text-warm max-w-[480px] mx-auto mb-16">Aberto a projetos, freelas, trainee e oportunidades.
- Se tem um desafio criativo, me conta.
+          <p className="font-serif italic text-[1.3rem] text-warm max-w-[480px] mx-auto mb-16">Se você chegou até aqui, a gente já se conhece. Bora marcar o segundo encontro
+          antes que a concorrência flerte na minha DM.
 
 
           </p>

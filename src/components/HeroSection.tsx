@@ -24,7 +24,7 @@ const HeroSection = () => {
           <p className="font-serif italic text-[1.25rem] text-warm leading-relaxed max-w-[380px] mb-12">
             Comunicação que transforma.<br />
             Criatividade que conecta.<br />
-            Impacto que permanece.
+            Quero permanecer na memória das pessoas muito depois de bater as botas.
           </p>
         </FadeIn>
         <FadeIn delay={0.3}>

@@ -527,25 +527,25 @@ const Copywriting = () => {
             {
               num: "01",
               title: "Copy para Social Media",
-              desc: "Legendas, CTAs, roteiros de Reels e copies de campanhas para marcas como Vivo e Tarea. Tom adaptado ao posicionamento de cada cliente.",
+              desc: "Legenda, CTA, roteiro de Reels e copy de campanha para Vivo e Tarea. Cada cliente tem um jeito de falar, e nenhum deles é o meu.",
               tags: ["Instagram", "LinkedIn", "Campanhas"],
             },
             {
               num: "02",
               title: "Redação Institucional",
-              desc: "Textos para comunicação governamental na Vice-Governadoria do DF. Linguagem clara, inclusiva e alinhada à identidade do GDF.",
+              desc: "Texto para comunicação de governo na Vice-Governadoria do DF. Aqui clareza não é estilo, é obrigação: quem lê precisa entender de primeira.",
               tags: ["Comunicação Gov.", "Institucional"],
             },
             {
               num: "03",
               title: "Roteiros Audiovisuais",
-              desc: "Roteiros para Reels, vídeos motivacionais e curtas-metragens. Do brief ao texto final, com atenção a ritmo, narrativa e impacto emocional.",
+              desc: "Roteiro para Reels, vídeo motivacional e curta. Pego no brief e largo no texto final, com o ritmo já marcado para quem vai gravar.",
               tags: ["Roteiro", "Reels", "Curta"],
             },
             {
               num: "04",
               title: "Endomarketing & Comunicação Interna",
-              desc: "Comunicados, campanhas internas e kit de mídia para colaboradores. Texto alinhado à cultura organizacional.",
+              desc: "Comunicado, campanha interna e kit de mídia. O público mais difícil de convencer é o que já trabalha na empresa.",
               tags: ["Endomarketing", "Comunicação Interna"],
             },
           ].map((item) => (

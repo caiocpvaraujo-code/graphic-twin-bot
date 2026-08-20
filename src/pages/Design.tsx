@@ -183,7 +183,7 @@ const Design = () => {
     <PageLayout
       eyebrow="05 — Direção de Arte"
       title="Design"
-      subtitle="Identidade visual, comunicação institucional e direção de arte."
+      subtitle="Recebo uma logo. Devolvo um sistema."
     >
       {/* ══ Case 01 — VGDF ══ */}
       <FadeIn>
@@ -205,10 +205,10 @@ const Design = () => {
 
       <FadeIn delay={0.1}>
         <p className="text-[0.9rem] leading-[1.9] text-warm max-w-[720px] mb-10">
-          Criação de peças institucionais para as redes sociais da Vice-Governadoria do DF.
-          Feeds informativos, stories e materiais de comunicação pública cobrindo pautas
-          de mobilidade, meio ambiente, inclusão social e ações do governo.
-          Identidade visual adaptada da nova marca GDF, com paleta azul + roxo (VGDF).
+          Fiz as peças institucionais das redes da Vice-Governadoria do DF: feed
+            informativo, stories e material de comunicação pública sobre mobilidade, meio
+            ambiente, inclusão social e ações do governo. A identidade saiu da nova marca
+            do GDF, adaptada para a paleta azul e roxo da VGDF.
         </p>
       </FadeIn>
 
@@ -297,9 +297,10 @@ const Design = () => {
 
       <FadeIn delay={0.1}>
         <p className="text-[0.9rem] leading-[1.9] text-warm max-w-[720px] mb-10">
-          Identidade visual e materiais gráficos para a 1ª edição do evento APBC Evolução —
-          "Pesquisa que Conecta. Evolução que Transforma o Agro." Criação de logo, paleta
-          (verde/dourado) e aplicações para evento com patrocinadores como Bayer, Nutrimax e Agripon.
+          Assinei a identidade da 1ª edição do APBC Evolução: logo, paleta em verde e
+            dourado, aplicações. O mote era Pesquisa que Conecta, Evolução que Transforma
+            o Agro, e a peça ia dividir espaço com Bayer, Nutrimax e Agripon — então tinha
+            que aguentar estar ao lado delas.
         </p>
       </FadeIn>
 

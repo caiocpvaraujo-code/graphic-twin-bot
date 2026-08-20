@@ -95,7 +95,7 @@ const Storymaker = () => {
     <PageLayout
       eyebrow="03 — Storymaker / Mobile Creator"
       title="Storymaker"
-      subtitle="Cobertura ao vivo, conteúdo mobile e narrativa visual em movimento."
+      subtitle="O evento ainda está acontecendo e o conteúdo já está no ar."
     >
       {/* ─── Platform badges ─── */}
       <FadeIn>
@@ -157,10 +157,10 @@ const Storymaker = () => {
 
       <FadeIn delay={0.1}>
         <p className="text-[0.9rem] leading-[1.9] text-warm max-w-[720px] mb-10">
-          Uma das maiores entregas de storymaking já feitas. Cobertura completa do evento Guardiões —
-          captação ao vivo com iPhone 16 Pro Max, edição e publicação em tempo real para Stories
-          e Reels. Planejamento de pauta, roteiro visual e coordenação de toda a comunicação
-          audiovisual do evento do início ao fim.
+          Cobri o Guardiões inteiro no iPhone 16 Pro Max, com captação, edição e
+            publicação acontecendo ao mesmo tempo. Enquanto uma pauta era gravada, a
+            anterior já estava no Stories. Cuidei do planejamento de pauta, do roteiro
+            visual e da coordenação audiovisual do começo ao fim.
         </p>
       </FadeIn>
 
@@ -297,9 +297,10 @@ const Storymaker = () => {
 
       <FadeIn delay={0.1}>
         <p className="text-[0.9rem] leading-[1.9] text-warm max-w-[720px] mb-10">
-          Produção de conteúdo mobile para restaurante premium em Brasília. Fotografia e vídeo
-          no iPhone 16 Pro Max — explorando composição, luz ambiente e detalhes que fazem
-          o prato ganhar apetite visual. Conteúdo pensado para feed e stories.
+          Conteúdo mobile para restaurante premium em Brasília, foto e vídeo no iPhone
+            16 Pro Max. Comida é o assunto mais ingrato de fotografar com luz de ambiente:
+            ou você espera a janela abrir do jeito certo, ou o prato esfria. Feed e
+            stories.
         </p>
       </FadeIn>
 
