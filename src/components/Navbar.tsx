@@ -1,7 +1,14 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-const SECTIONS = ["Sobre", "Trabalhos", "Habilidades", "Contato"];
+/* Sobre e Trabalhos viram rotas próprias.
+   Habilidades e Contato continuam sendo seções da home. */
+const NAV_ITEMS = [
+  { label: "Sobre", kind: "route", target: "/sobre" },
+  { label: "Trabalhos", kind: "route", target: "/curriculo" },
+  { label: "Habilidades", kind: "anchor", target: "habilidades" },
+  { label: "Contato", kind: "anchor", target: "contato" },
+] as const;
 
 const Navbar = () => {
   const [solid, setSolid] = useState(false);
@@ -14,10 +21,10 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Na home o link é âncora normal.
-  // Em subpáginas vira "/#secao": volta pra home e desce até a seção.
-  const sectionHref = (item: string) =>
-    isHome ? `#${item.toLowerCase()}` : `/#${item.toLowerCase()}`;
+  const anchorHref = (id: string) => (isHome ? `#${id}` : `/#${id}`);
+
+  const linkClass =
+    "text-muted-foreground text-[0.72rem] tracking-[0.18em] uppercase hover:text-foreground transition-colors duration-300";
 
   return (
     <nav
@@ -37,20 +44,23 @@ const Navbar = () => {
       </Link>
 
       <ul className="hidden md:flex gap-9 list-none">
-        {SECTIONS.map((item) => (
-          <li key={item}>
-            <a
-              href={sectionHref(item)}
-              className="text-muted-foreground text-[0.72rem] tracking-[0.18em] uppercase hover:text-foreground transition-colors duration-300"
-            >
-              {item}
-            </a>
+        {NAV_ITEMS.map((item) => (
+          <li key={item.label}>
+            {item.kind === "route" ? (
+              <Link to={item.target} className={linkClass}>
+                {item.label}
+              </Link>
+            ) : (
+              <a href={anchorHref(item.target)} className={linkClass}>
+                {item.label}
+              </a>
+            )}
           </li>
         ))}
       </ul>
 
       <a
-        href={isHome ? "#contato" : "/#contato"}
+        href={anchorHref("contato")}
         className="hidden md:inline-block bg-primary text-primary-foreground px-6 py-2.5 text-[0.72rem] tracking-[0.14em] uppercase hover:bg-accent transition-colors duration-300"
       >
         Fale comigo
