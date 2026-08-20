@@ -14,7 +14,7 @@ const WorkSection = () => {
       <div className="px-7 md:px-[60px] pb-16 flex items-baseline gap-6 max-w-[1300px] mx-auto">
         <p className="text-[0.65rem] tracking-[0.22em] uppercase text-primary flex items-center gap-2.5 whitespace-nowrap">
           <span className="w-6 h-px bg-primary inline-block" />
-          02 — Trabalhos
+          02 · Trabalhos
         </p>
         <FadeIn>
           <h2 className="font-display text-[clamp(3rem,7vw,7rem)] leading-[0.9]">Portifólio</h2>
@@ -49,7 +49,7 @@ const WorkSection = () => {
               <span className="font-serif italic text-primary text-[0.85rem]">01</span>
               <h4 className="font-display text-[1.6rem] tracking-[0.04em]">Publicidade Externa offline e online</h4>
             </div>
-            <p className="text-[0.86rem] leading-[1.8] text-muted-foreground max-w-[680px] mb-5">Criação de peças para canais externos — posts, stories, banners — e ativação de marca offline. Do briefing à entrega, identidade visual da maior telecom do Brasil.
+            <p className="text-[0.86rem] leading-[1.8] text-muted-foreground max-w-[680px] mb-5">Criação de peças para canais externos (posts, stories, banners) e ativação de marca offline. Do briefing à entrega, identidade visual da maior telecom do Brasil.
 
             </p>
             <a href="https://caio-portifolio.my.canva.site/vivo" target="_blank" rel="noopener noreferrer" className="img-frame block">
@@ -116,7 +116,7 @@ const WorkSection = () => {
               <span className="font-serif italic text-primary text-[0.85rem]">01</span>
               <h4 className="font-display text-[1.6rem] tracking-[0.04em]">Social media e endomarketing</h4>
             </div>
-            <p className="text-[0.86rem] leading-[1.8] text-muted-foreground max-w-[680px] mb-5">Construí o perfil institucional do zero — identidade visual, tom de voz, calendário editorial e todos os formatos de conteúdo para vagas, cultura e posicionamento da marca. Datas comemorativas, comunicados internos e kit completo de mídia para colaboradores: assinatura de e-mail personalizada, crachá, thumbnail LinkedIn e fundo de tela.
+            <p className="text-[0.86rem] leading-[1.8] text-muted-foreground max-w-[680px] mb-5">Construí o perfil institucional do zero: identidade visual, tom de voz, calendário editorial e todos os formatos de conteúdo para vagas, cultura e posicionamento da marca. Datas comemorativas, comunicados internos e kit completo de mídia para colaboradores: assinatura de e-mail personalizada, crachá, thumbnail LinkedIn e fundo de tela.
 
             </p>
             <a href="https://caio-portifolio.my.canva.site/tarea" target="_blank" rel="noopener noreferrer" className="img-frame block">
@@ -141,7 +141,7 @@ const WorkSection = () => {
         <div className="px-7 md:px-[60px] pb-16 flex items-baseline gap-6 max-w-[1300px] mx-auto">
           <p className="text-[0.65rem] tracking-[0.22em] uppercase text-primary flex items-center gap-2.5 whitespace-nowrap">
             <span className="w-6 h-px bg-primary inline-block" />
-            03 — Freelance
+            03 · Freelance
           </p>
           <FadeIn>
             <h2 className="font-display text-[clamp(3rem,7vw,7rem)] leading-[0.9]">Projetos</h2>
@@ -162,7 +162,7 @@ const WorkSection = () => {
             img: workFreela2,
             num: "02",
             title: "Identidade visual",
-            desc: "Liderança criativa e identidade visual 2024 do Instituto Verbo da Vida Brasília Asa Sul — conceito, paleta, tipografia e aplicações para o movimento jovem.",
+            desc: "Liderança criativa e identidade visual 2024 do Instituto Verbo da Vida Brasília Asa Sul: conceito, paleta, tipografia e aplicações para o movimento jovem.",
             link: "https://www.canva.com/design/DAHEnmL5UHE/ptT6InKZA5p6f_cV6VOBbw/view?utm_content=DAHEnmL5UHE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he5ec969b8c" // TODO: substituir pelo link real do projeto
           },
           {

@@ -181,7 +181,7 @@ const Design = () => {
 
   return (
     <PageLayout
-      eyebrow="05 — Direção de Arte"
+      eyebrow="05 · Direção de Arte"
       title="Design"
       subtitle="Recebo uma logo. Devolvo um sistema."
     >
@@ -198,7 +198,7 @@ const Design = () => {
           </div>
           <div className="text-left md:text-right mt-4 md:mt-0">
             <span className="text-[0.8rem] text-muted-foreground tracking-[0.06em]">Brasília, DF</span>
-            <p className="font-serif italic text-[1.05rem] text-warm mt-1">2026 — atual</p>
+            <p className="font-serif italic text-[1.05rem] text-warm mt-1">desde 2026</p>
           </div>
         </div>
       </FadeIn>
@@ -221,7 +221,7 @@ const Design = () => {
           <div className="img-frame inline-block w-full max-w-[280px] overflow-hidden">
             <motion.img
               src={gdfLogo}
-              alt="Logo VGDF — Vice-Governadoria do DF"
+              alt="Logo VGDF, Vice-Governadoria do DF"
               className="art w-full object-contain"
               whileHover={{ scale: 1.06 }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
@@ -233,14 +233,14 @@ const Design = () => {
       {/* ── Feed ── */}
       <FadeIn delay={0.2}>
         <p className="text-[0.65rem] tracking-[0.18em] uppercase text-muted-foreground mb-4">
-          Feed — {GDF_FEED.length} posts institucionais · clique para ampliar
+          Feed · {GDF_FEED.length} posts institucionais · clique para ampliar
         </p>
         <div className="grid grid-cols-3 md:grid-cols-5 gap-1.5 mb-14">
           {GDF_FEED.map((img, i) => (
             <Thumb
               key={i}
               src={img}
-              alt={`Feed VGDF — ${i + 1}`}
+              alt={`Feed VGDF ${i + 1}`}
               className="aspect-square"
               onClick={() => openLightbox(GDF_FEED, i)}
             />
@@ -251,14 +251,14 @@ const Design = () => {
       {/* ── Stories ── */}
       <FadeIn delay={0.25}>
         <p className="text-[0.65rem] tracking-[0.18em] uppercase text-muted-foreground mb-4">
-          Stories — {GDF_STORY.length} publicações · clique para ampliar
+          Stories · {GDF_STORY.length} publicações · clique para ampliar
         </p>
         <div className="grid grid-cols-3 md:grid-cols-5 gap-1.5 mb-6">
           {GDF_STORY.map((img, i) => (
             <Thumb
               key={i}
               src={img}
-              alt={`Story VGDF — ${i + 1}`}
+              alt={`Story VGDF ${i + 1}`}
               className="aspect-[9/16]"
               onClick={() => openLightbox(GDF_STORY, i)}
             />
@@ -299,7 +299,7 @@ const Design = () => {
         <p className="text-[0.9rem] leading-[1.9] text-warm max-w-[720px] mb-10">
           Assinei a identidade da 1ª edição do APBC Evolução: logo, paleta em verde e
             dourado, aplicações. O mote era Pesquisa que Conecta, Evolução que Transforma
-            o Agro, e a peça ia dividir espaço com Bayer, Nutrimax e Agripon — então tinha
+            o Agro, e a peça ia dividir espaço com Bayer, Nutrimax e Agripon, então tinha
             que aguentar estar ao lado delas.
         </p>
       </FadeIn>
@@ -313,7 +313,7 @@ const Design = () => {
             <Thumb
               key={i}
               src={img}
-              alt={`APBC Evolução — ${i + 1}`}
+              alt={`APBC Evolução ${i + 1}`}
               className="aspect-video"
               onClick={() => openLightbox(ABPC_IMGS, i)}
             />
@@ -350,11 +350,11 @@ const Design = () => {
       <FadeIn delay={0.1}>
         <p className="text-[0.9rem] leading-[1.9] text-warm max-w-[720px] mb-10">
           A Bela Via faz recapeamento de asfalto e viadutos em Brasília. Quando o projeto chegou
-          até mim, existia uma logo — e só. Sem paleta, tipografia, grid, tratamento de imagem ou
+          até mim, existia uma logo. Só isso. Sem paleta, tipografia, grid, tratamento de imagem ou
           regra de aplicação. Construí o sistema visual inteiro a partir do material da própria obra.
           O preto não é preto de design: é asfalto, a cor do produto que a empresa entrega. O amarelo
           veio da sinalização viária, a cor que existe para ser vista antes de todas as outras, e
-          virou o destaque — sempre em um único ponto por peça, nunca em dois. Fotografia em preto e
+          virou o destaque: sempre em um único ponto por peça, nunca em dois. Fotografia em preto e
           branco com o amarelo entrando só onde a informação importa: um grifo, uma linha, o diagrama
           técnico sobre a foto aérea. A engenharia aparece como camada gráfica em cima do real.
         </p>
@@ -369,7 +369,7 @@ const Design = () => {
             <Thumb
               key={i}
               src={img}
-              alt={`Bela Via — peça ${i + 1}`}
+              alt={`Bela Via, peça ${i + 1}`}
               className="aspect-[4/5]"
               onClick={() => openLightbox(BELAVIA_IMGS, i)}
             />

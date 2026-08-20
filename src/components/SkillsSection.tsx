@@ -62,7 +62,7 @@ const SkillsSection = () => {
         <div className="pb-16 flex items-baseline gap-6">
           <p className="text-[0.65rem] tracking-[0.22em] uppercase text-primary flex items-center gap-2.5 whitespace-nowrap">
             <span className="w-6 h-px bg-primary inline-block" />
-            04 — Skills
+            04 · Skills
           </p>
           <FadeIn>
             <h2 className="font-display text-[clamp(3rem,6vw,6rem)] leading-[0.9]">Habilidades</h2>

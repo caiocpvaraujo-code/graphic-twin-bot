@@ -134,7 +134,7 @@ const PdfModal = ({
             <motion.img
               key={current}
               src={doc.pages[current]}
-              alt={`${doc.title} — página ${current + 1}`}
+              alt={`${doc.title}, página ${current + 1}`}
               className="max-h-full max-w-full object-contain"
               style={{ maxHeight: "calc(100vh - 160px)" }}
               initial={{ opacity: 0, x: 20 }}
@@ -442,13 +442,13 @@ const PieceCard = ({
 /* ─── Page ─── */
 const DOCS = {
   padaria: {
-    title: "O Cheiro das Boas Lembranças — Padaria das Famílias",
+    title: "O Cheiro das Boas Lembranças · Padaria das Famílias",
     pages: [padaria1, padaria2, padaria3, padaria4, padaria5, padaria6, padaria7, padaria8, padaria9, padaria10, padaria11, padaria12],
     totalPages: 12,
     pdfUrl: "/docs/padaria-familias.pdf",
   },
   mira: {
-    title: "Mirá Pet & Co — Transformando vínculos em símbolos",
+    title: "Mirá Pet & Co · Transformando vínculos em símbolos",
     pages: Array.from({ length: 19 }, (_, i) => `/docs/mira/${String(i + 1).padStart(2, "0")}.jpg`),
     totalPages: 19,
     pdfUrl: "/docs/mira-pet-co.pdf",
@@ -467,13 +467,13 @@ const VIDEOS = {
     title: "A caixa",
     src: "/videos/incine-ad-caixa.mp4",
     poster: "/videos/poster-ad-caixa.jpg",
-    what: "Escrevi o roteiro e dirigi a peça. O gancho abre em objeto puro — uma caixa velha embaixo da cama — sem apresentar o candidato, porque em tráfego pago quem abre se apresentando perde o polegar nos três primeiros segundos. As cenas que nenhum banco de imagem tinha foram geradas por IA e montadas junto ao acervo da agência. Edição e finalização minhas.",
+    what: "Escrevi o roteiro e dirigi a peça. O gancho abre em objeto puro, uma caixa velha embaixo da cama, sem apresentar o candidato, porque em tráfego pago quem abre se apresentando perde o polegar nos três primeiros segundos. As cenas que nenhum banco de imagem tinha foram geradas por IA e montadas junto ao acervo da agência. Edição e finalização minhas.",
   },
   concurso: {
     title: "O concurso",
     src: "/videos/incine-ad-concurso.mp4",
     poster: "/videos/poster-ad-concurso.jpg",
-    what: "Roteiro, direção e edição. A peça persegue um único gesto: o dedo correndo a lista de aprovados. Construí o texto em frases curtas, com o anticlímax guardado para a última — a promessa cumprida e o resultado injusto na mesma respiração. Geração por IA combinada ao acervo da agência.",
+    what: "Roteiro, direção e edição. A peça persegue um único gesto: o dedo correndo a lista de aprovados. Construí o texto em frases curtas, com o anticlímax guardado para a última: a promessa cumprida e o resultado injusto na mesma respiração. Geração por IA combinada ao acervo da agência.",
   },
   viasacra: {
     title: "Via Sacra",
@@ -485,8 +485,8 @@ const VIDEOS = {
 
 const SCRIPTS = {
   cruz: {
-    title: "A Cruz — filme de apresentação",
-    what: "Roteiro integral do filme institucional. A estrutura parte da cruz de cenário que ele carregava como ator na Via Sacra e a coloca contra as cruzes reais de quem assistia — o peso que ele devolvia no fim do dia e o peso que os outros levavam para casa. A anáfora central organiza as três frentes de mandato sem transformar o texto em prestação de contas.",
+    title: "A Cruz · filme de apresentação",
+    what: "Roteiro integral do filme institucional. A estrutura parte da cruz de cenário que ele carregava como ator na Via Sacra e a coloca contra as cruzes reais de quem assistia: o peso que ele devolvia no fim do dia e o peso que os outros levavam para casa. A anáfora central organiza as três frentes de mandato sem transformar o texto em prestação de contas.",
     lines: [
       "Durante onze anos eu subi o Morro da Capelinha, carregando uma cruz nas costas, na frente de quase 100 mil pessoas.",
       "Eu era o Jesus da Via Sacra de Planaltina, a maior do Distrito Federal.",
@@ -517,7 +517,7 @@ const Copywriting = () => {
 
   return (
     <PageLayout
-      eyebrow="04 — Copywriting"
+      eyebrow="04 · Copywriting"
       title="Redação"
     >
       {/* ── Skill grid ── */}
@@ -592,7 +592,7 @@ const Copywriting = () => {
           <DocCard
             num="05"
             title="O Cheiro das Boas Lembranças"
-            subtitle="Apresentação completa de campanha publicitária para a Padaria das Famílias — conceito criativo, Big Idea, sinopse de filme e roteiro técnico."
+            subtitle="Apresentação completa de campanha publicitária para a Padaria das Famílias: conceito criativo, Big Idea, sinopse de filme e roteiro técnico."
             tags={["Campanha Publicitária", "Roteiro", "Big Idea"]}
             cover={padaria1}
             onClick={() => setActiveDoc("padaria")}
@@ -600,7 +600,7 @@ const Copywriting = () => {
           <DocCard
             num="06"
             title="Saving Our Planet"
-            subtitle="Livro infantil ilustrado sobre sustentabilidade e meio ambiente — narrativa, copywriting e roteiro para publicação educacional."
+            subtitle="Livro infantil ilustrado sobre sustentabilidade e meio ambiente: narrativa, copywriting e roteiro para publicação educacional."
             tags={["Copywriting", "Livro Infantil", "Sustentabilidade"]}
             cover={saving1}
             onClick={() => setActiveDoc("saving")}
@@ -608,7 +608,7 @@ const Copywriting = () => {
           <DocCard
             num="07"
             title="Mirá Pet & Co"
-            subtitle="Apresentação completa de posicionamento e campanha para marca de coleiras personalizadas — plataforma, assinatura, revista proprietária e ação de adoção. Redação minha, em dupla."
+            subtitle="Apresentação completa de posicionamento e campanha para marca de coleiras personalizadas: plataforma, assinatura, revista proprietária e ação de adoção. Redação minha, em dupla."
             tags={["Posicionamento", "Assinatura", "Campanha"]}
             cover="/docs/mira/01.jpg"
             onClick={() => setActiveDoc("mira")}
@@ -638,7 +638,7 @@ const Copywriting = () => {
             num="08"
             kind="Vídeo"
             title="A caixa"
-            subtitle="Peça de tráfego pago. Abre em objeto, não em candidato — a caixa velha embaixo da cama cria a pergunta antes de qualquer promessa."
+            subtitle="Peça de tráfego pago. Abre em objeto, não em candidato. A caixa velha embaixo da cama cria a pergunta antes de qualquer promessa."
             tags={["Roteiro", "Edição", "IA Generativa"]}
             cover="/videos/poster-ad-caixa.jpg"
             onClick={() => setActiveVideo("caixa")}

@@ -26,7 +26,7 @@ const AboutSection = () => {
           <FadeIn>
             <p className="text-[0.65rem] tracking-[0.22em] uppercase text-primary mb-5 flex items-center gap-2.5">
               <span className="w-6 h-px bg-primary inline-block" />
-              01 — Sobre
+              01 · Sobre
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
@@ -38,7 +38,7 @@ const AboutSection = () => {
             <div className="space-y-5">
               <p className="text-base leading-[1.9] text-warm">
                 Formado em <strong className="text-foreground font-medium">Publicidade e Propaganda na UnB</strong>, 
-                apaixonado por comunicação que faz sentido. De social media a endomarketing, de copywriting a edição de vídeo — 
+                apaixonado por comunicação que faz sentido. De social media a endomarketing, de copywriting a edição de vídeo,
                 meu trabalho vive na interseção entre <strong className="text-foreground font-medium">estratégia e criatividade</strong>.
               </p>
               <p className="text-base leading-[1.9] text-warm">

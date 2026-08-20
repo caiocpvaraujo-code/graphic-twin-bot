@@ -7,7 +7,7 @@ import videoRedesSociais from "@/assets/video-redes-sociais.jpeg";
 const Video = () => {
   return (
     <PageLayout
-      eyebrow="06 — Edição de Vídeo"
+      eyebrow="06 · Edição de Vídeo"
       title="Vídeo"
       subtitle="Escrevo o que vou filmar. Depois corto o que filmei."
     >
@@ -62,7 +62,7 @@ const Video = () => {
           </div>
           <p className="text-[0.9rem] leading-[1.9] text-warm max-w-[720px] mb-8">
             Estruturei transmissões do zero: câmera, switcher, OBS/StreamYard, mesa de som e
-            iluminação. Do talk show "Culto On Us" a eventos completos ao vivo — direção técnica
+            iluminação. Do talk show "Culto On Us" a eventos completos ao vivo, com direção técnica
             e criativa de ponta a ponta.
           </p>
           <a
@@ -108,7 +108,7 @@ const Video = () => {
           >
             <img
               src={videoRedesSociais}
-              alt="Edição de vídeo para Redes Sociais — CapCut"
+              alt="Edição de vídeo para Redes Sociais no CapCut"
               className="art w-full h-full object-cover"
             />
           </a>

@@ -5,9 +5,9 @@ import aboutPhoto from "@/assets/about-photo.jpg";
 const Sobre = () => {
   return (
     <PageLayout
-      eyebrow="01 — Sobre"
+      eyebrow="01 · Sobre"
       title="Quem é Caio?"
-      subtitle="Redator e diretor de arte. Escrevo, dirijo e edito — geralmente a mesma peça."
+      subtitle="Redator e diretor de arte. Escrevo, dirijo e edito. Geralmente a mesma peça."
     >
       <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-12 md:gap-[100px] items-start">
         {/* Photo */}
@@ -43,7 +43,7 @@ const Sobre = () => {
                 <strong className="text-foreground font-medium">
                   redator e copywriter na Incine Comunicação
                 </strong>
-                , atuando com três pré-candidatos do Distrito Federal — roteiro de vídeo e
+                , atuando com três pré-candidatos do Distrito Federal: roteiro de vídeo e
                 Reels, copy de carrossel, design das peças estáticas e edição de vídeos
                 curtos com criação por IA.
               </p>
@@ -61,8 +61,8 @@ const Sobre = () => {
               </p>
               <p className="text-base leading-[1.9] text-warm">
                 Produzo audiovisual{" "}
-                <strong className="text-foreground font-medium">desde 2016</strong> —
-                comecei fazendo conteúdo curto no celular e nunca parei. Como voluntário no
+                <strong className="text-foreground font-medium">desde 2016</strong>.
+                Comecei fazendo conteúdo curto no celular e nunca parei. Como voluntário no
                 Jovens Líderes pela Paz, fiz criação e mídia num projeto que{" "}
                 <strong className="text-foreground font-medium">
                   venceu o Prêmio LED, da TV Globo

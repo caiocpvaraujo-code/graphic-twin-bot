@@ -93,7 +93,7 @@ const TikTokIcon = () => (
 const Storymaker = () => {
   return (
     <PageLayout
-      eyebrow="03 — Storymaker / Mobile Creator"
+      eyebrow="03 · Storymaker / Mobile Creator"
       title="Storymaker"
       subtitle="O evento ainda está acontecendo e o conteúdo já está no ar."
     >
@@ -184,7 +184,7 @@ const Storymaker = () => {
             >
               <HoverImg
                 src={img}
-                alt={`Guardiões — Frame ${i + 1}`}
+                alt={`Guardiões, frame ${i + 1}`}
                 className="art w-full h-full object-cover"
               />
             </a>
@@ -228,7 +228,7 @@ const Storymaker = () => {
 
       <FadeIn delay={0.1}>
         <p className="text-[0.9rem] leading-[1.9] text-warm max-w-[720px] mb-10">
-          Coordenei toda a cobertura audiovisual do COLLAB — o maior evento de publicidade da
+          Coordenei toda a cobertura audiovisual do COLLAB, o maior evento de publicidade da
           história da UnB. Planejamento de pauta, roteiros de cobertura, manual de estilo
           visual e templates. Captação com iPhone, edição e publicação em tempo real.
           Cada conteúdo pensado para Instagram Stories e Reels com narrativa e identidade.
@@ -255,7 +255,7 @@ const Storymaker = () => {
             >
               <HoverImg
                 src={img}
-                alt={`COLLAB UnB — Frame ${i + 1}`}
+                alt={`COLLAB UnB, frame ${i + 1}`}
                 className="art w-full h-full object-cover"
               />
             </a>
@@ -317,7 +317,7 @@ const Storymaker = () => {
             >
               <HoverImg
                 src={img}
-                alt={`Pizza Mar — Mobile Content ${i + 1}`}
+                alt={`Pizza Mar, conteúdo mobile ${i + 1}`}
                 className="art w-full h-full object-cover"
               />
             </a>

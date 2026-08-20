@@ -46,7 +46,7 @@ const education = [
     orgShort: "UnB",
     logo: <UnbLogo />,
     course: "Publicidade e Propaganda",
-    period: "2022 — 2026",
+    period: "2022 a 2026",
     detail:
       "Centro de Excelência em Comunicação. Coordenação de cobertura audiovisual de eventos, produção de curta-metragem, pesquisa em comunicação estratégica.",
   },
@@ -55,7 +55,7 @@ const education = [
 const Curriculo = () => {
   return (
     <PageLayout
-      eyebrow="02 — Currículo"
+      eyebrow="02 · Currículo"
       title="Experiência"
       subtitle="Cinco empresas. Dez anos de câmera na mão."
     >
@@ -88,7 +88,7 @@ const Curriculo = () => {
               </div>
             </div>
             <div className="text-left md:text-right flex-shrink-0">
-              <p className="font-serif italic text-[1.05rem] text-warm">2026 — atual</p>
+              <p className="font-serif italic text-[1.05rem] text-warm">desde 2026</p>
               <p className="text-[0.8rem] text-muted-foreground tracking-[0.06em] mt-0.5">Brasília, DF</p>
             </div>
           </div>
@@ -97,7 +97,7 @@ const Curriculo = () => {
             Trabalho com três pré-candidatos do Distrito Federal, cuidando do conteúdo de
             redes: roteiro de vídeo e Reels, copy de carrossel, legenda de post. Também
             assino o design das peças estáticas e edito os vídeos curtos, misturando
-            geração por IA com o acervo da própria agência — porque quando todo mundo usa
+            geração por IA com o acervo da própria agência. Porque quando todo mundo usa
             o mesmo banco de imagem, todo mundo entrega a mesma peça.
           </p>
           <div className="flex flex-wrap gap-2">
@@ -130,7 +130,7 @@ const Curriculo = () => {
                   </h2>
                 </div>
                 <p className="text-[0.85rem] text-muted-foreground tracking-[0.04em]">
-                  Diretor de Arte / Designer · Assessoria de Comunicação — Palácio do Buriti
+                  Diretor de Arte / Designer · Assessoria de Comunicação · Palácio do Buriti
                 </p>
               </div>
             </div>
@@ -142,8 +142,8 @@ const Curriculo = () => {
 
           <p className="text-[0.9rem] leading-[1.9] text-warm max-w-[720px] mb-6">
             Trabalhei na Assessoria de Comunicação da Vice-Governadoria do DF, com a então
-            Vice-Governadora Celina Leão, hoje Governadora. Fiz peça para redes — feed,
-            story, material institucional — e desenvolvi a logo da VGDF a partir da nova
+            Vice-Governadora Celina Leão, hoje Governadora. Fiz peça para redes (feed,
+            story, material institucional) e desenvolvi a logo da VGDF a partir da nova
             identidade do GDF, adaptando paleta, elementos e aplicações para o contexto da
             assessoria.
           </p>
@@ -181,7 +181,7 @@ const Curriculo = () => {
               </div>
             </div>
             <div className="text-left md:text-right flex-shrink-0">
-              <p className="font-serif italic text-[1.05rem] text-warm">2024 — 2026</p>
+              <p className="font-serif italic text-[1.05rem] text-warm">2024 a 2026</p>
               <p className="text-[0.8rem] text-muted-foreground tracking-[0.06em] mt-0.5">Brasília, DF</p>
             </div>
           </div>
@@ -193,7 +193,7 @@ const Curriculo = () => {
               <h4 className="font-display text-[1.6rem] tracking-[0.04em]">Publicidade Externa offline e online</h4>
             </div>
             <p className="text-[0.86rem] leading-[1.8] text-muted-foreground max-w-[680px] mb-5">
-              Fiz peça para canal externo — post, story, banner — e ativação de marca
+              Fiz peça para canal externo (post, story, banner) e ativação de marca
             offline. Trabalhar dentro da identidade da maior telecom do país ensina uma
             coisa rápido: a régua já existe e ela não se dobra ao seu gosto.
             </p>
@@ -267,7 +267,7 @@ const Curriculo = () => {
               </div>
             </div>
             <div className="text-left md:text-right flex-shrink-0">
-              <p className="font-serif italic text-[1.05rem] text-warm">2023 — 2024</p>
+              <p className="font-serif italic text-[1.05rem] text-warm">2023 a 2024</p>
               <p className="text-[0.8rem] text-muted-foreground tracking-[0.06em] mt-0.5">Brasília, DF</p>
             </div>
           </div>
@@ -279,7 +279,7 @@ const Curriculo = () => {
               <h4 className="font-display text-[1.6rem] tracking-[0.04em]">Social media e endomarketing</h4>
             </div>
             <p className="text-[0.86rem] leading-[1.8] text-muted-foreground max-w-[680px] mb-5">
-              Construí o perfil institucional do zero — identidade visual, tom de voz, calendário
+              Construí o perfil institucional do zero: identidade visual, tom de voz, calendário
               editorial e todos os formatos de conteúdo para vagas, cultura e posicionamento da marca.
               Datas comemorativas, comunicados internos e kit completo de mídia para colaboradores:
               assinatura de e-mail personalizada, crachá, thumbnail LinkedIn e fundo de tela.

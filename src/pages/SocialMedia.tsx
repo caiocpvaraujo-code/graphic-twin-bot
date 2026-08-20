@@ -8,7 +8,7 @@ import gdfFeed2 from "@/assets/work-gdf-feed-2.jpg";
 const SocialMedia = () => {
   return (
     <PageLayout
-      eyebrow="07 — Social Media"
+      eyebrow="07 · Social Media"
       title="Social Media"
       subtitle="Estratégia, calendário editorial e conteúdo que engaja."
     >
@@ -51,9 +51,9 @@ const SocialMedia = () => {
               desc: "Construção do perfil do zero. Identidade visual, tom de voz e calendário editorial.",
             },
             {
-              brand: "VGDF — Stories",
+              brand: "VGDF · Stories",
               img: gdfFeed2,
-              desc: "Conteúdo de stories para a Vice-Governadoria — atualidades, pautas sociais e institucionais.",
+              desc: "Conteúdo de stories para a Vice-Governadoria: atualidades, pautas sociais e institucionais.",
             },
           ].map((item) => (
             <div key={item.brand} className="group">
