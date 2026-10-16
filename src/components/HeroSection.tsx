@@ -10,7 +10,7 @@ const HeroSection = () => {
         <FadeIn>
           <p className="text-[0.68rem] tracking-[0.22em] uppercase text-primary mb-7 flex items-center gap-3">SEU PRÓXIMO PUBLICITÁRIO
             <span className="w-8 h-px bg-primary inline-block" />
-            Publicidade · UnB · Brasília
+            Disponível agora · Brasília
           </p>
         </FadeIn>
         <FadeIn delay={0.1}>

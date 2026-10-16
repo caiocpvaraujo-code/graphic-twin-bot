@@ -170,7 +170,25 @@ const BELAVIA_IMGS = [
   "/img/belavia/belavia-1.jpg",
   "/img/belavia/belavia-2.jpg",
   "/img/belavia/belavia-3.jpg",
+  "/img/belavia/belavia-4.jpg",
+  "/img/belavia/belavia-5.jpg",
+  "/img/belavia/belavia-6.jpg",
+  "/img/belavia/belavia-7.jpg",
+  "/img/belavia/belavia-8.jpg",
+  "/img/belavia/belavia-9.jpg",
 ];
+
+const BELAVIA_STORIES = [
+  "/img/belavia/story-1.jpg",
+  "/img/belavia/story-2.jpg",
+  "/img/belavia/story-3.jpg",
+  "/img/belavia/story-4.jpg",
+  "/img/belavia/story-5.jpg",
+  "/img/belavia/story-6.jpg",
+];
+
+const COLINHA_IMGS = ["/img/web/colinha-1.jpg", "/img/web/colinha-2.jpg"];
+const PORTFOLIO_IMGS = ["/img/web/portfolio-1.jpg", "/img/web/portfolio-2.jpg"];
 
 /* ─── Page ─── */
 const Design = () => {
@@ -198,7 +216,7 @@ const Design = () => {
           </div>
           <div className="text-left md:text-right mt-4 md:mt-0">
             <span className="text-[0.8rem] text-muted-foreground tracking-[0.06em]">Brasília, DF</span>
-            <p className="font-serif italic text-[1.05rem] text-warm mt-1">desde 2026</p>
+            <p className="font-serif italic text-[1.05rem] text-warm mt-1">abr a jun 2026</p>
           </div>
         </div>
       </FadeIn>
@@ -337,7 +355,7 @@ const Design = () => {
               Bela Via
             </h2>
             <p className="text-[0.8rem] text-muted-foreground tracking-[0.06em] mt-1.5">
-              Bela Via Comércio e Construções · Direção de Arte
+              Bela Via Comércio e Construções · Direção de Arte · Freela via Quatro Comunicação
             </p>
           </div>
           <div className="text-left md:text-right mt-4 md:mt-0">
@@ -358,6 +376,11 @@ const Design = () => {
           branco com o amarelo entrando só onde a informação importa: um grifo, uma linha, o diagrama
           técnico sobre a foto aérea. A engenharia aparece como camada gráfica em cima do real.
         </p>
+        <p className="text-[0.9rem] leading-[1.9] text-warm max-w-[720px] mb-10 -mt-4">
+          O trabalho segue como freela pela Quatro Comunicação, agora com o feed e os stories
+          da série Engenharia Explica: drenagem, inclinação da via, as camadas debaixo do
+          asfalto. Assunto técnico explicado para quem só vê a rua pronta.
+        </p>
       </FadeIn>
 
       <FadeIn delay={0.15}>
@@ -375,12 +398,110 @@ const Design = () => {
             />
           ))}
         </div>
+        <p className="text-[0.65rem] tracking-[0.18em] uppercase text-muted-foreground mb-4 mt-10">
+          Stories · série Engenharia Explica
+        </p>
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-3 mb-6">
+          {BELAVIA_STORIES.map((img, i) => (
+            <Thumb
+              key={i}
+              src={img}
+              alt={`Bela Via, story ${i + 1}`}
+              className="aspect-[9/16]"
+              onClick={() => openLightbox(BELAVIA_STORIES, i)}
+            />
+          ))}
+        </div>
         <div className="flex flex-wrap gap-2 mb-16">
           {["Direção de Arte", "Identidade Visual", "Social Media", "Construção Civil"].map((tag) => (
             <span key={tag} className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm">
               {tag}
             </span>
           ))}
+        </div>
+      </FadeIn>
+
+      {/* ══ Case 04 — WEB ══ */}
+      <FadeIn>
+        <div className="flex flex-col md:flex-row justify-between md:items-end border-b border-border pb-7 mb-14">
+          <div>
+            <h2 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.88] text-foreground">
+              Web
+            </h2>
+            <p className="text-[0.8rem] text-muted-foreground tracking-[0.06em] mt-1.5">
+              Landing pages · Design e código
+            </p>
+          </div>
+          <div className="text-left md:text-right mt-4 md:mt-0">
+            <span className="text-[0.8rem] text-muted-foreground tracking-[0.06em]">Brasília, DF</span>
+            <p className="font-serif italic text-[1.05rem] text-warm mt-1">2026</p>
+          </div>
+        </div>
+      </FadeIn>
+
+      <FadeIn delay={0.1}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+          <div>
+            <div className="flex items-baseline gap-4 mb-4">
+              <span className="font-serif italic text-primary text-[0.85rem]">01</span>
+              <h4 className="font-display text-[1.6rem] tracking-[0.04em]">Colinha 40222</h4>
+            </div>
+            <p className="text-[0.86rem] leading-[1.8] text-muted-foreground mb-5">
+              Gerador de colinha eleitoral feito para a campanha da Dayse Amarilio. O eleitor
+              monta os seis votos na ordem da urna, buscando candidatos nos dados públicos do
+              TSE, e o 40222 já chega preenchido em destaque. Pensado para o celular, com tema
+              claro e escuro.
+            </p>
+            <div className="grid grid-cols-2 gap-3 mb-4">
+              {COLINHA_IMGS.map((img, i) => (
+                <Thumb
+                  key={i}
+                  src={img}
+                  alt={`Colinha 40222, tela ${i + 1}`}
+                  className="aspect-[4/5]"
+                  onClick={() => openLightbox(COLINHA_IMGS, i)}
+                />
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {["Landing Page", "UX Mobile", "Dados do TSE", "Campanha"].map((tag) => (
+                <span key={tag} className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <div className="flex items-baseline gap-4 mb-4">
+              <span className="font-serif italic text-primary text-[0.85rem]">02</span>
+              <h4 className="font-display text-[1.6rem] tracking-[0.04em]">Este portfólio</h4>
+            </div>
+            <p className="text-[0.86rem] leading-[1.8] text-muted-foreground mb-5">
+              O site que você está vendo. Desenhei e construí do zero, sem template: React,
+              TypeScript e Tailwind, animações em framer-motion, publicado na Vercel. A
+              estrutura parte de uma pergunta: quem chega aqui procura o quê? Por isso cada
+              habilidade virou uma porta de entrada própria.
+            </p>
+            <div className="grid grid-cols-2 gap-3 mb-4">
+              {PORTFOLIO_IMGS.map((img, i) => (
+                <Thumb
+                  key={i}
+                  src={img}
+                  alt={`Portfólio, tela ${i + 1}`}
+                  className="aspect-[16/10]"
+                  onClick={() => openLightbox(PORTFOLIO_IMGS, i)}
+                />
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {["Web Design", "React", "Tailwind", "Motion"].map((tag) => (
+                <span key={tag} className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </FadeIn>
 

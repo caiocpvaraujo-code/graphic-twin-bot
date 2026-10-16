@@ -15,6 +15,12 @@ const IncineLogo = () => (
   </div>
 );
 
+const DayseLogo = () => (
+  <div className="w-[72px] h-[72px] flex-shrink-0 flex items-center justify-center border border-primary/30 bg-primary/10">
+    <span className="font-display text-[1.25rem] text-primary leading-none tracking-[0.04em]">40222</span>
+  </div>
+);
+
 const GdfLogo = () => (
   <div className="w-[72px] h-[72px] flex-shrink-0 overflow-hidden">
     <img src={gdfLogo} alt="VGDF Logo" className="w-full h-full object-contain" />
@@ -60,8 +66,58 @@ const Curriculo = () => {
       subtitle="Cinco empresas. Dez anos de câmera na mão."
     >
 
-      {/* ── INCINE ── */}
+      {/* ── CAMPANHA DAYSE AMARILIO ── */}
       <FadeIn>
+        <div className="py-14 border-b border-border">
+          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-8">
+            <div className="flex items-start gap-5">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.85 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+                className="mt-1"
+              >
+                <DayseLogo />
+              </motion.div>
+              <div>
+                <div className="flex items-center gap-3 mb-1">
+                  <h2 className="font-display text-[clamp(2rem,5vw,5rem)] leading-[0.88] tracking-[0.02em]">
+                    Campanha Dayse Amarilio
+                  </h2>
+                  <span className="text-[0.6rem] tracking-[0.18em] uppercase bg-primary/20 text-primary border border-primary/30 px-2.5 py-1 rounded-sm self-center">
+                    Eleita
+                  </span>
+                </div>
+                <p className="text-[0.85rem] text-muted-foreground tracking-[0.04em]">
+                  Editor de Vídeo e Redator · Comunicação política
+                </p>
+              </div>
+            </div>
+            <div className="text-left md:text-right flex-shrink-0">
+              <p className="font-serif italic text-[1.05rem] text-warm">ago a out 2026</p>
+              <p className="text-[0.8rem] text-muted-foreground tracking-[0.06em] mt-0.5">Brasília, DF</p>
+            </div>
+          </div>
+
+          <p className="text-[0.9rem] leading-[1.9] text-warm max-w-[720px] mb-6">
+            Fui editor de vídeo e redator da campanha da Dayse Amarilio (PSB), eleita deputada
+            distrital do DF. Em 53 dias, entreguei mais de 70 peças: cortes de discurso e
+            entrevista, motion de mobilização, vídeo de humor, Status de WhatsApp, roteiro e
+            legenda. Campanha não tem segunda chance de lançamento, então o ritmo era o de uma
+            redação, com tudo dentro da lei eleitoral.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {["Edição de Vídeo", "Motion", "Roteiro", "Humor e Meme", "Comunicação Política"].map((tag) => (
+              <span key={tag} className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </FadeIn>
+
+      {/* ── INCINE ── */}
+      <FadeIn delay={0.1}>
         <div className="py-14 border-b border-border">
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-8">
             <div className="flex items-start gap-5">
@@ -78,9 +134,6 @@ const Curriculo = () => {
                   <h2 className="font-display text-[clamp(2rem,5vw,5rem)] leading-[0.88] tracking-[0.02em]">
                     Incine Comunicação
                   </h2>
-                  <span className="text-[0.6rem] tracking-[0.18em] uppercase bg-primary/20 text-primary border border-primary/30 px-2.5 py-1 rounded-sm self-center">
-                    Atual
-                  </span>
                 </div>
                 <p className="text-[0.85rem] text-muted-foreground tracking-[0.04em]">
                   Redator de Conteúdo e Copywriter · Comunicação política
@@ -88,15 +141,15 @@ const Curriculo = () => {
               </div>
             </div>
             <div className="text-left md:text-right flex-shrink-0">
-              <p className="font-serif italic text-[1.05rem] text-warm">desde 2026</p>
+              <p className="font-serif italic text-[1.05rem] text-warm">jun a ago 2026</p>
               <p className="text-[0.8rem] text-muted-foreground tracking-[0.06em] mt-0.5">Brasília, DF</p>
             </div>
           </div>
 
           <p className="text-[0.9rem] leading-[1.9] text-warm max-w-[720px] mb-6">
-            Trabalho com três pré-candidatos do Distrito Federal, cuidando do conteúdo de
+            Trabalhei com três pré-candidatos do Distrito Federal, cuidando do conteúdo de
             redes: roteiro de vídeo e Reels, copy de carrossel, legenda de post. Também
-            assino o design das peças estáticas e edito os vídeos curtos, misturando
+            assinei o design das peças estáticas e editei os vídeos curtos, misturando
             geração por IA com o acervo da própria agência. Porque quando todo mundo usa
             o mesmo banco de imagem, todo mundo entrega a mesma peça.
           </p>

@@ -39,13 +39,16 @@ const Sobre = () => {
                 no mesmo pacote.
               </p>
               <p className="text-base leading-[1.9] text-warm">
-                Hoje sou{" "}
+                Acabei de sair da{" "}
                 <strong className="text-foreground font-medium">
-                  redator e copywriter na Incine Comunicação
+                  campanha da Dayse Amarilio (PSB), eleita deputada distrital
                 </strong>
-                , atuando com três pré-candidatos do Distrito Federal: roteiro de vídeo e
-                Reels, copy de carrossel, design das peças estáticas e edição de vídeos
-                curtos com criação por IA.
+                , onde fui editor de vídeo e redator. Antes, na{" "}
+                <strong className="text-foreground font-medium">Incine Comunicação</strong>,
+                escrevi e editei para três pré-candidatos do DF.{" "}
+                <strong className="text-foreground font-medium">
+                  Estou disponível para começar agora.
+                </strong>
               </p>
               <p className="text-base leading-[1.9] text-warm">
                 Antes disso, na{" "}
