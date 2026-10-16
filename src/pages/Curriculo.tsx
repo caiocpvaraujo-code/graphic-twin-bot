@@ -1,23 +1,21 @@
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
 import FadeIn from "@/components/FadeIn";
 import gdfLogo from "@/assets/work-gdf-logo.jpg";
-import workVivo from "@/assets/work-vivo-1.jpg";
-import workVivo2 from "@/assets/work-vivo-2.jpg";
-import workTarea from "@/assets/work-tarea-1.jpg";
 import logoVivo from "@/assets/logo-vivo.jpeg";
 import logoTarea from "@/assets/logo-tarea.png";
 import logoUnb from "@/assets/logo-unb.jpeg";
 
 const IncineLogo = () => (
-  <div className="w-[72px] h-[72px] flex-shrink-0 flex items-center justify-center border border-primary/30 bg-primary/10">
-    <span className="font-display text-[1.6rem] text-primary leading-none tracking-[0.04em]">IN</span>
+  <div className="w-[72px] h-[72px] flex-shrink-0 overflow-hidden">
+    <img src="/img/logos/incine.png" alt="Incine Comunicação" className="w-full h-full object-cover" />
   </div>
 );
 
 const DayseLogo = () => (
-  <div className="w-[72px] h-[72px] flex-shrink-0 flex items-center justify-center border border-primary/30 bg-primary/10">
-    <span className="font-display text-[1.25rem] text-primary leading-none tracking-[0.04em]">40222</span>
+  <div className="w-[72px] h-[72px] flex-shrink-0 overflow-hidden bg-white">
+    <img src="/img/logos/dayse.png" alt="Dayse Amarilio 40222" className="w-full h-full object-contain" />
   </div>
 );
 
@@ -45,6 +43,74 @@ const UnbLogo = () => (
   </div>
 );
 
+
+/* ─── Case board ─── */
+const BoardCard = ({ src, alt, onOpen }: { src: string; alt: string; onOpen: () => void }) => (
+  <button onClick={onOpen} className="group mt-10 block w-full text-left" aria-label={`Ampliar ${alt}`}>
+    <p className="text-[0.65rem] tracking-[0.18em] uppercase text-muted-foreground mb-3">
+      Case board · clique para ampliar
+    </p>
+    <div className="img-frame overflow-hidden border border-border">
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        className="w-full h-auto block transition-transform duration-700 group-hover:scale-[1.015]"
+      />
+    </div>
+  </button>
+);
+
+const BoardModal = ({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) => {
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", handler);
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", handler);
+      document.body.style.overflow = "";
+    };
+  }, [onClose]);
+
+  return (
+    <motion.div
+      className="fixed inset-0 z-[600] flex items-center justify-center p-4 md:p-10"
+      style={{ background: "rgba(0,0,0,0.94)" }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.2 }}
+      onClick={onClose}
+    >
+      <button
+        onClick={onClose}
+        className="absolute top-4 right-4 w-11 h-11 flex items-center justify-center text-white/60 hover:text-white transition-colors duration-200"
+        aria-label="Fechar"
+      >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <img
+        src={src}
+        alt={alt}
+        className="max-w-full max-h-full object-contain"
+        onClick={(e) => e.stopPropagation()}
+      />
+    </motion.div>
+  );
+};
+
+const BOARDS = {
+  dayse: { src: "/img/boards/dayse.jpg", alt: "Case board da campanha Dayse Amarilio 40222" },
+  incine: { src: "/img/boards/incine.jpg", alt: "Case board da Incine Comunicação" },
+  vgdf: { src: "/img/boards/vgdf.jpg", alt: "Case board da Vice-Governadoria do DF" },
+  vivo: { src: "/img/boards/vivo.jpg", alt: "Case board da Vivo" },
+  tarea: { src: "/img/boards/tarea.jpg", alt: "Case board da Tarea" },
+};
+type BoardKey = keyof typeof BOARDS;
+
 /* ─── Education ─── */
 const education = [
   {
@@ -59,6 +125,8 @@ const education = [
 ];
 
 const Curriculo = () => {
+  const [board, setBoard] = useState<BoardKey | null>(null);
+
   return (
     <PageLayout
       eyebrow="02 · Currículo"
@@ -113,6 +181,7 @@ const Curriculo = () => {
               </span>
             ))}
           </div>
+          <BoardCard {...BOARDS.dayse} onOpen={() => setBoard("dayse")} />
         </div>
       </FadeIn>
 
@@ -160,6 +229,7 @@ const Curriculo = () => {
               </span>
             ))}
           </div>
+          <BoardCard {...BOARDS.incine} onOpen={() => setBoard("incine")} />
         </div>
       </FadeIn>
 
@@ -207,6 +277,7 @@ const Curriculo = () => {
               </span>
             ))}
           </div>
+          <BoardCard {...BOARDS.vgdf} onOpen={() => setBoard("vgdf")} />
         </div>
       </FadeIn>
 
@@ -239,60 +310,22 @@ const Curriculo = () => {
             </div>
           </div>
 
-          {/* Sub-case 01 */}
-          <div className="mb-14">
-            <div className="flex items-baseline gap-4 mb-4">
-              <span className="font-serif italic text-primary text-[0.85rem]">01</span>
-              <h4 className="font-display text-[1.6rem] tracking-[0.04em]">Publicidade Externa offline e online</h4>
-            </div>
-            <p className="text-[0.86rem] leading-[1.8] text-muted-foreground max-w-[680px] mb-5">
-              Fiz peça para canal externo (post, story, banner) e ativação de marca
-            offline. Trabalhar dentro da identidade da maior telecom do país ensina uma
-            coisa rápido: a régua já existe e ela não se dobra ao seu gosto.
-            </p>
-            <a
-              href="https://caio-portifolio.my.canva.site/vivo"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="img-frame block"
-            >
-              <img src={workVivo} alt="Trabalho VIVO - Social Media" className="art aspect-video" />
-            </a>
-            <div className="flex flex-wrap gap-2 mt-4">
-              {["Social Media", "Copywriting", "Design", "Instagram"].map((tag) => (
-                <span key={tag} className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm">
-                  {tag}
-                </span>
-              ))}
-            </div>
+          {/* Descrição */}
+          <p className="text-[0.9rem] leading-[1.9] text-warm max-w-[720px] mb-6">
+            Duas frentes na regional Centro-Oeste. Na publicidade, peça para canal externo (post,
+            story, banner) e ativação de marca offline, incluindo a campanha "Coração do Brasil" com
+            a Ana Castela. No endomarketing, logos para times regionais, mascote, uniforme, campanha
+            interna e infográfico. Trabalhar dentro da identidade da maior telecom do país ensina
+            uma coisa rápido: a régua já existe e ela não se dobra ao seu gosto.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {["Publicidade", "Endomarketing", "Branding", "Social Media"].map((tag) => (
+              <span key={tag} className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm">
+                {tag}
+              </span>
+            ))}
           </div>
-
-          {/* Sub-case 02 */}
-          <div className="mb-6">
-            <div className="flex items-baseline gap-4 mb-4">
-              <span className="font-serif italic text-primary text-[0.85rem]">02</span>
-              <h4 className="font-display text-[1.6rem] tracking-[0.04em]">Endomarketing & Identidade Interna</h4>
-            </div>
-            <p className="text-[0.86rem] leading-[1.8] text-muted-foreground max-w-[680px] mb-5">
-              Logo para time regional, peça de endomarketing, design de uniforme e
-            infográfico interno.
-            </p>
-            <a
-              href="https://caio-portifolio.my.canva.site/vivo"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="img-frame block"
-            >
-              <img src={workVivo2} alt="VIVO - Endomarketing" className="art aspect-video" />
-            </a>
-            <div className="flex flex-wrap gap-2 mt-4">
-              {["Endomarketing", "Branding", "Identidade Visual", "Infográficos"].map((tag) => (
-                <span key={tag} className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm">
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
+          <BoardCard {...BOARDS.vivo} onOpen={() => setBoard("vivo")} />
         </div>
       </FadeIn>
 
@@ -325,34 +358,21 @@ const Curriculo = () => {
             </div>
           </div>
 
-          {/* Sub-case 01 */}
-          <div className="mb-6">
-            <div className="flex items-baseline gap-4 mb-4">
-              <span className="font-serif italic text-primary text-[0.85rem]">01</span>
-              <h4 className="font-display text-[1.6rem] tracking-[0.04em]">Social media e endomarketing</h4>
-            </div>
-            <p className="text-[0.86rem] leading-[1.8] text-muted-foreground max-w-[680px] mb-5">
-              Construí o perfil institucional do zero: identidade visual, tom de voz, calendário
-              editorial e todos os formatos de conteúdo para vagas, cultura e posicionamento da marca.
-              Datas comemorativas, comunicados internos e kit completo de mídia para colaboradores:
-              assinatura de e-mail personalizada, crachá, thumbnail LinkedIn e fundo de tela.
-            </p>
-            <a
-              href="https://caio-portifolio.my.canva.site/tarea"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="img-frame block"
-            >
-              <img src={workTarea} alt="Trabalho TAREA" className="art aspect-video" />
-            </a>
-            <div className="flex flex-wrap gap-2 mt-4">
-              {["Endomarketing", "Branding", "Kit de Mídia"].map((tag) => (
-                <span key={tag} className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm">
-                  {tag}
-                </span>
-              ))}
-            </div>
+          {/* Descrição */}
+          <p className="text-[0.9rem] leading-[1.9] text-warm max-w-[720px] mb-6">
+            Construí o perfil institucional do zero: identidade visual, tom de voz, calendário
+            editorial e todos os formatos de conteúdo para vagas, cultura e posicionamento da marca.
+            Datas comemorativas, comunicados internos e kit completo de mídia para colaboradores:
+            assinatura de e-mail personalizada, crachá, thumbnail LinkedIn e fundo de tela.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {["Social Media", "Endomarketing", "Employer Branding", "Kit de Mídia"].map((tag) => (
+              <span key={tag} className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm">
+                {tag}
+              </span>
+            ))}
           </div>
+          <BoardCard {...BOARDS.tarea} onOpen={() => setBoard("tarea")} />
         </div>
       </FadeIn>
 
@@ -382,6 +402,10 @@ const Curriculo = () => {
           ))}
         </div>
       </FadeIn>
+
+      <AnimatePresence>
+        {board && <BoardModal {...BOARDS[board]} onClose={() => setBoard(null)} />}
+      </AnimatePresence>
     </PageLayout>
   );
 };

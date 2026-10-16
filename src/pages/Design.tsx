@@ -187,6 +187,11 @@ const BELAVIA_STORIES = [
   "/img/belavia/story-6.jpg",
 ];
 
+const VIVO_PUB = [1, 4, 5, 17, 18, 2].map((n) => `/img/vivo/vivo-${String(n).padStart(2, "0")}.jpg`);
+const VIVO_ENDO = [10, 11, 16, 19, 8, 13, 14, 3, 9, 15, 6, 7].map((n) => `/img/vivo/vivo-${String(n).padStart(2, "0")}.jpg`);
+const TAREA_REDES = [2, 6, 3, 7, 13, 12, 5, 11, 10, 8, 15, 1, 4].map((n) => `/img/tarea/tarea-${String(n).padStart(2, "0")}.jpg`);
+const TAREA_KIT = [16, 14, 9].map((n) => `/img/tarea/tarea-${String(n).padStart(2, "0")}.jpg`);
+
 const COLINHA_IMGS = ["/img/web/colinha-1.jpg", "/img/web/colinha-2.jpg"];
 const PORTFOLIO_IMGS = ["/img/web/portfolio-1.jpg", "/img/web/portfolio-2.jpg"];
 
@@ -421,7 +426,130 @@ const Design = () => {
         </div>
       </FadeIn>
 
-      {/* ══ Case 04 — WEB ══ */}
+      {/* ══ Case 04 — VIVO ══ */}
+      <FadeIn>
+        <div className="flex flex-col md:flex-row justify-between md:items-end border-b border-border pb-7 mb-14">
+          <div>
+            <h2 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.88] text-foreground">
+              Vivo
+            </h2>
+            <p className="text-[0.8rem] text-muted-foreground tracking-[0.06em] mt-1.5">
+              Telefônica Brasil · Estágio em marketing e comunicação
+            </p>
+          </div>
+          <div className="text-left md:text-right mt-4 md:mt-0">
+            <span className="text-[0.8rem] text-muted-foreground tracking-[0.06em]">Brasília, DF</span>
+            <p className="font-serif italic text-[1.05rem] text-warm mt-1">2024 a 2026</p>
+          </div>
+        </div>
+      </FadeIn>
+      <FadeIn delay={0.1}>
+        <p className="text-[0.9rem] leading-[1.9] text-warm max-w-[720px] mb-10">
+          Dentro da maior telecom do país a régua já existe: roxo, tipografia, tom. O trabalho
+          é fazer a peça regional caber nela e ainda parecer feita para quem vai ver. Na
+          publicidade, post, story e material de loja para o Centro-Oeste, incluindo a campanha
+          "Coração do Brasil" com a Ana Castela. No endomarketing, a régua afrouxa e dá para
+          brincar: logos para times regionais, mascote, uniforme e campanha interna.
+        </p>
+        <p className="text-[0.65rem] tracking-[0.18em] uppercase text-muted-foreground mb-4">
+          Publicidade · clique para ampliar
+        </p>
+        <div className="columns-2 md:columns-4 gap-3 mb-10 [&>*]:mb-3">
+          {VIVO_PUB.map((img, i) => (
+            <Thumb
+              key={img}
+              src={img}
+              alt={`Vivo, publicidade ${i + 1}`}
+              className="break-inside-avoid"
+              onClick={() => openLightbox(VIVO_PUB, i)}
+            />
+          ))}
+        </div>
+        <p className="text-[0.65rem] tracking-[0.18em] uppercase text-muted-foreground mb-4">
+          Endomarketing e marcas internas
+        </p>
+        <div className="columns-2 md:columns-4 gap-3 mb-10 [&>*]:mb-3">
+          {VIVO_ENDO.map((img, i) => (
+            <Thumb
+              key={img}
+              src={img}
+              alt={`Vivo, endomarketing ${i + 1}`}
+              className="break-inside-avoid"
+              onClick={() => openLightbox(VIVO_ENDO, i)}
+            />
+          ))}
+        </div>
+        <div className="flex flex-wrap gap-2 mb-16">
+          {["Direção de Arte", "Publicidade", "Endomarketing", "Branding"].map((tag) => (
+            <span key={tag} className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </FadeIn>
+
+      {/* ══ Case 05 — TAREA ══ */}
+      <FadeIn>
+        <div className="flex flex-col md:flex-row justify-between md:items-end border-b border-border pb-7 mb-14">
+          <div>
+            <h2 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.88] text-foreground">
+              Tarea
+            </h2>
+            <p className="text-[0.8rem] text-muted-foreground tracking-[0.06em] mt-1.5">
+              Tarea Management · Estágio em marketing
+            </p>
+          </div>
+          <div className="text-left md:text-right mt-4 md:mt-0">
+            <span className="text-[0.8rem] text-muted-foreground tracking-[0.06em]">Brasília, DF</span>
+            <p className="font-serif italic text-[1.05rem] text-warm mt-1">2023 a 2024</p>
+          </div>
+        </div>
+      </FadeIn>
+      <FadeIn delay={0.1}>
+        <p className="text-[0.9rem] leading-[1.9] text-warm max-w-[720px] mb-10">
+          A Tarea não tinha perfil institucional. Montei a presença do zero, com laranja e azul
+          marinho tirados da marca, fotografia de gente de verdade e um card de texto que se
+          repete como assinatura visual. O feed fala com dois públicos ao mesmo tempo: quem já
+          trabalha lá e quem ainda pode vir a trabalhar.
+        </p>
+        <p className="text-[0.65rem] tracking-[0.18em] uppercase text-muted-foreground mb-4">
+          Redes sociais · clique para ampliar
+        </p>
+        <div className="columns-2 md:columns-4 gap-3 mb-10 [&>*]:mb-3">
+          {TAREA_REDES.map((img, i) => (
+            <Thumb
+              key={img}
+              src={img}
+              alt={`Tarea, peça ${i + 1}`}
+              className="break-inside-avoid"
+              onClick={() => openLightbox(TAREA_REDES, i)}
+            />
+          ))}
+        </div>
+        <p className="text-[0.65rem] tracking-[0.18em] uppercase text-muted-foreground mb-4">
+          Kit do colaborador · assinatura, capa e fundo de tela
+        </p>
+        <div className="columns-1 md:columns-3 gap-3 mb-10 [&>*]:mb-3">
+          {TAREA_KIT.map((img, i) => (
+            <Thumb
+              key={img}
+              src={img}
+              alt={`Tarea, kit ${i + 1}`}
+              className="break-inside-avoid"
+              onClick={() => openLightbox(TAREA_KIT, i)}
+            />
+          ))}
+        </div>
+        <div className="flex flex-wrap gap-2 mb-16">
+          {["Direção de Arte", "Social Media", "Employer Branding", "Identidade"].map((tag) => (
+            <span key={tag} className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </FadeIn>
+
+      {/* ══ Case 06 — WEB ══ */}
       <FadeIn>
         <div className="flex flex-col md:flex-row justify-between md:items-end border-b border-border pb-7 mb-14">
           <div>

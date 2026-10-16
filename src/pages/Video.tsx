@@ -61,13 +61,13 @@ const DAYSE_VIDEOS = [
   },
   {
     key: "concursos",
-    kind: "Corte",
+    kind: "Corte vertical",
     title: "Concursos no DF",
-    subtitle: "Um dos dez cortes temáticos tirados de uma live longa sobre concursos.",
-    tags: ["Corte", "Entrevista", "Transcrição"],
+    subtitle: "A live sobre concursos reeditada para o celular: entrevistador em cima, Dayse embaixo.",
+    tags: ["Corte", "Formato 9:16", "Entrevista"],
     src: "/videos/dayse-concursos.mp4",
     poster: "/videos/poster-dayse-concursos.jpg",
-    what: "Transcrevi a live inteira e marquei os trechos que se sustentam sozinhos. Saíram dez cortes temáticos. Neste, a Dayse conta que veio de escola pública para defender prova perto de casa.",
+    what: "Transcrevi a live inteira e escolhi os trechos que se sustentam sozinhos. Depois reeditei a conversa em 9:16, empilhando os dois rostos, para que funcionasse no feed sem perder nem a pergunta nem a resposta. Da mesma transcrição saíram ainda dez cortes temáticos.",
   },
 ];
 
