@@ -1,5 +1,6 @@
 {
   "rewrites": [
+    { "source": "/colinha", "destination": "/colinha/index.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

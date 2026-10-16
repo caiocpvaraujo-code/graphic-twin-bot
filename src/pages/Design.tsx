@@ -591,6 +591,15 @@ const Design = () => {
                 />
               ))}
             </div>
+            <a
+              href="/colinha"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 mb-5 text-[0.72rem] tracking-[0.14em] uppercase hover:bg-accent transition-colors duration-300"
+            >
+              Ver funcionando
+              <span aria-hidden="true">↗</span>
+            </a>
             <div className="flex flex-wrap gap-2">
               {["Landing Page", "UX Mobile", "Dados do TSE", "Campanha"].map((tag) => (
                 <span key={tag} className="bg-primary/10 border border-primary/20 text-amber text-[0.62rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-sm">

@@ -1,0 +1,1621 @@
+<!doctype html>
+<html lang="pt-BR" data-tema="claro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Colinha 40222 · Dayse Amarilio</title>
+<meta name="description" content="Monte sua colinha para as Eleições 2026 no DF, na ordem da urna. Propaganda eleitoral de Dayse Amarilio, Deputada Distrital, PSB 40222.">
+<meta name="theme-color" content="#F6F6F4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;700;800&family=Atkinson+Hyperlegible+Next:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   TOKENS
+   Marca: amarelo #FFD400 + ciano #00AEEF sobre preto.
+   [COMPLETAR] conferir com o manual da campanha.
+========================================================= */
+:root{
+  --sans:"Atkinson Hyperlegible Next",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"Atkinson Hyperlegible Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  --amarelo:#FFD400; --ciano:#00AEEF; --marca-tinta:#0B1B2B;
+  --t-rapido:.14s; --t-base:.22s; --t-lento:.38s;
+  --e-sai:cubic-bezier(.2,.7,.25,1); --e-mola:cubic-bezier(.16,1,.3,1); --e-pula:cubic-bezier(.2,.9,.3,1.12);
+}
+:root,[data-tema="escuro"]{
+  --bg:#070708; --card:#111113; --card-2:#19191c; --linha:#26262a; --dash:#44444a;
+  --texto:#F4F4F5; --muted:#A1A1AA; --faint:#71717A;
+  --tile-bg:#0b0b0c; --tile-linha:#46464d; --anel:rgba(255,255,255,.22); --hover:rgba(255,255,255,.04);
+  --botao-bg:#F4F4F5; --botao-tx:#0a0a0a; --sombra:0 18px 40px rgba(0,0,0,.45);
+  color-scheme:dark;
+}
+[data-tema="claro"]{
+  --bg:#F6F6F4; --card:#FFFFFF; --card-2:#F1F1EE; --linha:#E4E4E1; --dash:#C9C9C5;
+  --texto:#111111; --muted:#555555; --faint:#767676;
+  --tile-bg:#FFFFFF; --tile-linha:#CFCFCB; --anel:rgba(17,17,17,.2); --hover:rgba(17,17,17,.04);
+  --botao-bg:#111111; --botao-tx:#FFFFFF; --sombra:0 14px 32px rgba(17,17,17,.10);
+  color-scheme:light;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0}
+body{background:var(--bg);color:var(--texto);font:400 16px/1.45 var(--sans);-webkit-text-size-adjust:100%;overflow-x:hidden;transition:background var(--t-lento) var(--e-sai),color var(--t-lento) var(--e-sai)}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+h1,h2,h3,p{margin:0}
+[hidden]{display:none !important}
+:focus-visible{outline:2px solid var(--ciano);outline-offset:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+svg{flex:none}
+
+/* =========================================================
+   MOVIMENTO
+========================================================= */
+@keyframes celaEntra{0%{transform:scale(.6) translateY(4px)}55%{transform:scale(1.1)}to{transform:none}}
+@keyframes cursor{50%{border-color:var(--dash)}}
+@keyframes dobra{0%{opacity:0;transform:perspective(1200px) rotateX(-80deg) scaleY(.35);filter:brightness(1.35)}46%{opacity:1;transform:perspective(1200px) rotateX(12deg) scaleY(1.04)}74%{transform:perspective(1200px) rotateX(-4deg)}to{transform:none;filter:none}}
+@keyframes pulso{0%{box-shadow:0 0 0 0 var(--anel)}30%{box-shadow:0 0 0 5px var(--anel)}to{box-shadow:0 0 0 0 transparent}}
+@keyframes sobe{0%{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes aparece{0%{opacity:0}to{opacity:1}}
+@keyframes linhaEntra{0%{transform:scaleX(.15);opacity:0}to{transform:scaleX(1);opacity:1}}
+@keyframes brilho{0%{transform:translateX(-140%) skewX(-18deg)}55%,to{transform:translateX(440%) skewX(-18deg)}}
+@keyframes treme{0%,to{transform:none}20%{transform:translateX(-6px)}40%{transform:translateX(5px)}60%{transform:translateX(-3px)}80%{transform:translateX(2px)}}
+@keyframes pisca{to{visibility:hidden}}
+@keyframes selo{0%{transform:scale(.4) rotate(-12deg);opacity:0}60%{transform:scale(1.08) rotate(3deg);opacity:1}to{transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}}
+
+/* =========================================================
+   TOPO + PROGRESSO
+========================================================= */
+.topo{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.topo-in{max-width:560px;margin:0 auto;padding:12px 16px 10px;display:flex;align-items:center;gap:10px}
+.marca{display:flex;align-items:center;gap:10px;background:none;border:0;padding:0;color:inherit;min-width:0;flex:1;text-align:left}
+.marca-num{font:800 17px/1 var(--mono);letter-spacing:.04em;background:var(--amarelo);color:var(--marca-tinta);padding:8px 9px;border-radius:10px}
+.marca-txt{min-width:0;line-height:1.1}
+.marca-txt b{display:block;font-weight:800;font-size:18px;letter-spacing:-.01em}
+.marca-txt small{display:block;font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.icone-bt{width:44px;height:44px;border-radius:14px;border:1px solid var(--linha);background:var(--card);display:grid;place-items:center;transition:transform var(--t-rapido) var(--e-sai),background var(--t-rapido)}
+.icone-bt:active{transform:scale(.94)}
+.icone-bt svg{width:20px;height:20px}
+.progresso{max-width:560px;margin:0 auto;padding:0 16px 10px;display:grid;grid-template-columns:repeat(6,1fr);gap:5px}
+.progresso span{height:5px;border-radius:9px;background:var(--linha);overflow:hidden;position:relative}
+.progresso span::after{content:"";position:absolute;inset:0;background:var(--texto);transform:scaleX(0);transform-origin:left;transition:transform var(--t-lento) var(--e-mola)}
+.progresso span.ok::after{transform:scaleX(1)}
+.progresso span.fixo::after{background:var(--amarelo);transform:scaleX(1)}
+
+/* =========================================================
+   HOME
+========================================================= */
+main{max-width:560px;margin:0 auto;padding:18px 16px 40px}
+.hero{text-align:center;padding:10px 0 22px;animation:sobe .5s var(--e-mola) both}
+.kicker{font:700 11px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+.hero h1{font-size:34px;font-weight:800;letter-spacing:-.025em;margin-top:12px;line-height:1.05}
+.hero p{margin-top:10px;color:var(--muted);font-size:15px}
+.oficial{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:12px;color:var(--muted);border:1px solid var(--linha);border-radius:99px;padding:5px 11px}
+.oficial i{width:6px;height:6px;border-radius:50%;background:var(--ciano)}
+.secao{display:flex;align-items:center;gap:12px;margin:22px 0 12px;font:700 12px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.secao::after{content:"";flex:1;height:1px;background:var(--linha);transform-origin:left;animation:linhaEntra .7s var(--e-mola) both}
+.cargos{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.cargo{background:var(--card);border:1px solid var(--linha);border-radius:20px;padding:16px;position:relative;transition:border-color var(--t-rapido) var(--e-sai),background var(--t-base) var(--e-sai);animation:sobe .45s var(--e-mola) both}
+.cargo:hover{border-color:var(--dash)}
+.cargo.entrou{animation:dobra .62s var(--e-sai) both,pulso .9s .5s var(--e-sai)}
+.cargo.erro .celas{animation:treme .38s var(--e-sai)}
+.cargo-linha{display:flex;align-items:center;gap:10px}
+.cargo-tit{flex:1;min-width:0;text-align:left;background:none;border:0;padding:0}
+.cargo-tit b{display:block;font-size:16px;font-weight:700;line-height:1.2}
+.cargo-tit small{display:block;margin-top:4px;font-size:13px;color:var(--muted)}
+.celas{position:relative;display:flex;gap:5px;flex:none;cursor:text;border-radius:10px}
+.cela{width:30px;height:42px;border:1.5px dashed var(--dash);border-radius:9px;display:grid;place-items:center;font:700 22px/1 var(--mono);color:var(--texto);transition:border-color var(--t-rapido),background var(--t-rapido)}
+.cela.cheia{border-style:solid;border-color:var(--tile-linha);background:var(--tile-bg)}
+.cela.pop{animation:celaEntra .32s var(--e-sai)}
+.celas:focus-within .cela.atual{border-style:solid;border-color:var(--texto);animation:cursor 1s steps(1) infinite}
+.celas-in{position:absolute;inset:0;width:100%;height:100%;opacity:0;border:0;padding:0;margin:0;font-size:16px;caret-color:transparent;cursor:text}
+.lupa{flex:none;width:42px;height:42px;border-radius:13px;border:1px solid var(--linha);background:var(--card-2);display:grid;place-items:center;transition:transform var(--t-rapido) var(--e-sai)}
+.lupa:active{transform:scale(.92)}
+.lupa svg{width:19px;height:19px}
+.cargo-msg{margin-top:10px;font-size:13px;color:#FF8A7A;animation:aparece .2s}
+[data-tema="claro"] .cargo-msg{color:#B42318}
+
+/* cargo preenchido */
+.escolha{width:100%;display:grid;grid-template-columns:58px minmax(0,1fr) 52px;gap:12px;align-items:center;background:none;border:0;padding:0;text-align:center}
+.foto{position:relative;width:58px;height:76px;border-radius:11px;overflow:hidden;background:var(--card-2);display:grid;place-items:center;font:700 17px var(--sans);color:var(--muted)}
+.foto::before{content:attr(data-ini)}
+.foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:var(--card-2)}
+.rot{display:block;font-size:12px;color:var(--muted);margin-bottom:7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tiles{display:inline-flex;gap:5px;justify-content:center}
+.tile{width:30px;height:40px;border:1.5px solid var(--tile-linha);border-radius:9px;background:var(--tile-bg);display:grid;place-items:center;font:700 22px/1 var(--mono)}
+.entrou .tile{animation:celaEntra .34s var(--e-sai) both}
+.tile.vazio{border-style:dashed;border-color:var(--dash);background:none}
+.tile.apagado{color:var(--faint)}
+.tecla-branco{display:inline-grid;place-items:center;height:40px;padding:0 16px;border-radius:8px;background:#F7F7F2;color:#111;font:700 15px var(--mono);letter-spacing:.08em;box-shadow:0 3px 0 #9a9a94}
+.fio{height:1px;margin:8px auto 0;width:80%;background:linear-gradient(90deg,transparent,var(--linha),transparent)}
+.nome{display:block;margin-top:7px;font-size:14px;font-weight:700;letter-spacing:.02em;line-height:1.2;overflow-wrap:anywhere}
+.partido small.longa{font-size:8.5px;letter-spacing:0}
+.partido small{display:block;margin-top:6px;font-size:10.5px;font-weight:700;color:var(--muted);letter-spacing:.04em;overflow-wrap:anywhere;line-height:1.1}
+.selo-p{width:48px;height:48px;margin:0 auto;border-radius:13px;background:var(--card-2);border:1px solid var(--linha);display:grid;place-items:center;font:800 18px var(--mono)}
+.trocar{position:absolute;top:12px;right:12px;color:var(--faint);display:flex}
+.trocar svg{width:16px;height:16px}
+
+/* Deputada Distrital: fixa e em destaque */
+.cargo.fixo{background:var(--amarelo);border:0;color:var(--marca-tinta);padding:18px 18px 16px;overflow:hidden}
+.cargo.fixo::before{content:"";position:absolute;left:0;top:0;bottom:0;width:7px;background:var(--ciano)}
+.fixo-topo{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.fixo-rot{font:700 11px/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.cadeado{display:inline-flex;align-items:center;gap:5px;background:var(--marca-tinta);color:var(--amarelo);font:700 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;padding:6px 9px;border-radius:99px;animation:selo .6s .5s var(--e-pula) both}
+.cadeado svg{width:12px;height:12px}
+.fixo-corpo{display:flex;align-items:center;gap:14px;margin-top:14px}
+.fixo-foto{width:68px;height:90px;border-radius:12px;object-fit:cover;flex:none;background:rgba(11,27,43,.1);border:2px solid var(--marca-tinta)}
+.fixo-nome{display:block;font-size:22px;font-weight:800;letter-spacing:.01em;line-height:1.1}
+.fixo-part{display:block;margin-top:5px;font-size:14px;font-weight:500}
+.fixo .tiles{margin-top:16px;gap:8px;display:flex;justify-content:flex-start}
+.fixo .tile{width:52px;height:66px;border-radius:13px;background:var(--marca-tinta);border-color:var(--marca-tinta);color:var(--amarelo);font-size:36px}
+.fixo .tile:nth-child(1){animation:celaEntra .4s .15s var(--e-sai) both}
+.fixo .tile:nth-child(2){animation:celaEntra .4s .22s var(--e-sai) both}
+.fixo .tile:nth-child(3){animation:celaEntra .4s .29s var(--e-sai) both}
+.fixo .tile:nth-child(4){animation:celaEntra .4s .36s var(--e-sai) both}
+.fixo .tile:nth-child(5){animation:celaEntra .4s .43s var(--e-sai) both}
+.fixo-nota{margin-top:14px;font-size:13px;font-weight:500}
+
+/* ações da home */
+.acoes-home{display:grid;gap:10px;margin-top:26px}
+.bt{min-height:54px;border-radius:16px;border:1px solid var(--linha);background:var(--card);font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;gap:9px;padding:12px 16px;transition:transform var(--t-rapido) var(--e-sai),background var(--t-rapido),opacity var(--t-rapido);position:relative;overflow:hidden;text-align:center;line-height:1.15}
+.bt:active{transform:scale(.97)}
+.bt svg{width:20px;height:20px}
+.bt-principal{background:var(--botao-bg);color:var(--botao-tx);border-color:var(--botao-bg)}
+.bt-marca{background:var(--amarelo);color:var(--marca-tinta);border-color:var(--amarelo)}
+.bt-brilho::after{content:"";position:absolute;top:0;bottom:0;left:0;width:30%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);animation:brilho 3.6s 1.2s var(--e-sai) infinite}
+.bt:disabled{opacity:.4;cursor:not-allowed}
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.linha-link{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:var(--card);border:1px solid var(--linha);border-radius:18px;padding:16px;transition:border-color var(--t-rapido),transform var(--t-rapido) var(--e-sai)}
+.linha-link:active{transform:scale(.985)}
+.linha-link b{display:block;font-size:16px}
+.linha-link small{display:block;color:var(--muted);font-size:13px;margin-top:3px}
+.linha-link .seta{margin-left:auto;color:var(--faint);font-size:22px}
+.linha-link .ic{width:42px;height:42px;border-radius:12px;background:var(--card-2);display:grid;place-items:center;flex:none}
+.linha-link .ic svg{width:20px;height:20px}
+
+.rodape{margin-top:36px;padding-top:18px;border-top:1px solid var(--linha);font-size:12.5px;color:var(--muted);display:grid;gap:8px}
+.rodape .assina{font-size:14px;color:var(--texto)}
+.rodape .assina b{font-weight:800}
+.rodape .legal{color:var(--texto);font-weight:700}
+
+/* =========================================================
+   GAVETA DE BUSCA
+========================================================= */
+.gaveta-fundo{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.6);opacity:0;transition:opacity var(--t-lento) var(--e-sai)}
+.gaveta-fundo.aberta{opacity:1}
+.gaveta{position:fixed;left:0;right:0;bottom:0;z-index:51;margin:0 auto;max-width:560px;height:94dvh;background:var(--bg);border:1px solid var(--linha);border-bottom:0;border-radius:24px 24px 0 0;display:flex;flex-direction:column;transform:translateY(102%);transition:transform .5s var(--e-mola);overflow:hidden;box-shadow:var(--sombra)}
+.gaveta.aberta{transform:none}
+.gaveta-alca{width:40px;height:5px;border-radius:9px;background:var(--dash);margin:8px auto 0;flex:none}
+.gaveta-topo{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;padding:8px 14px 6px;flex:none}
+.gaveta-topo h2{text-align:center;font-size:18px;font-weight:700}
+.fechar{width:44px;height:44px;border-radius:50%;border:0;background:var(--card-2);display:grid;place-items:center}
+.fechar svg{width:18px;height:18px}
+.busca{margin:8px 14px 0;position:relative;flex:none}
+.busca svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);width:19px;height:19px;color:var(--muted);pointer-events:none}
+.busca input{width:100%;height:52px;border-radius:16px;border:1px solid var(--linha);background:var(--card);padding:0 14px 0 44px;font-size:16px;outline:none;transition:border-color var(--t-rapido)}
+.busca input:focus{border-color:var(--texto)}
+.busca input::placeholder{color:var(--faint)}
+.filtros{display:flex;gap:8px;padding:10px 14px 0;flex:none;overflow-x:auto;scrollbar-width:none}
+.chip{flex:none;height:42px;border-radius:13px;border:1px solid var(--linha);background:var(--card);padding:0 14px;display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:700;position:relative}
+.chip svg{width:16px;height:16px}
+.chip select{position:absolute;inset:0;opacity:0;width:100%;cursor:pointer;font-size:16px}
+.chip.ativo{border-color:var(--texto)}
+.conta{display:flex;justify-content:space-between;gap:8px;padding:12px 16px 8px;font:700 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--faint);flex:none}
+.lista{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:2px 14px 14px;overscroll-behavior:contain}
+.lista ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.cand{width:100%;display:grid;grid-template-columns:58px minmax(0,1fr) 52px;gap:12px;align-items:center;text-align:center;background:var(--card);border:1px solid var(--linha);border-radius:18px;padding:12px;transition:border-color var(--t-rapido),transform var(--t-rapido) var(--e-sai)}
+.cand:hover{border-color:var(--dash)}
+.cand:active{transform:scale(.985)}
+.cand.anima{animation:sobe .4s var(--e-mola) both}
+.cand:disabled{opacity:.42;cursor:not-allowed}
+.cand.escolhido{border-color:var(--texto)}
+.etiqueta{display:inline-block;margin-top:6px;font:700 10px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:4px 7px;border-radius:6px;background:var(--card-2);color:var(--muted)}
+.etiqueta.alerta{background:rgba(255,120,100,.12);color:#FF8A7A}
+[data-tema="claro"] .etiqueta.alerta{background:#FDECEA;color:#B42318}
+.nada{padding:40px 12px;text-align:center;color:var(--muted)}
+.gaveta-base{flex:none;border-top:1px solid var(--linha);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));gap:8px;background:var(--bg)}
+.base-bt{min-height:58px;border-radius:14px;border:1px solid var(--linha);background:var(--card);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;font-size:12.5px;font-weight:700;padding:6px}
+.base-bt .mini{display:flex;gap:3px}
+.base-bt .mini i{width:13px;height:17px;border:1.3px dashed var(--dash);border-radius:4px;font:700 11px/15px var(--mono);font-style:normal;text-align:center;color:var(--faint)}
+.base-bt .mini-branco{font:700 10px/1 var(--mono);background:#F7F7F2;color:#111;padding:4px 8px;border-radius:4px;letter-spacing:.06em}
+.limpar-cargo{grid-column:1/-1;background:none;border:0;color:var(--muted);text-decoration:underline;text-underline-offset:3px;min-height:34px;font-size:14px}
+
+/* ficha do candidato */
+.ficha{position:absolute;inset:0;background:var(--bg);z-index:3;display:flex;flex-direction:column;transform:translateX(104%);transition:transform .45s var(--e-mola)}
+.ficha.aberta{transform:none}
+.ficha-topo{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;padding:14px 14px 4px}
+.ficha-topo p{text-align:center;font:700 11px/1.4 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--faint)}
+.ficha-corpo{flex:1;overflow-y:auto;padding:14px 16px 20px}
+.ficha-cab{display:grid;grid-template-columns:104px minmax(0,1fr) 56px;gap:14px;align-items:start}
+.ficha-cab .foto{width:104px;height:136px;border-radius:16px;font-size:26px}
+.ficha-nome{font-size:22px;font-weight:800;line-height:1.1;overflow-wrap:anywhere}
+.ficha-info{margin-top:8px;font-size:14px;color:var(--muted);display:grid;gap:3px}
+.ficha-sit{margin-top:8px;font-size:13px;display:flex;align-items:center;gap:6px}
+.ficha-sit i{width:8px;height:8px;border-radius:50%;background:#34C759;flex:none}
+.ficha-sit.alerta i{background:#FF8A7A}
+.ficha .tiles{margin-top:22px;gap:8px}
+.ficha .tile{width:48px;height:62px;border-radius:12px;font-size:32px}
+.ficha .tile:nth-child(1){animation:celaEntra .36s .10s var(--e-sai) both}
+.ficha .tile:nth-child(2){animation:celaEntra .36s .16s var(--e-sai) both}
+.ficha .tile:nth-child(3){animation:celaEntra .36s .22s var(--e-sai) both}
+.ficha .tile:nth-child(4){animation:celaEntra .36s .28s var(--e-sai) both}
+.ficha .tile:nth-child(5){animation:celaEntra .36s .34s var(--e-sai) both}
+.ficha .bt{width:100%;margin-top:22px}
+.ficha-fonte{margin-top:22px;font-size:12px;color:var(--faint);line-height:1.6}
+
+/* =========================================================
+   PÁGINAS (passar cola, minhas colinhas, simulador)
+========================================================= */
+.pagina{position:fixed;inset:0;z-index:40;background:var(--bg);overflow-y:auto;transform:translateX(100%);transition:transform .45s var(--e-mola);visibility:hidden}
+.pagina.aberta{transform:none;visibility:visible}
+.pagina-topo{position:sticky;top:0;z-index:2;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.pagina-topo-in{max-width:560px;margin:0 auto;display:grid;grid-template-columns:44px 1fr 44px;align-items:center;padding:12px 16px}
+.pagina-topo h2{text-align:center;font-size:18px;font-weight:700}
+.pagina-corpo{max-width:560px;margin:0 auto;padding:8px 16px 48px}
+.previa{background:var(--card);border:1px solid var(--linha);border-radius:22px;padding:16px;display:flex;justify-content:center}
+.previa canvas{display:block;width:100%;max-width:330px;height:auto;border-radius:10px}
+.previa.stories canvas{max-width:240px}
+.grupo{margin-top:18px}
+.grupo > span{display:block;font:700 11px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:8px}
+.seg{display:grid;grid-template-columns:1fr 1fr;background:var(--card);border:1px solid var(--linha);border-radius:14px;padding:4px;gap:4px}
+.seg label{position:relative}
+.seg input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer}
+.seg span{display:flex;align-items:center;justify-content:center;min-height:42px;border-radius:10px;font-weight:700;font-size:15px;color:var(--muted);transition:background var(--t-base) var(--e-sai),color var(--t-base)}
+.seg input:checked + span{background:var(--botao-bg);color:var(--botao-tx)}
+.seg input:focus-visible + span{outline:2px solid var(--ciano)}
+.alterna{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px;background:var(--card);border:1px solid var(--linha);border-radius:14px;padding:12px 14px;font-weight:700;cursor:pointer}
+.alterna input{appearance:none;width:46px;height:28px;border-radius:99px;background:var(--dash);position:relative;cursor:pointer;transition:background var(--t-base);flex:none;margin:0}
+.alterna input::after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff;transition:transform var(--t-base) var(--e-pula)}
+.alterna input:checked{background:var(--amarelo)}
+.alterna input:checked::after{transform:translateX(18px)}
+.saidas{display:grid;gap:10px;margin-top:20px}
+.nota{font-size:13px;color:var(--muted);line-height:1.45}
+.link-manual{width:100%;height:46px;border-radius:12px;border:1px solid var(--linha);background:var(--card);padding:0 12px;font:13px var(--mono)}
+.salvas{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.salva{background:var(--card);border:1px solid var(--linha);border-radius:18px;padding:16px;animation:sobe .4s var(--e-mola) both}
+.salva-nome{font-size:17px;font-weight:800;overflow-wrap:anywhere}
+.salva-data{font-size:12.5px;color:var(--muted);margin-top:3px}
+.salva-nums{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.salva-nums span{font:700 13px/1 var(--mono);padding:6px 7px;border-radius:7px;border:1px solid var(--tile-linha);background:var(--tile-bg)}
+.salva-nums span.fixo{background:var(--amarelo);color:var(--marca-tinta);border-color:var(--amarelo)}
+.salva-nums span.vazio{border-style:dashed;border-color:var(--dash);color:var(--faint);background:none}
+.salva-acoes{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.salva-acoes .bt{min-height:42px;border-radius:12px;font-size:14px;padding:8px 14px}
+.renomear{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.renomear input{flex:1 1 150px;min-width:0;height:44px;border-radius:12px;border:1px solid var(--texto);background:var(--card-2);padding:0 12px;font-size:16px}
+.aviso{border:1px solid rgba(255,212,0,.4);background:rgba(255,212,0,.08);border-radius:14px;padding:12px 14px;font-size:13.5px;margin-bottom:14px}
+.vazio-bloco{border:1.5px dashed var(--dash);border-radius:18px;padding:30px 18px;text-align:center;color:var(--muted)}
+.vazio-bloco .bt{margin-top:14px;width:100%}
+
+/* simulador: urna */
+.sim-cola{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;background:var(--amarelo);color:var(--marca-tinta);border-radius:14px;padding:10px 14px;font-weight:700;font-size:14px;margin-bottom:12px}
+.sim-cola b{font:800 18px var(--mono)}
+.urna{background:#2a2a28;border-radius:16px;padding:12px;display:grid;gap:12px}
+.visor{background:#EFEFEA;color:#111;font-family:Arial,Helvetica,sans-serif;border:6px solid #111;border-radius:4px;min-height:300px;padding:10px 12px;display:flex;flex-direction:column}
+.v-topo{font-size:12px;font-weight:700;min-height:16px}
+.v-cargo{text-align:center;font-size:22px;font-weight:700;margin-top:6px}
+.v-vaga{text-align:center;font-size:13px;margin-bottom:6px;min-height:16px}
+.v-corpo{flex:1;display:flex;gap:10px}
+.v-dados{flex:1;min-width:0;display:flex;flex-direction:column;gap:8px}
+.v-num{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:14px}
+.v-cxs{display:inline-flex;gap:4px}
+.v-cx{width:30px;height:40px;border:1.5px solid #111;background:#fff;display:grid;place-items:center;font:700 26px Arial,Helvetica,sans-serif}
+.v-cx.atual{animation:pisca 1s steps(2,start) infinite}
+.v-linha{font-size:14px;overflow-wrap:anywhere}
+.v-linha b{font-size:16px}
+.v-grande{font-size:21px;font-weight:700}
+.v-pisca{animation:pisca 1.1s steps(2,start) infinite}
+.v-foto{flex:none;width:80px;text-align:center;font-size:11px}
+.v-foto .quadro{position:relative;width:80px;height:104px;border:1.5px solid #111;background:#D9D9D3;display:grid;place-items:center;font-size:26px;font-weight:700;overflow:hidden}
+.v-foto .quadro::before{content:attr(data-ini)}
+.v-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.v-rodape{border-top:1.5px solid #111;margin-top:10px;padding-top:6px;font-size:12px;line-height:1.35}
+.v-fim{flex:1;display:grid;place-items:center;font-size:96px;font-weight:700;letter-spacing:.04em}
+.v-votou{text-align:right;font-size:14px;font-weight:700;color:#666}
+.teclado-caixa{background:#1b1b1a;border-radius:10px;padding:12px}
+.teclado-selo{font:700 10px/1 var(--mono);letter-spacing:.16em;color:#8f8f8a;text-align:center;margin-bottom:10px}
+.teclado{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.tecla{border:0;border-radius:5px;background:#0e0e0e;color:#f5f5f5;font:700 26px Arial,Helvetica,sans-serif;min-height:54px;box-shadow:0 3px 0 #000;touch-action:manipulation;transition:transform .08s,box-shadow .08s}
+.tecla:active,.tecla.apertada{transform:translateY(3px);box-shadow:0 0 0 #000;filter:brightness(1.3)}
+.tecla.zero{grid-column:2}
+.teclas-acao{display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:8px;margin-top:12px;align-items:end}
+.teclas-acao .tecla{font-size:13px;color:#111;letter-spacing:.02em}
+.t-branco{background:#f7f7f2}
+.t-corrige{background:#e8712a}
+.t-confirma{background:#23a04e;min-height:68px}
+.sim-msg{min-height:22px;margin-top:10px;font-size:14px;font-weight:700;color:var(--amarelo)}
+[data-tema="claro"] .sim-msg{color:#8A5A00}
+.resumo{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:6px}
+.resumo li{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;background:var(--card);border:1px solid var(--linha);border-radius:12px;padding:10px 12px;font-size:14px}
+.resumo b{font-family:var(--mono)}
+@media (max-width:370px){
+  .escolha,.cand{grid-template-columns:50px minmax(0,1fr) 44px;gap:8px}
+  .foto{width:50px;height:66px;border-radius:9px}
+  .selo-p{width:42px;height:42px;font-size:16px;border-radius:11px}
+  .tile{width:26px;height:36px;font-size:19px;border-radius:8px}
+  .tiles{gap:4px}
+  .cela{width:27px;height:38px;font-size:19px}
+  .lupa{width:38px;height:38px}
+  .fixo .tile{width:46px;height:60px;font-size:32px}
+  .ficha-cab{grid-template-columns:86px minmax(0,1fr) 48px}
+  .ficha-cab .foto{width:86px;height:114px}
+}
+@media (min-width:760px){.urna{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);padding:16px}}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));z-index:90;transform:translate(-50%,24px);width:min(92vw,440px);background:var(--botao-bg);color:var(--botao-tx);padding:13px 16px;border-radius:14px;font-size:14px;font-weight:700;opacity:0;pointer-events:none;transition:opacity var(--t-base),transform var(--t-lento) var(--e-mola);box-shadow:var(--sombra)}
+.toast.ver{opacity:1;transform:translate(-50%,0)}
+.toast.erro{background:#B42318;color:#fff}
+
+/* =========================================================
+   IMPRESSÃO: cola de bolso
+========================================================= */
+#impressao{display:none}
+@media print{
+  @page{size:A4 portrait;margin:12mm}
+  html,body{background:#fff !important;color:#000}
+  body > *:not(#impressao){display:none !important}
+  #impressao{display:block}
+}
+.imp-aviso{font:11px Arial,Helvetica,sans-serif;color:#444;text-align:center;margin-bottom:4mm}
+.imp-folha{display:flex;gap:8mm;justify-content:center;flex-wrap:wrap}
+.imp-cola{width:82mm;border:1px dashed #000;border-radius:3mm;padding:3.5mm;font-family:var(--sans);color:#000;-webkit-print-color-adjust:exact;print-color-adjust:exact;break-inside:avoid}
+.imp-cab{display:flex;justify-content:space-between;align-items:baseline;gap:2mm;padding-bottom:2mm;border-bottom:.4mm solid #000}
+.imp-cab b{font-size:11pt;font-weight:800;white-space:nowrap}
+.imp-cab span{font:7pt var(--mono);text-align:right}
+.imp-linha{display:flex;align-items:center;gap:2mm;padding:1.8mm 1mm;border-bottom:.25mm solid #bbb}
+.imp-linha.fixo{background:#FFD400;border-radius:2mm;border-bottom:0;margin:1mm 0}
+.imp-ord{font:800 9pt var(--mono);width:4mm}
+.imp-txt{flex:1;min-width:0}
+.imp-txt b{display:block;font-size:7.5pt;text-transform:uppercase;letter-spacing:.04em}
+.imp-txt span{display:block;font-size:7pt}
+.imp-nums{display:flex;gap:.8mm}
+.imp-dig{width:5.2mm;height:6.8mm;border:.3mm solid #000;border-radius:1mm;background:#fff;display:grid;place-items:center;font:800 12pt var(--mono)}
+.imp-linha.fixo .imp-dig{background:#0B1B2B;color:#FFD400;border-color:#0B1B2B}
+.imp-rod{margin-top:2mm;font-size:6pt;line-height:1.35}
+.imp-rod b{font-size:6.5pt}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="topo-in">
+    <button class="marca" type="button" data-ir="home" aria-label="Início">
+      <span class="marca-num">40222</span>
+      <span class="marca-txt"><b>colinha</b><small>Dayse Amarilio · Deputada Distrital</small></span>
+    </button>
+    <button class="icone-bt" id="bt-tema" type="button" aria-label="Alternar tema claro e escuro"></button>
+  </div>
+  <div class="progresso" id="progresso" aria-hidden="true"><span></span><span class="fixo"></span><span></span><span></span><span></span><span></span></div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <p class="kicker">Eleições 2026 · 4 de outubro</p>
+    <h1>Monte sua colinha</h1>
+    <p>A urna pede seis votos, nesta ordem. Toque no cargo para buscar.</p>
+    <span class="oficial"><i></i>Não oficial · dados públicos do TSE</span>
+  </section>
+
+  <p class="secao">Distrito Federal · DF</p>
+  <ol class="cargos" id="cargos-df"></ol>
+  <p class="secao">Nacional</p>
+  <ol class="cargos" id="cargos-br"></ol>
+
+  <div class="acoes-home">
+    <button class="bt bt-principal" type="button" data-ir="passar" id="bt-passar"></button>
+    <div class="duas">
+      <button class="bt bt-brilho" type="button" id="bt-imprimir"></button>
+      <button class="bt" type="button" id="bt-salvar"></button>
+    </div>
+    <button class="linha-link" type="button" data-ir="minhas"><span class="ic" data-ic="pasta"></span><span><b>Minhas colinhas</b><small>Salvas neste aparelho, prontas para abrir ou passar.</small></span><span class="seta">›</span></button>
+    <button class="linha-link" type="button" data-ir="simulador"><span class="ic" data-ic="urna"></span><span><b>Simulador de votação</b><small>Sua colinha na urna, com as teclas e os sons.</small></span><span class="seta">›</span></button>
+  </div>
+
+  <footer class="rodape">
+    <p class="assina"><b>Dayse Amarilio</b> · Deputada Distrital · PSB · <b>40222</b></p>
+    <p class="legal" data-legal></p>
+    <p>Esta ferramenta <b>não é oficial</b> e não tem ligação com o Tribunal Superior Eleitoral (TSE). Candidatos, números, partidos e fotos vêm da base pública do TSE (DivulgaCandContas), consultada em <span data-extraido></span>. A lista aparece em ordem alfabética rotativa, sem destaque para ninguém.</p>
+    <p>Suas escolhas ficam só neste aparelho. Sem cadastro, sem rastreamento e sem envio para servidor.</p>
+  </footer>
+</main>
+
+<!-- ================= GAVETA DE BUSCA ================= -->
+<div class="gaveta-fundo" id="gaveta-fundo" hidden></div>
+<section class="gaveta" id="gaveta" role="dialog" aria-modal="true" aria-labelledby="gaveta-tit" hidden>
+  <div class="gaveta-alca"></div>
+  <div class="gaveta-topo">
+    <button class="fechar" type="button" data-fechar-gaveta aria-label="Fechar"></button>
+    <h2 id="gaveta-tit">Buscar</h2><span></span>
+  </div>
+  <label class="busca"><span class="sr">Buscar candidato</span><span data-ic="lupa"></span><input id="busca" type="search" placeholder="busque por nome ou número" autocomplete="off" enterkeyhint="search"></label>
+  <div class="filtros">
+    <span class="chip" id="chip-partido"><span id="chip-partido-tx">Partido</span><span data-ic="baixo"></span><select id="filtro-partido" aria-label="Filtrar por partido"></select></span>
+    <button class="chip" type="button" id="chip-ordem"><span data-ic="ordem"></span><span id="chip-ordem-tx">Alfabética rotativa</span></button>
+  </div>
+  <div class="conta"><span id="conta-n"></span><span id="conta-ordem"></span></div>
+  <div class="lista" id="lista"><ul id="lista-ul"></ul></div>
+  <div class="gaveta-base" id="gaveta-base"></div>
+
+  <div class="ficha" id="ficha" aria-live="polite">
+    <div class="ficha-topo"><button class="fechar" type="button" id="ficha-voltar" aria-label="Voltar para a lista"></button><p id="ficha-kicker"></p><span></span></div>
+    <div class="ficha-corpo" id="ficha-corpo"></div>
+  </div>
+</section>
+
+<!-- ================= PÁGINA: PASSAR COLA ================= -->
+<section class="pagina" id="pg-passar" aria-labelledby="tit-passar">
+  <div class="pagina-topo"><div class="pagina-topo-in"><button class="fechar" type="button" data-voltar aria-label="Voltar"></button><h2 id="tit-passar">Passar cola</h2><span></span></div></div>
+  <div class="pagina-corpo">
+    <div class="previa" id="previa-caixa"><canvas id="previa" width="1080" height="1350" role="img" aria-label="Prévia da arte da colinha"></canvas></div>
+    <p class="nota" id="passar-status" style="margin-top:12px;text-align:center"></p>
+    <div class="grupo"><span>Formato</span>
+      <div class="seg"><label><input type="radio" name="formato" value="post" checked><span>Post 4:5</span></label><label><input type="radio" name="formato" value="stories"><span>Stories 9:16</span></label></div></div>
+    <div class="grupo"><span>Tema</span>
+      <div class="seg"><label><input type="radio" name="tema" value="claro" checked><span>Claro</span></label><label><input type="radio" name="tema" value="escuro"><span>Escuro</span></label></div></div>
+    <div class="grupo"><span>Tipo</span>
+      <div class="seg"><label><input type="radio" name="tipo" value="estatica" checked><span>Imagem</span></label><label><input type="radio" name="tipo" value="animada"><span>Animada</span></label></div></div>
+    <label class="alterna">Ocultar cargos vazios <input type="checkbox" id="op-ocultar"></label>
+    <div class="saidas">
+      <button class="bt bt-marca" type="button" id="bt-compartilhar"></button>
+      <div class="duas"><button class="bt" type="button" id="bt-png"></button><button class="bt" type="button" id="bt-video"></button></div>
+      <p class="nota" id="nota-video"></p>
+      <button class="bt" type="button" id="bt-copiar"></button>
+      <input class="link-manual" id="link-manual" type="text" readonly hidden aria-label="Link da colinha">
+      <p class="nota">O link leva só os números, no próprio endereço. Nada vai para servidor. Na arte, a foto da Dayse é a oficial; as dos outros candidatos viram iniciais.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PÁGINA: MINHAS COLINHAS ================= -->
+<section class="pagina" id="pg-minhas" aria-labelledby="tit-minhas">
+  <div class="pagina-topo"><div class="pagina-topo-in"><button class="fechar" type="button" data-voltar aria-label="Voltar"></button><h2 id="tit-minhas">Minhas colinhas</h2><span></span></div></div>
+  <div class="pagina-corpo">
+    <p class="aviso" id="aviso-memoria" hidden>Este navegador não deixou salvar no aparelho. As colinhas ficam guardadas só enquanto esta página estiver aberta.</p>
+    <ul class="salvas" id="lista-salvas"></ul>
+  </div>
+</section>
+
+<!-- ================= PÁGINA: SIMULADOR ================= -->
+<section class="pagina" id="pg-simulador" aria-labelledby="tit-sim">
+  <div class="pagina-topo"><div class="pagina-topo-in"><button class="fechar" type="button" data-voltar aria-label="Voltar"></button><h2 id="tit-sim">Simulador de votação</h2><span></span></div></div>
+  <div class="pagina-corpo">
+    <div id="sim-intro">
+      <p class="nota" style="font-size:15px">Mesma ordem, mesmas teclas e os sons da urna. Aumente o volume.</p>
+      <div class="saidas">
+        <button class="bt bt-principal" type="button" id="sim-com-cola">Treinar com minha colinha</button>
+        <button class="bt" type="button" id="sim-zero">Começar do zero</button>
+      </div>
+      <p class="nota" style="margin-top:14px">Simulador não oficial, só para treino. Nenhum voto é registrado. No computador: números, Enter (confirma), Backspace (corrige) e B (branco).</p>
+    </div>
+    <div id="sim" hidden>
+      <div class="sim-cola" id="sim-cola"></div>
+      <div class="urna">
+        <div class="visor" id="visor" aria-live="polite"></div>
+        <div class="teclado-caixa">
+          <div class="teclado-selo">SIMULADOR · NÃO OFICIAL</div>
+          <div class="teclado" id="teclado"></div>
+          <div class="teclas-acao">
+            <button class="tecla t-branco" type="button" data-tecla="branco">BRANCO</button>
+            <button class="tecla t-corrige" type="button" data-tecla="corrige">CORRIGE</button>
+            <button class="tecla t-confirma" type="button" data-tecla="confirma">CONFIRMA</button>
+          </div>
+        </div>
+      </div>
+      <p class="sim-msg" id="sim-msg" role="status"></p>
+      <div id="sim-fim" hidden></div>
+    </div>
+  </div>
+</section>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div id="impressao" aria-hidden="true"></div>
+
+<script>
+/* =========================================================
+   DADOS OFICIAIS DO TSE · Eleição Geral Federal 2026 · DF
+   Fonte: DivulgaCandContas (divulgacandcontas.tse.jus.br),
+   endpoint /divulga/rest/v1/candidatura/listar/2026/{UE}/20322002026/{cargo}/candidatos
+   Extraído em 23/09/2026. Rodar de novo antes de publicar: registros mudam
+   (renúncias, julgamentos, substituições).
+   Formato compacto:
+     presidente/governador/senador: [idTSE, número, nome de urna, sigla, situação, coligação]
+     federal:                       [idTSE, número, nome de urna, sigla, situação]
+     distrital:                     [idTSE - 70002530000, número, nome de urna, situação]
+   Situação: D deferido · DR deferido com recurso · P pendente · IR indeferido com recurso
+             I indeferido · R renúncia · N pedido não conhecido
+========================================================= */
+window.TSE = {
+  eleicao: { id: 20322002026, ano: 2026, uf: 'DF', data: '2026-10-04', extraidoEm: '2026-09-23' },
+  foto: (id, ue) => `https://divulgacandcontas.tse.jus.br/divulga/rest/arquivo/img/20322002026/${id}/${ue}`,
+  partidos: {
+    'DC': [27, 'Democracia Cristã'], 'PCB': [21, 'Partido Comunista Brasileiro'], 'AVANTE': [70, 'Avante'],
+    'PL': [22, 'Partido Liberal'], 'PSTU': [16, 'Partido Socialista dos Trabalhadores Unificado'],
+    'PRTB': [28, 'Partido Renovador Trabalhista Brasileiro'], 'PT': [13, 'Partido dos Trabalhadores'],
+    'MISSÃO': [14, 'Partido Missão'], 'PSD': [55, 'Partido Social Democrático'], 'PCO': [29, 'Partido da Causa Operária'],
+    'UP': [80, 'Unidade Popular'], 'DEMOCRATA': [35, 'Democrata'], 'NOVO': [30, 'Partido Novo'],
+    'PSB': [40, 'Partido Socialista Brasileiro'], 'PP': [11, 'Progressistas'], 'AGIR': [36, 'Agir'],
+    'PSDB': [45, 'Partido da Social Democracia Brasileira'], 'PDT': [12, 'Partido Democrático Trabalhista'],
+    'PSOL': [50, 'Partido Socialismo e Liberdade'], 'MOBILIZA': [33, 'Mobilização Nacional'], 'UNIÃO': [44, 'União Brasil'],
+    'PODE': [20, 'Podemos'], 'REPUBLICANOS': [10, 'Republicanos'], 'MDB': [15, 'Movimento Democrático Brasileiro'],
+    'SOLIDARIEDADE': [77, 'Solidariedade'], 'REDE': [18, 'Rede Sustentabilidade'], 'PRD': [25, 'Partido Renovação Democrática'],
+    'PV': [43, 'Partido Verde'], 'CIDADANIA': [23, 'Cidadania'], 'PC do B': [65, 'Partido Comunista do Brasil']
+  },
+  cargos: {
+    presidente: [[280002552484,"27","CLARIANA BARAO","DC","D","DC"],[280002551975,"21","EDMILSON COSTA","PCB","D","PCB"],[280002551547,"70","ESCRITOR AUGUSTO CURY","AVANTE","D","BRASIL DOS NOSSOS SONHOS"],[280002551544,"22","FLAVIO BOLSONARO","PL","D","PL"],[280002541457,"16","HERTZ DIAS","PSTU","D","PSTU"],[280002554479,"28","LEONARDO AVALANCHE","PRTB","P","PRTB"],[280002542548,"13","LULA","PT","D","BRASIL PRONTO PRA MAIS"],[280002553884,"28","PABLO MARÇAL","PRTB","I","PRTB"],[280002540694,"14","RENAN SANTOS","MISSÃO","D","MISSÃO"],[280002551932,"55","RONALDO CAIADO","PSD","D","PSD"],[280002552487,"29","RUI COSTA PIMENTA","PCO","D","PCO"],[280002538811,"80","SAMARA","UP","D","UP"],[280002548139,"35","VETERINÁRIO WILSON GRASSI","DEMOCRATA","D","DEMOCRATA"],[280002539826,"30","ZEMA","NOVO","D","NOVO"]],
+    governador: [[70002552586,"55","ARRUDA","PSD","IR","RESGATAR BRASÍLIA"],[70002551557,"40","CAPPELLI","PSB","D","PSB"],[70002553055,"11","CELINA LEÃO","PP","D","PROPÓSITO E AÇÃO"],[70002551298,"36","ELISSON","AGIR","IR","AGIR"],[70002552341,"29","EXPEDITO MENDONÇA","PCO","D","PCO"],[70002547775,"30","KIKO CAPUTO","NOVO","D","NOVO"],[70002552496,"13","LEANDRO GRASS","PT","D","DF DO POVO"],[70002552965,"45","PAULA BELMONTE","PSDB","D","FEDERAÇÃO PSDB CIDADANIA"],[70002535930,"16","PROFESSOR ROBSON","PSTU","D","PSTU"],[70002537111,"80","PROFESSORA SAMARA MINEIRO","UP","D","UP"],[70002553982,"28","RICO PINHEIRO","PRTB","IR","PRTB"]],
+    senador: [[70002553859,"355","AVENIR ROSA","DEMOCRATA","I","DEMOCRATA"],[70002552934,"223","BIA KICIS","PL","D","PROPÓSITO E AÇÃO"],[70002551426,"290","DAVID HORN","PCO","D","PCO"],[70002552490,"131","ERIKA KOKAY","PT","D","DF DO POVO"],[70002553296,"456","GUTO FELÍCIO DOS SANTOS","PSDB","D","FEDERAÇÃO PSDB CIDADANIA"],[70002552492,"123","LEILA DO VÔLEI","PDT","D","DF DO POVO"],[70002552582,"700","MARLEY","AVANTE","D","AVANTE"],[70002552936,"222","MICHELLE BOLSONARO","PL","D","PROPÓSITO E AÇÃO"],[70002537112,"800","PROFESSOR GUILHERME AMORIM","UP","D","UP"],[70002553751,"555","RONALDO FONSECA","PSD","D","PSD"],[70002548624,"300","SEBASTIÃO COELHO","NOVO","D","NOVO"],[70002551323,"360","TIAGO","AGIR","IR","AGIR"],[70002536445,"161","ZANATA","PSTU","D","PSTU"]],
+    federal: [[70002537009,"5566","ABADIA","PSD","D"],[70002537008,"5500","ADILA MARIA","PSD","D"],[70002537007,"5522","ADRIANO AMARAL","PSD","D"],[70002541499,"2727","ADRIANO ANIMAL","DC","D"],[70002533388,"5001","ADRIANO FIÚZA","PSOL","D"],[70002550321,"2220","AGACIEL MAIA","PL","D"],[70002539540,"1310","AGNELO QUEIROZ","PT","D"],[70002553649,"2900","AGUIDA MARIA","PCO","D"],[70002550322,"2222","ALBERTO FRAGA","PL","D"],[70002532001,"3022","ALE CHIANELLI","NOVO","D"],[70002545070,"1411","ALVARO MOZINI","MISSÃO","D"],[70002544462,"7052","ANA FEROLA","AVANTE","D"],[70002553647,"2999","ANA SCHRAMM","PCO","D"],[70002543822,"3300","ANTONIO SIRIANO","MOBILIZA","D"],[70002546418,"3555","C.J. GTA","DEMOCRATA","R"],[70002545075,"1441","CAMILA CORRÊA","MISSÃO","D"],[70002550315,"2238","CAPITÃO DAVI","PL","D"],[70002532004,"3030","CARINE TEIXEIRA","NOVO","D"],[70002542520,"4007","CARLA GEHLEN","PSB","D"],[70002538513,"4411","CARLOS DALVAN","UNIÃO","D"],[70002554509,"2022","CARLOS MACEDO","PODE","D"],[70002553648,"2929","CARLOS VINÍCIUS","PCO","D"],[70002537006,"5555","CAROL FLEURY","PSD","D"],[70002538526,"1086","CAROL FURLAN","REPUBLICANOS","D"],[70002540849,"2088","CAROL RIBEIRO","PODE","D"],[70002532008,"3036","CIDA VILLAS BÔAS","NOVO","D"],[70002532007,"3001","CORONEL AVIADOR LUIZ GAMA","NOVO","D"],[70002538517,"1190","CORONEL MORENO","PP","D"],[70002538940,"1516","COSTA NETO","MDB","D"],[70002538528,"1022","CRIS BRITTO","REPUBLICANOS","D"],[70002545072,"1400","CRIS CAIADO","MISSÃO","D"],[70002542518,"4023","CRISTOVAM BUARQUE","PSB","D"],[70002542516,"4008","DANI FREITAS","PSB","D"],[70002542521,"4022","DANI SOLTA O VERBO","PSB","D"],[70002538938,"1500","DANIEL DONIZET","MDB","D"],[70002553989,"1050","DEFENSOR CELESTINO","REPUBLICANOS","D"],[70002537013,"5551","DELEGADO NUGOLI","PSD","D"],[70002553954,"7707","DIEGO COSTA","SOLIDARIEDADE","D"],[70002544468,"7000","DR. CARLOS","AVANTE","D"],[70002537011,"5544","DR. JOÃO LUIZ","PSD","D"],[70002533385,"5040","DRA RAQUEL FERREIRA","PSOL","D"],[70002554528,"4456","DRA. GARDENIA","UNIÃO","P"],[70002538519,"1117","DRA. MARINA NORONHA","PP","D"],[70002537106,"8080","DURVAL","UP","D"],[70002541498,"2789","EDILSON PARDALS","DC","D"],[70002551192,"4577","ELAINE PINK","PSDB","D"],[70002533386,"1818","ELIANILDO NASCIMENTO","REDE","D"],[70002541500,"2700","ELIZEU COSTA DO UBER","DC","D"],[70002532005,"3010","EMILIO KERBER","NOVO","D"],[70002533382,"5080","ENFERMEIRA KARINE","PSOL","D"],[70002538514,"4455","ESTER CARVALHO","UNIÃO","D"],[70002533381,"5050","FÁBIO FELIX","PSOL","D"],[70002551187,"4522","FELIPE RODRIGUES","PSDB","IR"],[70002551185,"4567","FLÁVIA PORTELA","PSDB","D"],[70002532003,"3004","FLAVIO FLEURY","NOVO","D"],[70002547156,"1212","FLAVIO WERNECK","PDT","D"],[70002540848,"2020","FRANÇA","PODE","IR"],[70002538521,"1020","FRED LINHARES","REPUBLICANOS","D"],[70002538108,"7733","GABRIEL PORTELLA","SOLIDARIEDADE","D"],[70002543819,"3310","GARCIA DO POVO","MOBILIZA","D"],[70002551186,"4510","GERALDO NAVES O BARRA PESADA","PSDB","R"],[70002538101,"7777","GERCIANE","SOLIDARIEDADE","D"],[70002538103,"2522","GILSON AMORIM","PRD","D"],[70002538523,"1011","GILVAN PATRULHA DO CONSUMIDOR","REPUBLICANOS","D"],[70002544467,"7055","GLAUCIA DO ARRUDA","AVANTE","D"],[70002540845,"2033","GORDINHO DA FARMÁCIA","PODE","D"],[70002533384,"1819","GUILHERME JAGANU","REDE","D"],[70002538939,"1522","HÉLVIA PARANAGUÁ","MDB","D"],[70002546415,"3522","IARA NARDIA","DEMOCRATA","D"],[70002547162,"1216","ISANIL","PDT","D"],[70002543815,"3332","ISAURA BARBOSA","MOBILIZA","D"],[70002540843,"2000","ISMAEL ALMEIDA","PODE","D"],[70002541495,"2777","IVONE LOPES","DC","D"],[70002550316,"2200","IZALCI LUCAS","PL","D"],[70002538102,"7722","JAIR MARINHO","SOLIDARIEDADE","D"],[70002544463,"7007","JEAN VICTOR","AVANTE","D"],[70002547155,"1221","JÔ ABREU","PDT","D"],[70002543820,"3355","JOEL MATOS DEFENSOR AMBIENTAL","MOBILIZA","D"],[70002538937,"1551","JOSY JACOB","MDB","D"],[70002539538,"4300","JU DOS TIGRADOS","PV","D"],[70002538527,"1010","JULIO CESAR","REPUBLICANOS","D"],[70002553949,"5577","JÚLIO ISIDRO","PSD","D"],[70002551190,"4543","JUNIOR ALMEIDA","PSDB","I"],[70002546557,"7077","JUSCELINO KUBITSCHEK","AVANTE","D"],[70002551188,"4500","KARLA VINHAS","PSDB","D"],[70002540847,"2022","KLESLEY GARCIA","PODE","R"],[70002546416,"3535","LAIRA INÁCIO","DEMOCRATA","N"],[70002547158,"1270","LARISSA SCHMIDT","PDT","D"],[70002543821,"3396","LEANDRO BARROSO","MOBILIZA","D"],[70002551189,"4566","LEIA XAVIER","PSDB","D"],[70002541497,"2712","LEONARDO BEAR","DC","D"],[70002538106,"7710","LETICIA LEAL","SOLIDARIEDADE","D"],[70002538524,"1001","LIZA LOPES","REPUBLICANOS","D"],[70002545071,"1444","LUCAS BRASILEIRO","MISSÃO","D"],[70002533383,"5005","LUDMILA SUAID","PSOL","D"],[70002538520,"1000","LUIZ EDUARDO","REPUBLICANOS","D"],[70002539539,"1331","MÁRCIA ABRAHÃO","PT","D"],[70002538515,"1177","MARCOS WESLEY","PP","D"],[70002550317,"2223","MARIA AMÉLIA","PL","D"],[70002533387,"1801","MARIA CLEUDES","REDE","D"],[70002554435,"2311","MARIANA DE PAULA","CIDADANIA","D"],[70002550931,"2201","MARIANA NAIME","PL","D"],[70002539534,"1300","MARIVALDO PEREIRA","PT","D"],[70002545073,"1456","MARTA LIMA","MISSÃO","D"],[70002538525,"1088","MATHEUS MILANEZ","REPUBLICANOS","R"],[70002543818,"3390","MAURO LOPES","MOBILIZA","D"],[70002538107,"7778","MAX FERRAMENTAS","SOLIDARIEDADE","D"],[70002540844,"2027","MAYARA NORONHA","PODE","D"],[70002537107,"8000","MILENA DO MLB","UP","D"],[70002541493,"2770","MILENA SOUSA","DC","D"],[70002547161,"1233","MOACIR COLETIVO TRABALHISTA","PDT","D"],[70002532009,"3033","NANA","NOVO","D"],[70002533389,"5000","NEIVA LOPES","PSOL","D"],[70002554416,"3535","NOELY COLETIVO CORAGEM","DEMOCRATA","D"],[70002551184,"4555","OSCAR SILVA","PSDB","D"],[70002538104,"2525","PABLO VALENTE","PRD","D"],[70002538936,"1505","PAMELA ÁGUIA","MDB","D"],[70002547159,"1213","PASTOR ISMAEL LOPES","PDT","D"],[70002546417,"3590","PASTOR LIMA NETO","DEMOCRATA","D"],[70002544466,"7033","PASTORA ANA LIMA","AVANTE","D"],[70002532002,"3012","PAULO ECHEBARRIA","NOVO","D"],[70002544464,"7088","PAULO SA","AVANTE","D"],[70002547160,"1214","PAULO TAVARES","PDT","D"],[70002539541,"1313","POLICARPO","PT","D"],[70002538516,"4456","PROF. DÍDIA","UNIÃO","R"],[70002539533,"4343","PROF. REGINALDO VERAS","PV","D"],[70002547154,"1230","PROFA. FÁTIMA SOUSA","PDT","D"],[70002546413,"3500","PROFESSOR ANTHONY COUTO","DEMOCRATA","IR"],[70002538511,"4400","PROFESSOR FRANCELINO","UNIÃO","D"],[70002542514,"4080","PROFESSOR GADELHA","PSB","D"],[70002542515,"4004","PROFESSOR ISRAEL","PSB","D"],[70002551191,"4545","PROFESSOR LÉO MATOS","PSDB","D"],[70002547157,"1234","PROFESSOR RAFAEL PARENTE","PDT","D"],[70002543817,"3344","PROFESSORA JULIANA ALVES","MOBILIZA","D"],[70002538935,"1515","RAFAEL PRUDENTE","MDB","D"],[70002543816,"3322","RAPOSÃO DS","MOBILIZA","D"],[70002542522,"4000","RAQUEL MEDEIROS","PSB","D"],[70002538522,"1015","RAVAN LEÃO","REPUBLICANOS","D"],[70002546411,"3577","REIS COLETIVO SEGURANÇAPRIVADA","DEMOCRATA","D"],[70002541501,"2733","RENATO MACHADO","DC","D"],[70002546412,"3510","RICHARD BANHARA","DEMOCRATA","D"],[70002543823,"3333","RITA BALLOCK","MOBILIZA","D"],[70002554386,"2323","ROBERTO FREIRE","CIDADANIA","D"],[70002544465,"7070","RODOLPHO HOTH HOTH","AVANTE","D"],[70002544461,"7022","ROGERIO ARAPOANGA","AVANTE","D"],[70002542519,"4040","ROLLEMBERG","PSB","D"],[70002537012,"5561","RONALDO FONSECA","PSD","R"],[70002539536,"1333","ROSILENE CORRÊA","PT","D"],[70002539537,"1361","RUTH VENCEREMOS","PT","D"],[70002540842,"2026","SALVE JORGE","PODE","D"],[70002546419,"3550","SANCHEZ","DEMOCRATA","D"],[70002550318,"2277","SANDRA FARAJ","PL","DR"],[70002538518,"4444","SANDRO AVELAR","UNIÃO","D"],[70002537010,"5545","SARGENTO ELIOMAR","PSD","D"],[70002540846,"2030","SARGENTO MAURÍCIO PARDAL","PODE","D"],[70002541496,"2755","SERRALHEIRO RONO PINHEIRO","DC","D"],[70002540501,"3636","SILVA FOTOGRAFO - O CORNO","AGIR","IR"],[70002541494,"2750","SOCORRO MARTINS","DC","D"],[70002546414,"3525","STEPHANIE ALVES","DEMOCRATA","D"],[70002538105,"2523","SUBTENENTE CINTYA","PRD","D"],[70002540850,"2090","SUBTENENTE VERA","PODE","D"],[70002550319,"2233","THIAGO MANZONI","PL","D"],[70002540502,"3600","TIA NEGA","AGIR","IR"],[70002550320,"2211","ULISSIS LIMA","PL","D"],[70002538512,"1111","VALDIRENE TAVARES","PP","D"],[70002539535,"1324","VANESSA É O BICHO","PT","D"],[70002545074,"1414","VICTOR RATTES","MISSÃO","D"],[70002538934,"1599","WASHINGTON CORAÇÃO VALENTE","MDB","D"],[70002542517,"4061","WENDER","PSB","D"],[70002538693,"1501","WESLEY AMARAL","MDB","D"],[70002532006,"3000","WILKER LEÃO","NOVO","D"],[70002538941,"1555","ZÉ HUMBERTO","MDB","D"]],
+    distrital: [[3406,"50444","ABEL SANTOS","D"],[20878,"45190","ADALBERTO CARVALHO","D"],[8126,"77123","ADERVAL","D"],[13433,"27111","ÁGATHA LOPES","D"],[12546,"33733","AGENILDO NERI","D"],[1346,"30777","AILUDE MÁXIMO","D"],[6813,"55033","AKILLA MARINHO","D"],[16952,"35100","ALCIVÂNIO BOMFIM","D"],[6811,"55055","ALESSANDRO CARDOSO","D"],[11279,"20022","ALESSANDRO MITO","D"],[20007,"22123","ALESSANDRO PAIVA","D"],[11288,"20100","ALEX GALVÃO","D"],[1328,"30456","ALEX OLIVEIRA","D"],[1327,"30230","ALEXA","D"],[13434,"27222","ALEXANDRE OLIVER","D"],[16910,"12777","ALINE SÁ","D"],[23995,"55575","ALINE VESELY","DR"],[15057,"14714","AMANDA CAMARGO","D"],[8489,"11022","ANA MARIA","D"],[11298,"20123","ANA PAULA MARRA","D"],[8127,"77456","ANACLETO","R"],[16743,"70777","ANDERSON GUINÉ","D"],[20996,"45200","ANDERSON VIEIRA","D"],[20001,"22022","ANDRÉ KUBITSCHEK","D"],[24148,"25190","ANDRÉ PILLA","D"],[16919,"12110","ANDRÉ PIRES","D"],[10814,"10110","ANDREA ESPANHA","D"],[8803,"15222","ÂNDREA ESTEVAM","D"],[20018,"22001","ANDREA PONTES","D"],[16961,"35017","ANDREIA BOMBOM","D"],[20010,"22333","ANDRÉIA MOURA","D"],[23994,"55200","ANDREIA SALLES","D"],[10514,"13012","ANDREY LEMOS","D"],[16723,"70022","ANGELICA","D"],[3397,"18018","ANGELINA NARDELLI","D"],[19999,"22061","ANNA SEBBA","D"],[15058,"14321","ANTHONY RIBAS","D"],[16969,"35111","ARCANJO MAGALHÃES","D"],[17153,"12333","ARILSON DE OLIVEIRA","D"],[15056,"14014","ARTHUR GURGEL","D"],[11291,"20001","ARTUR CEZAR","D"],[7108,"80110","BÁRBARA CALISTA","D"],[3409,"18123","BARTIRIA COLETIVO NOSSA GENTE","D"],[12510,"40023","BARTOLOMEU BARTÔ RODRIGUES","D"],[12532,"33033","BEBETO","D"],[20877,"45222","BENEDITO DA VOZINHA","D"],[10516,"65180","BERÊ DARC","D"],[12504,"40100","BERNARDO MOREIRA","D"],[18153,"77000","BETHANIA KELLY","D"],[6167,"18180","BETINHO GUARIROBA","D"],[10821,"10100","BISPO RENATO ANDRADE","D"],[13439,"27012","BISPO WELDON","D"],[13427,"27391","BITO RAMOS","D"],[24468,"25444","BRUNELLI","P"],[16742,"70190","CABO VITORIO","D"],[1340,"30700","CAÇULECI PACHECO","D"],[13445,"27027","CAIAFA","D"],[12535,"33333","CAMARGO MINHA CAPITAL","D"],[11284,"20333","CAPITÃO ADERIVALDO CARDOSO","D"],[16956,"35180","CARLÃO RECLAMÃO","D"],[20983,"45000","CARLOS PENNA","D"],[23992,"55333","CARLOS SÁ","DR"],[13440,"27127","CARLOS XAVIER","D"],[12543,"33003","CAROL FORÇA DA MULHER","D"],[20017,"22122","CAROL KALIL","D"],[20879,"45888","CARVALHO RIO MELCHIOR","D"],[8119,"25555","CASTELO","D"],[10503,"13100","CHICO VIGILANTE","D"],[3412,"18011","CHIQUINHO LIVREIRO","R"],[7109,"80123","CHRISTIAN RODRIGUES SENA","D"],[13436,"27321","CLAUDECI LUART","D"],[11300,"20111","CLÁUDIA LAPA","D"],[8504,"44123","CLAUDIO ABRANTES","D"],[11296,"20061","CLÁUDIO BORCEM","D"],[16954,"35456","CLÁUDIO FERREIRA DOMINGUES","D"],[20993,"45155","CLEA TORRES","D"],[6808,"55888","CLEBER DF AGUASCLARAS","D"],[12527,"33337","CLEIA ARAÚJO","D"],[11281,"20456","CLEIDIANE VITALINO","D"],[16722,"70456","CLEMILTON","D"],[11289,"20193","COMANDANTE ALAN","D"],[3411,"50257","CONCEIÇÃO DA AGRICULTURA","D"],[8807,"15888","CONCEIÇÃO DO MARANHÃO","D"],[10823,"10101","CONDE","DR"],[11292,"20122","CORONEL MICHELLO","D"],[13425,"27190","CORONEL NEVITON SANGUE BOM","D"],[12545,"33007","CORRETOR NOGUEIRA","DR"],[12540,"33777","CRICIA CANTORA DE PENTECOSTES","D"],[1345,"30303","CRIS MOURÃO","D"],[10815,"10987","CRIS NARDES","D"],[8114,"77810","CRISTIANE CARVALHO","D"],[8805,"15015","CRISTIANO ARAÚJO","D"],[8495,"44070","CRISTIANO SEVERO","D"],[1341,"30500","DAIANE DOS SANTOS","D"],[10526,"13197","DANIEL BARROS","D"],[16726,"70000","DANIEL RADAR","D"],[20876,"45555","DANIELA CIRIACO","D"],[20874,"45045","DATANIEL DUARTE","D"],[12507,"40222","DAYSE AMARILIO","D"],[10504,"13056","DAYSE HANSA","D"],[10825,"10111","DEFENSOR CELESTINO","R"],[1332,"30030","DEFENSOR KLEBER","D"],[12538,"33180","DEISE ANDRADE","D"],[10813,"10555","DELEGADA DOUTORA JANE","D"],[8500,"44180","DELEGADA KAREN","D"],[10822,"10190","DELEGADO FERNANDO FERNANDES","D"],[8810,"15777","DELEGADO JONATAS","D"],[16738,"70255","DELEGADO LAERCIO","D"],[6809,"55000","DELEGADO PABLO AGUIAR","D"],[10827,"10456","DELMASSO","D"],[10819,"10888","DENISE FRANCO","D"],[12503,"40567","DENNIS WEB","D"],[11295,"20002","DEO DO MANDALA","D"],[8112,"77111","DEUSDETE FILHO","D"],[16917,"12344","DHIOGO BACURAU","D"],[8122,"77077","DIEGO LOCUTOR","D"],[8809,"15500","DILSON RESENDE","R"],[24039,"10111","DIÓGENES BASTOS","D"],[16958,"35353","DIOLAN ROCHA","D"],[21373,"35133","DIONES ALMEIDA","I"],[13432,"27022","DONNY SILVA","D"],[16730,"70999","DR CAIO GRACCO","D"],[1344,"30007","DR JACINTO","D"],[12533,"33192","DR WENDEL MOREIRA","D"],[8794,"15678","DR. CANDIDO TELES","D"],[1337,"30022","DR. ERIC GUSTAVO","D"],[13442,"27123","DR. GUTEMBERG","D"],[16737,"70122","DR. HELIO GOMES","D"],[11294,"20033","DR. KLEBES REZENDE","D"],[16968,"35355","DR. LUCIMIR","D"],[1343,"30111","DR. PETRUS","D"],[6812,"55678","DR. VICENZO","D"],[15063,"14100","DRª CAROLINA MAIA","D"],[20005,"22221","DRA CRIS","D"],[8490,"44101","DRA SUZANA LIMA","D"],[16949,"35678","DRA. ANGÉLICA CARAÍBA","D"],[24355,"30026","DRA. ATENA OLIVEIRA","D"],[8509,"44222","DRA. FABI","D"],[20013,"22010","DRA. KELLEN GUERRA","D"],[20986,"45755","DRA. LUCILENE FERNANDES","D"],[16967,"35888","DRA. MÔNICA","D"],[3396,"50500","DRA. NATÁLIA MATIAS","D"],[1347,"30555","DRA.TÂNIA SOSTER","D"],[8115,"77777","EDEM ALEXANDRE","D"],[3413,"50133","EDISON CEILÂNDIA","D"],[20988,"45061","EDLEUZO CAVALCANTE","I"],[8113,"77222","EDSON CORDEIRO","D"],[8801,"15551","EDSON SOL NASCENTE","D"],[15067,"14123","EDU SANTOS","D"],[10522,"43000","EDUARDO BRANDÃO","D"],[8493,"44000","EDUARDO PEDROSA","D"],[20003,"22222","EDUARDO TORRES","D"],[3407,"18000","ELAINY ELAS INDÍGENAS","I"],[11297,"20555","ELIANA EMERICK","D"],[3404,"18486","ELIANA VETERINÁRIA","D"],[16964,"35800","ELIAS SANTOS","D"],[13438,"27024","ELISSON FRANKLIN","D"],[16966,"35250","ELIZEU SÍNDICO","D"],[10506,"43123","ELKE PIMENTEL","D"],[10826,"10505","EMANUEL S.O.S","D"],[12539,"33088","EMANUELL RESOLVE","D"],[15066,"14149","EMANUELLE","D"],[7377,"55655","ENFERMEIRA LIDIA","D"],[1334,"30300","ENGENHEIRO VALTER SABOIA","D"],[1330,"30100","ERICKA FILIPPELLI","D"],[10818,"10193","ERICSON GOMES","D"],[7380,"55444","ERIVELTON","D"],[10832,"10222","ESTEFANE SAMPAIO","D"],[16973,"35333","ESTEFFANY","D"],[8123,"77023","EUGÊNIO MAGALHÃES","D"],[16739,"70555","EVALDO LOBATO","D"],[19997,"22522","EVANDRO ARAUJO","D"],[10511,"13007","FABIANO TROMPETISTA","D"],[8125,"77007","FABIO DE MORAIS","D"],[7375,"55500","FATIMA CÓ","D"],[10505,"13321","FÁTIMA RÔLA","D"],[1326,"30530","FERNANDA FRANÇA","D"],[8804,"15156","FERNANDA MATEUS","D"],[20014,"22321","FERNANDO CAIXETA","D"],[13446,"27777","FERNANDO DO RESGATE","D"],[12500,"40123","FERNANDO FREITAS","D"],[8117,"77122","FLAVINHA CEILANDIA","D"],[16725,"70369","FLAVIO POTIGUAR","D"],[12523,"33323","FRANCIMAR NAVA","D"],[17145,"12122","FRANCISCA CÔRTE","D"],[20880,"45345","GABRIEL LUNA","D"],[10525,"13131","GABRIEL MAGNO","D"],[16729,"70100","GABRIELA FREIRE","D"],[17146,"12321","GABY","D"],[8116,"25123","GIGANTE DA FEDERAL","D"],[21996,"70333","GILBERTO ELIAZARIO DE CAMARGOS","D"],[10831,"10020","GIULIANNO CARTAXO","D"],[12544,"33133","GIZA TEA","D"],[20995,"45456","GLÓRIA VALE","D"],[16957,"35000","GUARDA JANIO","D"],[12501,"40800","GUILHERME CARVALHO EMANAR","D"],[8798,"15133","GUSTAVO AIRES","D"],[12541,"33700","GUTEMBERG RIOS","D"],[20002,"22555","HAMILTON TATU","D"],[8118,"25001","HELVÍDIO NUNES","D"],[15061,"14141","HENRIQUE DURÃES","D"],[8796,"15190","HERMETO","D"],[16970,"35444","IGOR SARAIVA","D"],[8124,"25025","ILENE ALMEIDA","D"],[13424,"27272","INÊS ARMAND","D"],[8799,"15000","IOLANDO","D"],[24142,"77200","IPAMINONA DOS INQUILINOS","D"],[8128,"25500","IRACEMA DURÃO","D"],[16951,"35007","ISA LUSTOSA","D"],[8496,"11123","ISRAEL PRESENÇA","D"],[16736,"70007","ISSA","D"],[12530,"33456","ITALO MIRANDA","D"],[8501,"11410","IURI MARQUES","D"],[7385,"55026","IZADORA COIMBRA","D"],[13444,"27700","IZAQUIEL SOUZA","D"],[7379,"55190","JABÁ ARRUDA","D"],[10519,"13001","JACY AFONSO","D"],[23993,"55255","JADIEL DA CONSTRUÇÃO","DR"],[17144,"12112","JAIR DOS APLICATIVOS","D"],[1335,"30190","JAIRO MELO","I"],[20994,"45678","JAMES MAYNER","D"],[15064,"14441","JANDERSON AGUIA","R"],[16971,"35777","JAPA DA BIKE","D"],[8800,"15900","JAQUELINE SILVA","D"],[10507,"43222","JEAN DA CULTURA","D"],[1336,"30061","JÉZER JÚNIOR","D"],[12494,"15444","JÔ ASSISTENTE SOCIAL","D"],[20016,"22224","JOÃO ALEXANDRE","D"],[20000,"22888","JOÃO CARDOSO","D"],[13437,"27500","JOÃO DITO","D"],[10513,"13061","JOÃO FAVORITO","D"],[8130,"25000","JOÃO LEAL","R"],[24511,"45300","JOÃO TERRA","D"],[20019,"22000","JOAQUIM RORIZ NETO","D"],[17149,"12345","JOE VALLE DA MALUNGA","D"],[23991,"55661","JONATHAN ARAÚJO","DR"],[12526,"33111","JORGE FARIAS RODOVIÁRIO","D"],[16972,"35192","JORGE VIANNA","D"],[17148,"12022","JOSEFLAY JOSIAS","D"],[16913,"12000","JOVITA ROSA","D"],[20015,"22190","JULIA LUCY","D"],[20989,"45100","JULIANA CÂNDIDA","D"],[3401,"50123","KEKA BAGNO","D"],[16950,"35222","KEVIN VEM","D"],[8508,"44197","LACÍ MARINHO","D"],[16746,"70700","LAU DE PAULA","D"],[10508,"13193","LAUREANO DE FARIA","D"],[16744,"70234","LAURICIO RADIOSAUDE","D"],[12508,"40044","LENNE EVANGELISTA","D"],[8494,"11010","LÉO GOLEIRO","D"],[7386,"55321","LÉO REZENDE","D"],[12536,"33122","LETÍCIA SAMPAIO","D"],[1329,"30000","LGM","D"],[13426,"27100","LORRUANA MEDEIROS","D"],[10523,"13111","LÚCIA CARVALHO","D"],[17141,"12369","LÚCIA LUCIMAR","D"],[20982,"45123","LUCIANA LIMA","D"],[1349,"30321","LUCIANA MENDINA","D"],[8120,"77190","LUCIENE DANIEL DA SEGURANÇA","IR"],[8502,"44007","LUCIJAINE VILAR","D"],[16959,"35555","LUÍS MIRANDA","D"],[20006,"22822","LUÍZA DO CLEZÃO","D"],[16731,"70707","LYLY DO AVANTE","D"],[3400,"50700","MADU K","D"],[13443,"27333","MAGGIE MARGARIDA CHAULET","D"],[3392,"50060","MANO LIMA","D"],[11282,"20101","MANUELA ANDRADE","D"],[17142,"12126","MARA MARÇAL","D"],[16960,"35035","MARCEL UBER BLACK","D"],[8806,"15555","MARCELA PASSAMANI","D"],[16740,"70789","MARCELE MAMA","D"],[10812,"10777","MARCELINHO CARIOCA","D"],[8491,"11777","MARCELINHO NUNES","D"],[19998,"22777","MARCELO IZIDORO","D"],[10811,"10000","MARCELO TRATOR","D"],[12493,"15151","MARCOS MARSHAL","D"],[23398,"10722","MARCOS PORTO","D"],[12497,"40233","MARI JOW","D"],[16733,"70870","MARI TEIXEIRA","D"],[20872,"45130","MARIA DUCLERIO","D"],[20873,"45525","MARIA JOSE","D"],[10517,"13333","MARIANA ROSA","D"],[8129,"77137","MARLENE","D"],[16918,"12071","MARQUIM DO TROPA","D"],[8499,"11112","MARTHA ELIENE","D"],[10817,"10123","MARTINS MACHADO","D"],[1333,"30033","MATHEUS FERNANDES","D"],[15059,"14114","MATHEUS MARQUES","D"],[3394,"50100","MAX MACIEL","D"],[10820,"10010","MC JENNY","D"],[17152,"12061","MERCIONE","D"],[3402,"50000","MICHEL PLATINI","D"],[10829,"10026","MIGUEL DA 26","D"],[3408,"18081","MIRANDA GOMES","D"],[12525,"33000","MISSIONÁRIA EUDES","D"],[3414,"50511","MOUSTAFA","D"],[12499,"40061","MÚCIO","D"],[16953,"35500","NANDA BATISTA","D"],[11283,"20777","NATAL FURUCHO","D"],[8498,"11211","NATÁLIA REIS","D"],[20992,"45617","NATANRY OSORIO","D"],[3403,"50180","NATTY VIEIRA","D"],[12512,"40333","NAY DO ACARAJÉ","D"],[6810,"55155","NELSON NETO","D"],[8110,"77135","NERY CHARLIE","D"],[11280,"20020","NETO RODRIGUES","D"],[8109,"77321","NEWTON DOS ESPORTES","D"],[1339,"30888","NOEMIA T BISPO","D"],[8121,"77843","ORION OLIVEIRA","D"],[12509,"40420","PABLO FEITOSA","D"],[10510,"13405","PARDIM","D"],[7378,"55111","PASTOR ANDERSON SILVA","D"],[12496,"15153","PASTOR DÁCIO CORDEIRO","D"],[8488,"11133","PASTOR DANIEL DE CASTRO","D"],[8497,"44190","PASTOR LEIBER","D"],[13431,"27000","PASTOR RAFAEL","D"],[8111,"77277","PASTOR ROBERTO","D"],[16962,"35999","PASTORA ALLANA","D"],[10520,"13556","PASTORA LUZINETE","D"],[10828,"10060","PASTORA MÁRCIA","D"],[16741,"70077","PATRICIA DA FEIRA","D"],[11299,"20028","PATRÍCIA HELENA","D"],[3393,"50050","PATTY RAMIRO","D"],[16914,"12105","PAULINHO CAMPELLO","D"],[3399,"50321","PAULO CÉSAR (PC)","D"],[1338,"30123","PAULO MINEIRO","D"],[8507,"44044","PEDRO DO OVO","D"],[12537,"33789","PEDRO MECÂNICO COLETIVO","D"],[8492,"44555","PEDRO OLIVEIRA","D"],[1348,"30444","PEDRO PAYNE","D"],[8486,"11011","PEPA","D"],[15068,"14444","PERITA TIROTTI","D"],[3410,"50200","PIKINEIA","D"],[10816,"10022","PINHO","D"],[20012,"22422","POLICIAL JOÃO RENATO","D"],[11277,"20700","PR. JOÃO DE DEUS","D"],[16915,"12101","PR. SIDNEY","D"],[16965,"35135","PRETA PRAIANA","D"],[11293,"20088","PRISCILA BACCILE","D"],[8808,"15111","PROF FÁBIO CIDADE EDUCADORA","R"],[16724,"70222","PROF WESLEY","D"],[16912,"12012","PROF. CRISTIANO LUZ","D"],[16920,"12456","PROF. NILVAN DE VASCONCELLOS","D"],[10524,"13133","PROFª ALTACI KOKAMA","D"],[10509,"13613","PROFA. KEILA SANCHES","D"],[12506,"40120","PROFESSOR AHAROM","D"],[1350,"30999","PROFESSOR ÁLVARO DOMINGUES","D"],[20985,"45145","PROFESSOR DIEGO GOMES","D"],[12513,"40109","PROFESSOR DOUGLAS GOMES/O DIVO","D"],[10518,"65123","PROFESSOR ELIAS","D"],[17147,"12123","PROFESSOR FERNANDO MOURA","D"],[17151,"12361","PROFESSOR FERNANDO SOUSA","D"],[20981,"45013","PROFESSOR GUSTAVO SALLES","D"],[7383,"55777","PROFESSOR IVAN MORAES","D"],[17143,"12555","PROFESSOR JAIRON","D"],[7384,"55555","PROFESSOR JORDENES","D"],[13441,"27277","PROFESSOR WILLIAN COMUNIDADE","D"],[20990,"45321","PROFESSORA GODOI","D"],[12502,"40140","PROFESSORA JÉSSICA MOTTA","D"],[3405,"50020","PROFESSORA RAY","D"],[12547,"33100","RAAD","D"],[13430,"27999","RACHEL DOCES","D"],[12505,"40200","RAPHAEL SEBBA","D"],[1342,"30333","REGIS MACHADO","D"],[13435,"27300","REINALDO ARAUJO","D"],[8510,"11001","REJANE COSTA","D"],[10824,"10789","RENATA DAGUIAR","D"],[16734,"70193","RENATO SILVEIRA BARBOSA","D"],[15060,"14040","RHAILLER SANTOS","D"],[20008,"22002","RICARDO CASTANHEIRA","D"],[1331,"30222","RICARDO CASTRO","D"],[10512,"13013","RICARDO VALE","D"],[16745,"70070","RIGONE AMORIM","I"],[16955,"35123","ROBÉRIO MELO TX","D"],[11286,"20000","ROBÉRIO NEGREIROS","D"],[24222,"45333","ROBERTO VIEIRA","I"],[20021,"22100","RODRIGO DANTAS","D"],[12511,"40400","RODRIGO DIAS","D"],[7382,"55123","ROGERIO MORRO DA CRUZ","D"],[16727,"70321","ROGÉRIO ULYSSES","D"],[3398,"50777","ROMÁRIO LEAL","D"],[8503,"11111","RÔNEY NEMER","D"],[20009,"22193","ROOSEVELT VILELA","D"],[10521,"13000","ROSI COSTA","D"],[16963,"35026","SALVADOR CASTRO","D"],[8802,"15100","SAMARA BRITO","D"],[3395,"18222","SAMI YASSINE","D"],[20011,"22722","SAMUEL GAÚCHO","D"],[7381,"55100","SANDRA BACELAR","D"],[16728,"70770","SANDRA SILVA","D"],[23990,"55533","SANDRO BILKS","DR"],[20984,"45777","SAPHIRA","D"],[12534,"33123","SARDINHA","D"],[18154,"77330","SARGENTO ELIZALDA","IR"],[11278,"20226","SARGENTO PAULO ROBERTO","D"],[12495,"15333","SARGENTO TÁRIK","I"],[10830,"10061","SCOOBY UBE","D"],[12542,"33001","SGT ROKSINAIDY","D"],[11285,"20090","SGT. LUCIANO BAGLOGUI","D"],[16735,"70111","SILENE DA SAÚDE","D"],[8487,"44567","SILVINHO ALMEIDA","D"],[7376,"55855","SIMONE MAGALHÃES","D"],[12498,"40321","SOFIA CARVALHO","R"],[20991,"45451","SORAYA COSTA","D"],[16909,"12307","SORRISO","D"],[11301,"20190","SUBTENENTE GERALDO ALVES","D"],[17150,"12331","SUELI LÍDER GUERREIRA","D"],[11287,"20200","SUZELE VELOSO","D"],[12529,"33222","TABANEZ","D"],[15065,"14777","TANIEL MACEDO","D"],[11290,"20222","TELMA RUFINO","D"],[12524,"33663","THAYS MÃE DO GABRIEL","D"],[13429,"27727","TIA LU","D"],[13423,"27555","TIA MARIA","D"],[20987,"45125","TINA","R"],[7374,"55222","TOMAZ","D"],[12531,"33190","ULISSES DIAS","D"],[20875,"45163","VALDECY LÍDER COMUNITÁRIO","D"],[8506,"11234","VALDELINO BARCELOS","D"],[20004,"22322","VICTOR JANSEN","D"],[8505,"11122","VIRGÍLIO NETO","D"],[16911,"12222","WEILA ALMEIDA","D"],[15062,"14001","WELLINGTON CAMPOS","D"],[8797,"15123","WELLINGTON LUIZ","D"],[13428,"27888","WELLINGTON MEGA","D"],[16732,"70123","WILSON AMIGÃO","D"],[12528,"33355","XANDÃO DO POVÃO","D"],[20020,"22478","XANDÃO LELECO","D"],[15069,"14000","YURI KAIOLI","D"],[16916,"12300","ZAQUEU ENGRAXATE","D"],[8795,"15166","ZÉ ALENCAR","D"],[10515,"13123","ZÉ DO COCO","D"],[13447,"27234","ZULEIKA DO BLOG","D"]]
+  }
+};
+
+</script>
+<script>
+/* Foto oficial de urna de Dayse Amarilio (TSE, DivulgaCandContas, candidatura 70002542507). Embutida para poder entrar na arte exportada. */
+window.FOTO_DAYSE = "data:image/jpeg;base64,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";
+
+</script>
+<script>
+'use strict';
+if (!window.TSE || !window.FOTO_DAYSE) {
+  document.body.innerHTML = '<main style="max-width:480px;margin:60px auto;padding:0 20px;font:16px/1.5 system-ui,sans-serif"><h1 style="font-size:22px">Não foi possível carregar a base de candidatos</h1><p>Abra o arquivo <b>index.html</b> da pasta <b>colinha-dayse-40222</b>.</p></main>';
+  throw new Error('Base do TSE não carregada');
+}
+
+/* =========================================================
+   MÓDULO 1 · CONFIGURAÇÃO DA CAMPANHA
+========================================================= */
+const CANDIDATA = { numero: '40222', nome: 'Dayse Amarilio', urna: 'DAYSE AMARILIO', cargo: 'Deputada Distrital', partido: 'PSB', cnpj: '[COMPLETAR]' };
+const LEGAL = `Propaganda eleitoral: ${CANDIDATA.nome} ${CANDIDATA.numero} · CNPJ ${CANDIDATA.cnpj}`;
+const DATA_ELEICAO = '4 de outubro';
+
+/* Ordem exata da urna nas Eleições Gerais 2026 */
+const CARGOS = [
+  { id: 'federal',    nome: 'Deputado Federal',   digitos: 4, prop: true, base: 'federal',    ue: 'DF', secao: 'df' },
+  { id: 'distrital',  nome: 'Deputado Distrital', digitos: 5, prop: true, base: 'distrital',  ue: 'DF', secao: 'df', fixo: CANDIDATA.numero },
+  { id: 'senador1',   nome: 'Senador', vaga: '1ª vaga', digitos: 3, base: 'senador', ue: 'DF', secao: 'df' },
+  { id: 'senador2',   nome: 'Senador', vaga: '2ª vaga', digitos: 3, base: 'senador', ue: 'DF', secao: 'df' },
+  { id: 'governador', nome: 'Governador',         digitos: 2, base: 'governador', ue: 'DF', secao: 'df' },
+  { id: 'presidente', nome: 'Presidente',         digitos: 2, base: 'presidente', ue: 'BR', secao: 'br' }
+];
+const CARGO = Object.fromEntries(CARGOS.map(c => [c.id, c]));
+const tituloCargo = c => c.nome + (c.vaga ? ` (${c.vaga})` : '');
+
+/* =========================================================
+   MÓDULO 2 · DADOS (normaliza a base do TSE)
+========================================================= */
+const Dados = (() => {
+  const T = window.TSE;
+  const partidoPorNumero = {};
+  Object.entries(T.partidos).forEach(([sigla, [num, nome]]) => { partidoPorNumero[String(num)] = { sigla, numero: String(num), nome }; });
+  const partidoPorSigla = sigla => { const p = T.partidos[sigla]; return p ? { sigla, numero: String(p[0]), nome: p[1] } : { sigla, numero: '', nome: sigla }; };
+
+  const base = {};
+  Object.entries(T.cargos).forEach(([chave, linhas]) => {
+    const ue = chave === 'presidente' ? 'BR' : 'DF';
+    base[chave] = linhas.map(r => {
+      const c = chave === 'distrital'
+        ? { id: 70002530000 + r[0], numero: r[1], nome: r[2], sit: r[3] }
+        : { id: r[0], numero: r[1], nome: r[2], sigla: r[3], sit: r[4], colig: r[5] || '' };
+      const p = c.sigla ? partidoPorSigla(c.sigla) : (partidoPorNumero[c.numero.slice(0, 2)] || { sigla: '', numero: c.numero.slice(0, 2), nome: '' });
+      c.sigla = p.sigla; c.partido = p;
+      c.foto = c.numero === CANDIDATA.numero && chave === 'distrital' ? window.FOTO_DAYSE : T.foto(c.id, ue);
+      c.base = chave;
+      return c;
+    });
+  });
+  const PRIORIDADE = ['D', 'DR', 'P', 'IR', 'I', 'N', 'R'];
+  return {
+    base,
+    extraidoEm: T.eleicao.extraidoEm.split('-').reverse().join('/'),
+    partido: num => partidoPorNumero[num] || null,
+    partidos: () => Object.values(partidoPorNumero),
+    candidatos: cargo => base[cargo.base],
+    /* números repetidos (renúncia + substituto): vale a candidatura ativa */
+    porNumero(cargo, n) {
+      const achados = base[cargo.base].filter(c => c.numero === n);
+      achados.sort((a, b) => PRIORIDADE.indexOf(a.sit) - PRIORIDADE.indexOf(b.sit));
+      return achados[0] || null;
+    }
+  };
+})();
+
+const SITUACAO = {
+  D: ['Registro deferido pelo TSE', ''], DR: ['Deferido, com recurso', 'Deferido c/ recurso'],
+  P: ['Registro pendente de julgamento', 'Pendente'], IR: ['Indeferido, com recurso', 'Indeferido c/ recurso'],
+  I: ['Registro indeferido', 'Indeferido'], R: ['Renunciou à candidatura', 'Renúncia'], N: ['Pedido não conhecido pelo TSE', 'Não conhecido']
+};
+
+/* =========================================================
+   MÓDULO 3 · UTILIDADES E ÍCONES
+========================================================= */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+const semAcento = s => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+const soDigitos = (v, max) => String(v ?? '').replace(/\D/g, '').slice(0, max);
+const PARTICULAS = ['DA', 'DE', 'DO', 'DAS', 'DOS', 'E'];
+const iniciais = nome => { const p = String(nome).toUpperCase().replace(/[^\p{L}\s]/gu, ' ').split(/\s+/).filter(w => w && !PARTICULAS.includes(w)); return p.length ? (p[0][0] + (p.length > 1 ? p[p.length - 1][0] : '')) : '?'; };
+const titulo = s => String(s).toLowerCase().replace(/(^|\s)(\p{L})/gu, (m, a, b) => a + b.toUpperCase()).replace(/\b(Da|De|Do|Das|Dos|E)\b/g, m => m.toLowerCase());
+
+const IC = {
+  lupa: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.6-4.6"/></svg>',
+  x: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>',
+  voltar: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>',
+  sol: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>',
+  lua: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>',
+  cadeado: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>',
+  trocar: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4 3 8l4 4M3 8h14M17 20l4-4-4-4M21 16H7"/></svg>',
+  baixo: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>',
+  ordem: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v16M3 16l4 4 4-4M17 20V4M13 8l4-4 4 4"/></svg>',
+  pasta: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 6.5h6.5l2 2H21V19H3z"/></svg>',
+  urna: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><rect x="6" y="8" width="7" height="6" rx="1"/><path d="M16 9h2M16 12h2M16 15h2"/></svg>',
+  enviar: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3M7 8l5-5 5 5"/><path d="M5 13v7h14v-7"/></svg>',
+  imprimir: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg>',
+  salvar: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 3h12v18l-6-4-6 4z"/></svg>',
+  baixar: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg>',
+  video: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg>',
+  link: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>'
+};
+const pintarIcones = (r = document) => $$('[data-ic]', r).forEach(el => { el.innerHTML = IC[el.dataset.ic] || ''; });
+
+function fotoHTML(c, extra = '') {
+  return `<span class="foto ${extra}" data-ini="${esc(iniciais(c.nome))}"><img src="${esc(c.foto)}" alt="" loading="lazy" decoding="async" onerror="this.remove()"></span>`;
+}
+function tilesHTML(numero, qtd, classe = '') {
+  return `<span class="tiles ${classe}">${Array.from({ length: qtd }, (_, k) => `<span class="tile${numero[k] ? '' : ' vazio'}" style="animation-delay:${80 + k * 60}ms">${esc(numero[k] || '')}</span>`).join('')}</span>`;
+}
+
+/* =========================================================
+   MÓDULO 4 · REGRAS DA URNA
+========================================================= */
+const Regras = {
+  resolver(cargoId, valor, votos = {}) {
+    const cargo = CARGO[cargoId];
+    if (valor === 'BRANCO') return { status: 'branco' };
+    if (valor === 'NULO') return { status: 'nulo' };
+    const n = soDigitos(valor, cargo.digitos);
+    if (!n) return { status: 'vazio' };
+    if (cargo.prop && n.length === 2) {
+      const p = Dados.partido(n);
+      return p ? { status: 'legenda', partido: p } : { status: 'nao-encontrado', msg: `Não existe partido com o número ${n}. Na urna, seria voto nulo.` };
+    }
+    if (n.length < cargo.digitos) {
+      const f = cargo.digitos - n.length;
+      return { status: 'incompleto', msg: `${cargo.nome} tem ${cargo.digitos} dígitos. ${f === 1 ? 'Falta 1' : `Faltam ${f}`}.` };
+    }
+    const c = Dados.porNumero(cargo, n);
+    if (!c) {
+      const p = cargo.prop ? Dados.partido(n.slice(0, 2)) : null;
+      return { status: 'nao-encontrado', msg: p ? `Nenhum candidato com o número ${n}. Na urna, o voto iria para a legenda ${p.sigla}.` : `Nenhum candidato com o número ${n}. Na urna, seria voto nulo.` };
+    }
+    if (cargoId === 'senador2' && votos.senador1 === n) return { status: 'duplicado', candidato: c, msg: `${titulo(c.nome)} já está na 1ª vaga. Escolha outro nome para a 2ª vaga.` };
+    return { status: 'candidato', candidato: c };
+  },
+  valido: r => ['candidato', 'legenda', 'branco', 'nulo'].includes(r.status)
+};
+
+/* =========================================================
+   MÓDULO 5 · ESTADO (com rascunho automático)
+========================================================= */
+function normalizarVotos(v = {}) {
+  const out = {};
+  CARGOS.forEach(c => {
+    const x = v[c.id];
+    out[c.id] = c.fixo ? c.fixo : (x === 'BRANCO' || x === 'NULO') ? x : soDigitos(x, c.digitos);
+  });
+  return out;
+}
+const Estado = {
+  atual: { id: null, nome: '', votos: normalizarVotos() },
+  ouvintes: [],
+  aoMudar(fn) { this.ouvintes.push(fn); },
+  avisar(ids, opts = {}) { this.ouvintes.forEach(fn => fn(ids, opts)); Armazenamento.rascunho(this.atual); },
+  setVoto(id, valor, opts = {}) {
+    const c = CARGO[id];
+    if (!c || c.fixo) return; // Deputado Distrital é travado em 40222
+    this.atual.votos[id] = (valor === 'BRANCO' || valor === 'NULO') ? valor : soDigitos(valor, c.digitos);
+    this.avisar(id.startsWith('senador') ? [id, id === 'senador1' ? 'senador2' : 'senador1'] : [id], opts);
+  },
+  carregar(col) { this.atual = { id: col.id || null, nome: col.nome || '', votos: normalizarVotos(col.votos) }; this.avisar(CARGOS.map(c => c.id)); },
+  resultado(id) { return Regras.resolver(id, this.atual.votos[id], this.atual.votos); },
+  preenchidos() { return CARGOS.filter(c => Regras.valido(this.resultado(c.id))).length; }
+};
+
+/* =========================================================
+   MÓDULO 6 · ARMAZENAMENTO LOCAL (try/catch + reserva em memória)
+========================================================= */
+const Armazenamento = (() => {
+  const CHAVE = 'colinha-dayse-40222:v2';
+  let memoria = [], disponivel = true, avisado = false;
+  const ler = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
+  const escrever = (k, v) => { try { localStorage.setItem(k, v); return true; } catch (e) { return false; } };
+  function falhou() {
+    disponivel = false;
+    const a = $('#aviso-memoria'); if (a) a.hidden = false;
+    if (!avisado) { avisado = true; UI.toast('Não deu para salvar no aparelho. As colinhas ficam só nesta sessão.', 'erro'); }
+  }
+  function gravar() { if (!escrever(CHAVE, JSON.stringify(memoria))) { falhou(); return false; } return true; }
+  return {
+    get disponivel() { return disponivel; },
+    carregar() {
+      try {
+        const t = localStorage.getItem(CHAVE);
+        const arr = t ? JSON.parse(t) : [];
+        memoria = Array.isArray(arr) ? arr : [];
+        localStorage.setItem(CHAVE + ':t', '1'); localStorage.removeItem(CHAVE + ':t');
+      } catch (e) { disponivel = false; }
+    },
+    listar() { return [...memoria].sort((a, b) => b.atualizadaEm - a.atualizadaEm); },
+    obter(id) { return memoria.find(c => c.id === id) || null; },
+    salvar(col) {
+      const agora = Date.now();
+      let item = col.id && this.obter(col.id);
+      if (item) Object.assign(item, { nome: col.nome, votos: { ...col.votos }, atualizadaEm: agora });
+      else { item = { id: 'c' + agora.toString(36), nome: col.nome, votos: { ...col.votos }, criadaEm: agora, atualizadaEm: agora }; memoria.push(item); }
+      return { item, ok: gravar() };
+    },
+    renomear(id, nome) { const it = this.obter(id); if (it) { it.nome = nome; it.atualizadaEm = Date.now(); } return gravar(); },
+    apagar(id) { memoria = memoria.filter(c => c.id !== id); return gravar(); },
+    rascunho(col) { escrever(CHAVE + ':rascunho', JSON.stringify(col)); },
+    lerRascunho() { try { return JSON.parse(ler(CHAVE + ':rascunho') || 'null'); } catch (e) { return null; } },
+    tema(v) { if (v) escrever('colinha-tema:v2', v); return ler('colinha-tema:v2'); }
+  };
+})();
+
+/* =========================================================
+   MÓDULO 7 · INTERFACE GERAL (tema, páginas, toast)
+========================================================= */
+const UI = {
+  pilha: [],
+  paginas: {},
+  registrar(nome, obj) { this.paginas[nome] = obj; },
+  ir(nome) {
+    if (nome === 'home') { while (this.pilha.length) this.voltar(true); return; }
+    const el = $('#pg-' + nome);
+    if (!el || this.pilha.includes(nome)) return;
+    this.pilha.push(nome);
+    el.scrollTop = 0;
+    el.classList.add('aberta');
+    this.paginas[nome]?.entrar?.();
+    try { history.pushState({ pg: nome }, ''); } catch (e) {}
+  },
+  voltar(semHistorico) {
+    const nome = this.pilha.pop();
+    if (!nome) return;
+    $('#pg-' + nome).classList.remove('aberta');
+    this.paginas[nome]?.sair?.();
+    if (!semHistorico) try { history.back(); } catch (e) {}
+  },
+  toast(msg, tipo = '') {
+    const t = $('#toast');
+    t.textContent = msg; t.className = 'toast ver ' + tipo;
+    clearTimeout(this._t); this._t = setTimeout(() => { t.className = 'toast'; }, 3800);
+  },
+  tema(t) {
+    document.documentElement.dataset.tema = t;
+    $('#bt-tema').innerHTML = t === 'escuro' ? IC.sol : IC.lua;
+    $('meta[name="theme-color"]').content = t === 'escuro' ? '#070708' : '#F6F6F4';
+  },
+  iniciar() {
+    pintarIcones();
+    $$('[data-fechar-gaveta],[data-voltar],#ficha-voltar').forEach(b => { b.innerHTML = b.id === 'ficha-voltar' || b.hasAttribute('data-voltar') ? IC.voltar : IC.x; });
+    $$('[data-legal]').forEach(e => { e.textContent = LEGAL; });
+    $$('[data-extraido]').forEach(e => { e.textContent = Dados.extraidoEm; });
+    const salvo = Armazenamento.tema();
+    this.tema(salvo === 'escuro' ? 'escuro' : 'claro');
+    $('#bt-tema').addEventListener('click', () => { const t = document.documentElement.dataset.tema === 'escuro' ? 'claro' : 'escuro'; this.tema(t); Armazenamento.tema(t); });
+    document.addEventListener('click', e => {
+      const b = e.target.closest('[data-ir]');
+      if (b) { e.preventDefault(); this.ir(b.dataset.ir); }
+      if (e.target.closest('[data-voltar]')) this.voltar();
+    });
+    window.addEventListener('popstate', () => {
+      if (Busca.aberta) { Busca.fechar(true); return; }
+      if (this.pilha.length) this.voltar(true);
+    });
+  }
+};
+
+/* =========================================================
+   MÓDULO 8 · HOME (cards dos cargos)
+========================================================= */
+const Home = {
+  iniciar() {
+    const ord = i => `${i + 1}º na urna`;
+    CARGOS.forEach((c, i) => {
+      const li = document.createElement('li');
+      li.className = 'cargo'; li.id = 'cargo-' + c.id;
+      li.style.animationDelay = `${120 + i * 60}ms`;
+      li.dataset.ordem = ord(i);
+      $(c.secao === 'br' ? '#cargos-br' : '#cargos-df').appendChild(li);
+      this.render(c.id);
+    });
+    const wrap = $('#home');
+    wrap.addEventListener('click', e => {
+      const b = e.target.closest('[data-abrir]');
+      if (b) Busca.abrir(b.dataset.abrir);
+    });
+    wrap.addEventListener('input', e => {
+      const inp = e.target.closest('.celas-in');
+      if (inp) this.digitando(inp);
+    });
+    wrap.addEventListener('keydown', e => {
+      const inp = e.target.closest('.celas-in');
+      if (inp && e.key === 'Enter') inp.blur();
+    });
+    $('#bt-passar').innerHTML = IC.enviar + 'Passar cola';
+    $('#bt-imprimir').innerHTML = IC.imprimir + 'Imprimir';
+    $('#bt-salvar').innerHTML = IC.salvar + 'Salvar';
+    $('#bt-imprimir').addEventListener('click', () => Impressao.imprimir());
+    $('#bt-salvar').addEventListener('click', () => this.salvar());
+    Estado.aoMudar((ids, opts) => { ids.forEach(id => { if (!opts.digitando || opts.digitando !== id) this.render(id, { animar: opts.animar === id }); }); this.progresso(); });
+    this.progresso();
+  },
+  progresso() {
+    $$('#progresso span').forEach((s, i) => { const c = CARGOS[i]; if (!c.fixo) s.classList.toggle('ok', Regras.valido(Estado.resultado(c.id))); });
+  },
+  render(id, { animar = false } = {}) {
+    const c = CARGO[id], li = $('#cargo-' + id), r = Estado.resultado(id), v = Estado.atual.votos[id];
+    li.classList.remove('entrou', 'erro');
+    if (c.fixo) { li.classList.add('fixo'); li.innerHTML = this.fixoHTML(c, li.dataset.ordem); pintarIcones(li); return; }
+    if (Regras.valido(r)) {
+      li.innerHTML = this.cheioHTML(c, r, v, li.dataset.ordem);
+      if (animar) { void li.offsetWidth; li.classList.add('entrou'); }
+      return;
+    }
+    li.innerHTML = this.vazioHTML(c, v, li.dataset.ordem);
+    pintarIcones(li);
+    if (r.msg && v.length === c.digitos) li.insertAdjacentHTML('beforeend', `<p class="cargo-msg">${esc(r.msg)}</p>`);
+  },
+  celas(c, v, novo = -1) {
+    return Array.from({ length: c.digitos }, (_, k) => `<span class="cela${v[k] ? ' cheia' : ''}${k === novo ? ' pop' : ''}${k === v.length ? ' atual' : ''}">${esc(v[k] || '')}</span>`).join('');
+  },
+  vazioHTML(c, v, ordem) {
+    return `<div class="cargo-linha">
+      <button class="cargo-tit" type="button" data-abrir="${c.id}" aria-label="Escolher ${esc(tituloCargo(c))}"><b>${esc(tituloCargo(c))}</b><small>${c.digitos} dígitos · ${ordem}</small></button>
+      <label class="celas"><span class="sr">Número · ${esc(tituloCargo(c))} · ${c.digitos} dígitos</span>
+        <input class="celas-in" data-cargo="${c.id}" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" maxlength="${c.digitos}" value="${esc(/^\d*$/.test(v) ? v : '')}">
+        <span class="celas-vis" style="display:contents">${this.celas(c, /^\d*$/.test(v) ? v : '')}</span>
+      </label>
+      <button class="lupa" type="button" data-abrir="${c.id}" aria-label="Buscar candidato · ${esc(tituloCargo(c))}"><span data-ic="lupa"></span></button>
+    </div>`;
+  },
+  cheioHTML(c, r, v, ordem) {
+    let foto, nome, numero = v, selo = '', sigla = '', qtd;
+    if (r.status === 'candidato') {
+      const k = r.candidato;
+      foto = fotoHTML(k); nome = k.nome; selo = k.partido.numero; sigla = k.sigla;
+    } else if (r.status === 'legenda') {
+      foto = `<span class="foto" data-ini="${esc(r.partido.sigla.slice(0, 4))}"></span>`; nome = `LEGENDA ${r.partido.sigla}`; selo = r.partido.numero; sigla = r.partido.sigla;
+    } else if (r.status === 'branco') {
+      foto = `<span class="foto" data-ini="—"></span>`; nome = 'VOTO EM BRANCO';
+    } else {
+      foto = `<span class="foto" data-ini="—"></span>`; nome = 'VOTO NULO'; numero = '0'.repeat(c.digitos);
+    }
+    qtd = numero === 'BRANCO' ? 0 : numero.length;
+    const tiles = r.status === 'branco' ? '<span class="tecla-branco">BRANCO</span>'
+      : `<span class="tiles">${Array.from({ length: qtd }, (_, k) => `<span class="tile${r.status === 'nulo' ? ' apagado' : ''}" style="animation-delay:${260 + k * 70}ms">${esc(numero[k])}</span>`).join('')}</span>`;
+    return `<button class="escolha" type="button" data-abrir="${c.id}" aria-label="${esc(tituloCargo(c))}: ${esc(nome)} ${r.status === 'candidato' || r.status === 'legenda' ? numero : ''}. Toque para trocar.">
+      ${foto}
+      <span style="min-width:0"><span class="rot">${esc(tituloCargo(c))} · ${ordem}</span>${tiles}<span class="fio"></span><b class="nome">${esc(nome)}</b></span>
+      <span class="partido">${selo ? `<span class="selo-p">${esc(selo)}</span><small class="${sigla.length > 8 ? 'longa' : ''}">${esc(sigla)}</small>` : ''}</span>
+    </button><span class="trocar" aria-hidden="true">${IC.trocar}</span>`;
+  },
+  fixoHTML(c, ordem) {
+    return `<div class="fixo-topo"><span class="fixo-rot">${esc(c.nome)} · ${ordem.replace(' na urna', '')}</span></div>
+      <div class="fixo-corpo"><img class="fixo-foto" src="${window.FOTO_DAYSE}" alt="Foto de urna de Dayse Amarilio">
+        <span><b class="fixo-nome">${esc(CANDIDATA.urna)}</b><span class="fixo-part">PSB · Partido Socialista Brasileiro</span></span></div>
+      ${tilesHTML(CANDIDATA.numero, 5)}
+      <p class="fixo-nota">Já está na sua colinha. Na urna, digite 40222 e aperte CONFIRMA.</p>`;
+  },
+  digitando(inp) {
+    const c = CARGO[inp.dataset.cargo];
+    const anterior = /^\d*$/.test(Estado.atual.votos[c.id]) ? Estado.atual.votos[c.id] : '';
+    const v = soDigitos(inp.value, c.digitos);
+    if (inp.value !== v) inp.value = v;
+    Estado.setVoto(c.id, v, { digitando: c.id });
+    const li = $('#cargo-' + c.id);
+    $('.celas-vis', li).innerHTML = this.celas(c, v, v.length > anterior.length ? v.length - 1 : -1);
+    $('.cargo-msg', li)?.remove();
+    if (v.length === c.digitos) {
+      const r = Estado.resultado(c.id);
+      if (Regras.valido(r)) {
+        inp.blur();
+        setTimeout(() => { this.render(c.id, { animar: true }); this.progresso(); }, 260);
+      } else {
+        li.classList.remove('erro'); void li.offsetWidth; li.classList.add('erro');
+        li.insertAdjacentHTML('beforeend', `<p class="cargo-msg">${esc(r.msg)}</p>`);
+      }
+    }
+  },
+  salvar() {
+    const nome = (Estado.atual.nome || '').trim() || `Colinha ${new Date().toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' })} ${new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}`;
+    const { item, ok } = Armazenamento.salvar({ id: Estado.atual.id, nome, votos: Estado.atual.votos });
+    Estado.atual.id = item.id; Estado.atual.nome = nome;
+    Armazenamento.rascunho(Estado.atual);
+    UI.toast(ok ? `“${nome}” salva neste aparelho.` : `“${nome}” guardada só nesta sessão.`, ok ? '' : 'erro');
+  }
+};
+
+/* =========================================================
+   MÓDULO 9 · BUSCA (gaveta com lista, filtros e ficha)
+========================================================= */
+const Busca = {
+  aberta: false, cargoId: null, modo: 'candidatos', ordem: 'rotativa', letra: 'A',
+  iniciar() {
+    $('[data-fechar-gaveta]').addEventListener('click', () => this.fechar());
+    $('#gaveta-fundo').addEventListener('click', () => this.fechar());
+    $('#busca').addEventListener('input', () => this.render(false));
+    $('#filtro-partido').addEventListener('change', e => { $('#chip-partido-tx').textContent = e.target.value || 'Partido'; $('#chip-partido').classList.toggle('ativo', !!e.target.value); this.render(false); });
+    $('#chip-ordem').addEventListener('click', () => { this.ordem = this.ordem === 'rotativa' ? 'numero' : 'rotativa'; this.render(true); });
+    $('#lista').addEventListener('click', e => {
+      const b = e.target.closest('[data-num]');
+      if (!b || b.disabled) return;
+      if (this.modo === 'partidos') { this.escolher(b.dataset.num); return; }
+      this.ficha(b.dataset.num, b.dataset.id);
+    });
+    $('#gaveta-base').addEventListener('click', e => {
+      const b = e.target.closest('[data-acao]');
+      if (!b) return;
+      const a = b.dataset.acao;
+      if (a === 'legenda') { this.modo = this.modo === 'partidos' ? 'candidatos' : 'partidos'; $('#busca').value = ''; this.render(true); }
+      else if (a === 'branco') this.escolher('BRANCO');
+      else if (a === 'nulo') this.escolher('NULO');
+      else if (a === 'limpar') { Estado.setVoto(this.cargoId, ''); this.fechar(); UI.toast('Cargo limpo.'); }
+    });
+    $('#ficha-voltar').addEventListener('click', () => $('#ficha').classList.remove('aberta'));
+    $('#ficha-corpo').addEventListener('click', e => { const b = e.target.closest('[data-adicionar]'); if (b && !b.disabled) this.escolher(b.dataset.adicionar); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && this.aberta) { if ($('#ficha').classList.contains('aberta')) $('#ficha').classList.remove('aberta'); else this.fechar(); } });
+  },
+  abrir(cargoId) {
+    const c = CARGO[cargoId];
+    if (!c || c.fixo) return; // Distrital não abre busca
+    this.cargoId = cargoId; this.modo = 'candidatos';
+    const letras = [...new Set(Dados.candidatos(c).map(k => semAcento(k.nome)[0].toUpperCase()))].sort();
+    this.letra = letras[Math.floor(Math.random() * letras.length)];
+    $('#gaveta-tit').textContent = tituloCargo(c);
+    $('#busca').value = '';
+    const siglas = [...new Set(Dados.candidatos(c).map(k => k.sigla))].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+    $('#filtro-partido').innerHTML = `<option value="">Todos os partidos</option>` + siglas.map(s => `<option>${esc(s)}</option>`).join('');
+    $('#chip-partido-tx').textContent = 'Partido'; $('#chip-partido').classList.remove('ativo');
+    $('#ficha').classList.remove('aberta');
+    this.render(true);
+    $('#lista').scrollTop = 0;
+    $('#gaveta-fundo').hidden = false; $('#gaveta').hidden = false;
+    requestAnimationFrame(() => requestAnimationFrame(() => { $('#gaveta-fundo').classList.add('aberta'); $('#gaveta').classList.add('aberta'); }));
+    document.body.style.overflow = 'hidden';
+    this.aberta = true;
+    try { history.pushState({ gaveta: 1 }, ''); } catch (e) {}
+  },
+  fechar(doHistorico) {
+    if (!this.aberta) return;
+    this.aberta = false;
+    $('#gaveta-fundo').classList.remove('aberta'); $('#gaveta').classList.remove('aberta');
+    document.body.style.overflow = '';
+    setTimeout(() => { if (!this.aberta) { $('#gaveta-fundo').hidden = true; $('#gaveta').hidden = true; } }, 460);
+    if (!doHistorico) try { history.back(); } catch (e) {}
+  },
+  ordenar(lista) {
+    if (this.ordem === 'numero') return [...lista].sort((a, b) => a.numero.localeCompare(b.numero));
+    const alfa = [...lista].sort((a, b) => a.nome.localeCompare(b.nome, 'pt-BR'));
+    const i = alfa.findIndex(k => semAcento(k.nome)[0].toUpperCase() >= this.letra);
+    return i > 0 ? alfa.slice(i).concat(alfa.slice(0, i)) : alfa;
+  },
+  render(animar) {
+    const c = CARGO[this.cargoId];
+    const q = semAcento($('#busca').value.trim());
+    const partido = $('#filtro-partido').value;
+    const votoAtual = Estado.atual.votos[c.id];
+    const outraVaga = c.id === 'senador1' ? Estado.atual.votos.senador2 : c.id === 'senador2' ? Estado.atual.votos.senador1 : '';
+    $('#chip-ordem-tx').textContent = this.ordem === 'rotativa' ? 'Alfabética rotativa' : 'Por número';
+    $('#busca').placeholder = this.modo === 'partidos' ? 'busque o partido por sigla ou número' : 'busque por nome ou número';
+    let html = '', n = 0;
+    if (this.modo === 'partidos') {
+      let ps = Dados.partidos().filter(p => !q || semAcento(p.sigla + ' ' + p.nome).includes(q) || p.numero.startsWith(q));
+      ps.sort((a, b) => a.sigla.localeCompare(b.sigla, 'pt-BR'));
+      n = ps.length;
+      html = ps.map((p, i) => `<li><button class="cand${animar && i < 12 ? ' anima' : ''}${votoAtual === p.numero ? ' escolhido' : ''}" style="animation-delay:${i * 28}ms" type="button" data-num="${p.numero}">
+        <span class="foto" data-ini="${esc(p.sigla.slice(0, 4))}"></span>
+        <span style="min-width:0"><span class="rot">Voto de legenda · ${esc(c.nome)}</span>${tilesHTML(p.numero, 2)}<span class="fio"></span><b class="nome">${esc(p.nome.toUpperCase())}</b></span>
+        <span class="partido"><span class="selo-p">${p.numero}</span><small class="${p.sigla.length > 8 ? 'longa' : ''}">${esc(p.sigla)}</small></span></button></li>`).join('');
+      $('#conta-n').textContent = `${n} partidos · só a legenda`;
+      $('#conta-ordem').textContent = 'A → Z';
+    } else {
+      let ks = Dados.candidatos(c).filter(k => (!partido || k.sigla === partido) && (!q || semAcento(k.nome).includes(q) || k.numero.startsWith(q) || semAcento(k.sigla).includes(q)));
+      ks = this.ordenar(ks);
+      n = ks.length;
+      html = ks.map((k, i) => {
+        const bloq = outraVaga && outraVaga === k.numero;
+        const tag = bloq ? '<span class="etiqueta">Já na outra vaga</span>' : SITUACAO[k.sit]?.[1] ? `<span class="etiqueta${['I', 'R', 'N'].includes(k.sit) ? ' alerta' : ''}">${SITUACAO[k.sit][1]}</span>` : '';
+        return `<li><button class="cand${animar && i < 12 ? ' anima' : ''}${votoAtual === k.numero ? ' escolhido' : ''}" style="animation-delay:${i * 28}ms" type="button" data-num="${k.numero}" data-id="${k.id}" ${bloq ? 'disabled' : ''}>
+          ${fotoHTML(k)}
+          <span style="min-width:0"><span class="rot">${esc(c.nome)} · ${c.ue === 'BR' ? 'Brasil' : 'DF'}</span>${tilesHTML(k.numero, k.numero.length)}<span class="fio"></span><b class="nome">${esc(k.nome)}</b>${tag}</span>
+          <span class="partido"><span class="selo-p">${esc(k.partido.numero)}</span><small class="${k.sigla.length > 8 ? 'longa' : ''}">${esc(k.sigla)}</small></span></button></li>`;
+      }).join('');
+      $('#conta-n').textContent = `${n} candidato${n === 1 ? '' : 's'} · ${c.ue === 'BR' ? 'Brasil' : 'DF'} · 2026`;
+      $('#conta-ordem').textContent = this.ordem === 'rotativa' ? `${this.letra} → Z → A` : '0 → 9';
+    }
+    $('#lista-ul').innerHTML = html || `<li class="nada">Nada encontrado para “${esc($('#busca').value)}”.</li>`;
+    $('.filtros').hidden = this.modo === 'partidos';
+    const vr = Estado.resultado(c.id);
+    $('#gaveta-base').style.setProperty('--cols', c.prop ? 3 : 2);
+    $('#gaveta-base').innerHTML =
+      (c.prop ? `<button class="base-bt" type="button" data-acao="legenda"><span class="mini"><i></i><i></i></span>${this.modo === 'partidos' ? 'Ver candidatos' : 'Só o partido'}</button>` : '') +
+      `<button class="base-bt" type="button" data-acao="nulo"><span class="mini">${'<i>0</i>'.repeat(Math.min(c.digitos, 4))}</span>Votar nulo</button>
+       <button class="base-bt" type="button" data-acao="branco"><span class="mini-branco">BRANCO</span>Votar em branco</button>` +
+      (vr.status !== 'vazio' ? `<button class="limpar-cargo" type="button" data-acao="limpar">Limpar este cargo</button>` : '');
+  },
+  ficha(numero, id) {
+    const c = CARGO[this.cargoId];
+    const k = Dados.candidatos(c).find(x => String(x.id) === String(id)) || Dados.porNumero(c, numero);
+    const outraVaga = c.id === 'senador1' ? Estado.atual.votos.senador2 : c.id === 'senador2' ? Estado.atual.votos.senador1 : '';
+    const bloq = outraVaga === k.numero;
+    const [sitTxt] = SITUACAO[k.sit] || ['Situação não informada'];
+    const alerta = !['D', 'DR'].includes(k.sit);
+    $('#ficha-kicker').textContent = `${c.nome}${c.vaga ? ' · ' + c.vaga : ''} · ${c.ue === 'BR' ? 'Brasil' : 'DF'} · 2026`;
+    $('#ficha-corpo').innerHTML = `
+      <div class="ficha-cab">${fotoHTML(k)}
+        <div style="min-width:0"><h3 class="ficha-nome">${esc(k.nome)}</h3>
+          <div class="ficha-info"><span>${esc(k.partido.nome)}</span>${k.colig && k.colig !== k.sigla ? `<span>${esc(titulo(k.colig))}</span>` : ''}</div>
+          <p class="ficha-sit${alerta ? ' alerta' : ''}"><i></i>${esc(sitTxt)}</p></div>
+        <span class="partido"><span class="selo-p">${esc(k.partido.numero)}</span><small class="${k.sigla.length > 8 ? 'longa' : ''}">${esc(k.sigla)}</small></span>
+      </div>
+      ${tilesHTML(k.numero, k.numero.length)}
+      <button class="bt bt-principal" type="button" data-adicionar="${k.numero}" ${bloq ? 'disabled' : ''}>${bloq ? 'Já está na outra vaga de Senador' : Estado.atual.votos[c.id] === k.numero ? 'Já está na sua colinha' : 'Adicionar à colinha'}</button>
+      <p class="ficha-fonte">Fonte: TSE · DivulgaCandContas · consulta em ${Dados.extraidoEm}.<br>Situação do registro pode mudar até a eleição.</p>`;
+    $('#ficha').classList.add('aberta');
+  },
+  escolher(valor) {
+    const id = this.cargoId;
+    Estado.setVoto(id, valor, { animar: id });
+    this.fechar();
+    setTimeout(() => $('#cargo-' + id)?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 200);
+  }
+};
+
+/* =========================================================
+   MÓDULO 10 · ARTE (canvas: prévia, PNG e vídeo)
+========================================================= */
+const Arte = (() => {
+  const SANS = '"Atkinson Hyperlegible Next", system-ui, sans-serif';
+  const MONO = '"Atkinson Hyperlegible Mono", ui-monospace, monospace';
+  const AM = '#FFD400', TINTA = '#0B1B2B', CIANO = '#00AEEF';
+  const TEMAS = {
+    escuro: { fundo: '#070708', card: '#131315', linha: '#2a2a2e', texto: '#F4F4F5', sub: '#A1A1AA', faint: '#5f5f67', tileBg: '#0b0b0c', tileLinha: '#46464d', ini: '#222226', iniTx: '#bdbdc4' },
+    claro:  { fundo: '#F6F6F4', card: '#FFFFFF', linha: '#E2E2DF', texto: '#111111', sub: '#555555', faint: '#A3A3A0', tileBg: '#FFFFFF', tileLinha: '#CFCFCB', ini: '#EDEDEA', iniTx: '#444444' }
+  };
+  const FORMATOS = { post: { W: 1080, H: 1350, topo: 70, base: 0 }, stories: { W: 1080, H: 1920, topo: 230, base: 250 } };
+  const DURACAO = 6;
+  let foto = null;
+  const clamp = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v));
+  const ease = p => 1 - Math.pow(1 - p, 3);
+  const pop = p => p <= 0 ? 0 : p >= 1 ? 1 : p < .55 ? .6 + (1.1 - .6) * (p / .55) : 1.1 - .1 * ((p - .55) / .45);
+
+  async function preparar() {
+    try { await Promise.race([Promise.all([document.fonts.load(`800 40px ${SANS}`), document.fonts.load(`700 40px ${MONO}`), document.fonts.load(`500 40px ${SANS}`)]), new Promise(r => setTimeout(r, 2500))]); } catch (e) {}
+    if (!foto) { foto = new Image(); foto.src = window.FOTO_DAYSE; try { await foto.decode(); } catch (e) {} }
+  }
+  const fonte = (ctx, peso, px, mono) => { ctx.font = `${peso} ${px}px ${mono ? MONO : SANS}`; };
+  const esp = (ctx, v) => { if ('letterSpacing' in ctx) ctx.letterSpacing = v + 'px'; };
+  function rr(ctx, x, y, w, h, r) { ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath(); }
+  function caber(ctx, t, maxW, peso, px, mono) {
+    let s = px; fonte(ctx, peso, s, mono);
+    while (ctx.measureText(t).width > maxW && s > px * .6) { s -= 2; fonte(ctx, peso, s, mono); }
+    if (ctx.measureText(t).width <= maxW) return t;
+    while (t.length > 1 && ctx.measureText(t + '…').width > maxW) t = t.slice(0, -1);
+    return t + '…';
+  }
+  /* casas de número, alinhadas à direita em xDir */
+  function casas(ctx, txt, qtd, xDir, yMeio, w, h, cor, s, t0, vazias) {
+    const gap = Math.round(w * .16);
+    const x0 = xDir - qtd * w - (qtd - 1) * gap;
+    for (let k = 0; k < qtd; k++) {
+      const x = x0 + k * (w + gap), y = yMeio - h / 2;
+      rr(ctx, x, y, w, h, w * .26);
+      if (vazias) { ctx.setLineDash([9, 7]); ctx.lineWidth = 3; ctx.strokeStyle = cor.dash; ctx.stroke(); ctx.setLineDash([]); continue; }
+      ctx.fillStyle = cor.bg; ctx.fill(); ctx.lineWidth = 3; ctx.strokeStyle = cor.linha; ctx.stroke();
+      const sc = pop(clamp((s - t0 - k * .09) / .34));
+      if (sc > 0 && txt[k]) {
+        ctx.save(); ctx.translate(x + w / 2, yMeio); ctx.scale(sc, sc);
+        fonte(ctx, 700, h * .6, true); ctx.fillStyle = cor.tx; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+        ctx.fillText(txt[k], 0, h * .03); ctx.restore();
+      }
+    }
+    return x0;
+  }
+  function linhas(cfg) {
+    return CARGOS.map((c, i) => {
+      const r = Regras.resolver(c.id, cfg.votos[c.id], cfg.votos), ok = Regras.valido(r);
+      const l = { c, i, ok, r, numero: '', nome: 'Em aberto', sub: '', ini: '', fixo: !!c.fixo };
+      if (r.status === 'candidato') Object.assign(l, { numero: r.candidato.numero, nome: r.candidato.nome, sub: r.candidato.sigla, ini: iniciais(r.candidato.nome) });
+      if (r.status === 'legenda') Object.assign(l, { numero: r.partido.numero, nome: `LEGENDA ${r.partido.sigla}`, sub: titulo(r.partido.nome), ini: r.partido.sigla.slice(0, 4) });
+      if (r.status === 'branco') Object.assign(l, { numero: 'BRANCO', nome: 'VOTO EM BRANCO', ini: '' });
+      if (r.status === 'nulo') Object.assign(l, { numero: '0'.repeat(c.digitos), nome: 'VOTO NULO', ini: '' });
+      if (l.fixo) Object.assign(l, { nome: CANDIDATA.urna, sub: 'PSB · Partido Socialista Brasileiro' });
+      return l;
+    }).filter(l => !cfg.ocultarVazios || l.ok);
+  }
+  function desenhar(ctx, cfg, s = Infinity) {
+    const F = FORMATOS[cfg.formato], T = TEMAS[cfg.tema], { W, H } = F, M = 60;
+    ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1;
+    ctx.fillStyle = T.fundo; ctx.fillRect(0, 0, W, H);
+    ctx.textBaseline = 'alphabetic';
+    // cabeçalho
+    const a0 = ease(clamp(s / .5));
+    ctx.globalAlpha = a0;
+    let y = F.topo + 30;
+    fonte(ctx, 700, 25, true); esp(ctx, 5); ctx.fillStyle = T.faint; ctx.textAlign = 'center';
+    ctx.fillText('ELEIÇÕES 2026 · DF · 4 DE OUTUBRO', W / 2, y); esp(ctx, 0);
+    y += 84; fonte(ctx, 800, 80); ctx.fillStyle = T.texto; ctx.fillText('Minha colinha', W / 2, y);
+    // barra de progresso, como no site
+    y += 32;
+    const segW = (W - 2 * M - 5 * 10) / 6;
+    const L0 = linhas({ ...cfg, ocultarVazios: false });
+    for (let k = 0; k < 6; k++) {
+      rr(ctx, M + k * (segW + 10), y, segW, 8, 4); ctx.fillStyle = T.linha; ctx.fill();
+      const p = ease(clamp((s - .3 - k * .12) / .4));
+      if (L0[k].ok && p > 0) { rr(ctx, M + k * (segW + 10), y, segW * p, 8, 4); ctx.fillStyle = L0[k].fixo ? AM : T.texto; ctx.fill(); }
+    }
+    ctx.globalAlpha = 1;
+    const topo = y + 28;
+    const rodH = 232, rodY = H - F.base - rodH;
+    const L = linhas(cfg);
+    const gap = 12;
+    const rowH = Math.min((rodY - 22 - topo - gap * (L.length - 1)) / Math.max(L.length, 1), cfg.formato === 'stories' ? 210 : 176);
+    L.forEach((l, i) => linha(ctx, l, i, topo + i * (rowH + gap), rowH, W, M, T, s));
+    rodape(ctx, W, H, rodY, M, T, s);
+    ctx.restore();
+  }
+  function linha(ctx, l, i, y, h, W, M, T, s) {
+    const t0 = .5 + i * .26, p = ease(clamp((s - t0) / .5));
+    if (p <= 0) return;
+    ctx.save();
+    ctx.globalAlpha = p;
+    ctx.translate(0, y); ctx.scale(1, .35 + .65 * p); ctx.translate(0, -y);
+    const fixo = l.fixo;
+    rr(ctx, M, y, W - 2 * M, h, 30);
+    ctx.fillStyle = fixo ? AM : T.card; ctx.fill();
+    if (!fixo) { ctx.lineWidth = 2; ctx.strokeStyle = T.linha; ctx.stroke(); }
+    else { ctx.save(); ctx.clip(); ctx.fillStyle = CIANO; ctx.fillRect(M, y, 12, h); ctx.restore(); }
+    const cor = fixo ? TINTA : T.texto, corSub = fixo ? TINTA : T.sub;
+    // foto
+    const fh = h - 30, fw = Math.round(fh * .76), fx = M + 26, fy = y + 15;
+    ctx.save(); rr(ctx, fx, fy, fw, fh, 16);
+    if (fixo && foto && foto.complete && foto.naturalWidth) {
+      ctx.clip();
+      const r = Math.max(fw / foto.naturalWidth, fh / foto.naturalHeight);
+      ctx.drawImage(foto, fx + (fw - foto.naturalWidth * r) / 2, fy + (fh - foto.naturalHeight * r) / 2, foto.naturalWidth * r, foto.naturalHeight * r);
+    } else if (l.ok) {
+      ctx.fillStyle = T.ini; ctx.fill();
+      if (l.ini) { fonte(ctx, 800, fw * .34); ctx.fillStyle = T.iniTx; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(l.ini, fx + fw / 2, fy + fh / 2 + 2); }
+    } else { ctx.setLineDash([9, 7]); ctx.lineWidth = 3; ctx.strokeStyle = T.faint; ctx.stroke(); ctx.setLineDash([]); }
+    ctx.restore();
+    ctx.textBaseline = 'alphabetic';
+    // casas do número
+    const xDir = W - M - 26, meio = y + h / 2;
+    const tw = Math.min(Math.round(h * .5), fixo ? 76 : 68), th = Math.round(tw * 1.3);
+    const corCasa = fixo ? { bg: TINTA, linha: TINTA, tx: AM, dash: TINTA } : { bg: T.tileBg, linha: T.tileLinha, tx: T.texto, dash: T.faint };
+    let xEsq;
+    if (l.numero === 'BRANCO') {
+      const bw = tw * 3.2; xEsq = xDir - bw;
+      const sc = pop(clamp((s - t0 - .1) / .34));
+      ctx.save(); ctx.translate(xEsq + bw / 2, meio); ctx.scale(sc || .001, sc || .001);
+      rr(ctx, -bw / 2, -th / 2, bw, th, 12); ctx.fillStyle = '#F7F7F2'; ctx.fill(); ctx.lineWidth = 3; ctx.strokeStyle = '#C9C9C3'; ctx.stroke();
+      fonte(ctx, 700, th * .34, true); ctx.fillStyle = '#111'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('BRANCO', 0, 2); ctx.restore();
+    } else {
+      xEsq = casas(ctx, l.numero, l.ok ? l.numero.length : l.c.digitos, xDir, meio, tw, th, corCasa, s, t0 + .15, !l.ok);
+    }
+    // textos
+    const tx = fx + fw + 26, maxW = xEsq - 26 - tx;
+    ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
+    const nomePx = Math.min(42, h * .26);
+    fonte(ctx, 700, 22, true); esp(ctx, 3); ctx.fillStyle = corSub;
+    ctx.fillText(caber(ctx, `${l.i + 1}º · ${(l.c.nome + (l.c.vaga ? ' ' + l.c.vaga : '')).toUpperCase()}`, maxW, 700, 22, true), tx, meio - nomePx * .85);
+    esp(ctx, 0);
+    ctx.fillStyle = l.ok ? cor : T.faint;
+    ctx.fillText(caber(ctx, l.nome, maxW, 800, nomePx), tx, meio + nomePx * .38);
+    if (l.sub) { ctx.fillStyle = corSub; ctx.fillText(caber(ctx, l.sub, maxW, 500, 24), tx, meio + nomePx * .38 + 36); }
+    ctx.restore();
+  }
+  function rodape(ctx, W, H, ry, M, T, s) {
+    ctx.save();
+    ctx.globalAlpha = ease(clamp((s - .25) / .5));
+    ctx.fillStyle = T.linha; ctx.fillRect(M, ry, W - 2 * M, 2);
+    const tw = 70, th = 92;
+    const x0 = casas(ctx, CANDIDATA.numero, 5, W - M, ry + 88, tw, th, { bg: AM, linha: AM, tx: TINTA }, s, .5);
+    ctx.textAlign = 'left';
+    fonte(ctx, 700, 22, true); esp(ctx, 4); ctx.fillStyle = T.sub;
+    ctx.fillText(caber(ctx, 'DEPUTADA DISTRITAL · PSB', x0 - M - 24, 700, 22, true), M, ry + 66);
+    esp(ctx, 0); ctx.fillStyle = T.texto;
+    ctx.fillText(caber(ctx, CANDIDATA.nome, x0 - M - 24, 800, 56), M, ry + 126);
+    ctx.fillStyle = T.sub;
+    ctx.fillText(caber(ctx, LEGAL, W - 2 * M, 700, 21), M, ry + 180);
+    ctx.fillText(caber(ctx, 'Colinha não oficial, sem ligação com o TSE. Dados de candidatos: base pública do TSE.', W - 2 * M, 500, 20), M, ry + 210);
+    ctx.restore();
+  }
+  return { desenhar, preparar, FORMATOS, DURACAO };
+})();
+
+/* =========================================================
+   MÓDULO 11 · EXPORTAÇÃO (PNG, vídeo, compartilhar, link)
+========================================================= */
+const Exportacao = {
+  cachePNG: null, cacheVideo: null,
+  cfg() {
+    const v = n => $(`input[name="${n}"]:checked`).value;
+    return { formato: v('formato'), tema: v('tema'), tipo: v('tipo'), ocultarVazios: $('#op-ocultar').checked, votos: { ...Estado.atual.votos } };
+  },
+  chave: cfg => JSON.stringify([cfg.formato, cfg.tema, cfg.ocultarVazios, cfg.votos]),
+  arquivo: (cfg, ext) => `colinha-dayse-40222-${cfg.formato}.${ext}`,
+  tela(cfg) { const { W, H } = Arte.FORMATOS[cfg.formato]; const cv = document.createElement('canvas'); cv.width = W; cv.height = H; return cv; },
+  async png(cfg = this.cfg()) {
+    const k = this.chave(cfg);
+    if (this.cachePNG?.k === k) return this.cachePNG;
+    await Arte.preparar();
+    const cv = this.tela(cfg); Arte.desenhar(cv.getContext('2d'), cfg, Infinity);
+    const blob = await new Promise((ok, erro) => cv.toBlob(b => b ? ok(b) : erro(new Error('png')), 'image/png'));
+    return (this.cachePNG = { k, blob, nome: this.arquivo(cfg, 'png') });
+  },
+  suportaVideo() {
+    if (typeof MediaRecorder === 'undefined' || !HTMLCanvasElement.prototype.captureStream) return null;
+    return ['video/webm;codecs=vp9', 'video/webm;codecs=vp8', 'video/webm', 'video/mp4'].find(m => MediaRecorder.isTypeSupported?.(m)) || null;
+  },
+  async video(cfg = this.cfg(), progresso = () => {}) {
+    const k = this.chave(cfg);
+    if (this.cacheVideo?.k === k) return this.cacheVideo;
+    const mime = this.suportaVideo();
+    if (!mime) throw new Error('sem-suporte');
+    await Arte.preparar();
+    const cv = this.tela(cfg), ctx = cv.getContext('2d');
+    Arte.desenhar(ctx, cfg, 0);
+    const stream = cv.captureStream(30);
+    const rec = new MediaRecorder(stream, { mimeType: mime, videoBitsPerSecond: 6e6 });
+    const partes = [];
+    rec.ondataavailable = e => { if (e.data?.size) partes.push(e.data); };
+    const parou = new Promise(r => { rec.onstop = r; });
+    rec.start(250);
+    const t0 = performance.now();
+    await new Promise(fim => {
+      const q = () => { const s = (performance.now() - t0) / 1000; Arte.desenhar(ctx, cfg, s); progresso(Math.min(1, s / Arte.DURACAO)); s < Arte.DURACAO ? requestAnimationFrame(q) : fim(); };
+      requestAnimationFrame(q);
+    });
+    rec.stop(); await parou; stream.getTracks().forEach(t => t.stop());
+    const tipo = mime.split(';')[0];
+    return (this.cacheVideo = { k, blob: new Blob(partes, { type: tipo }), nome: this.arquivo(cfg, tipo === 'video/mp4' ? 'mp4' : 'webm') });
+  },
+  baixar({ blob, nome }) {
+    const url = URL.createObjectURL(blob), a = document.createElement('a');
+    a.href = url; a.download = nome; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  },
+  async compartilhar(arq) {
+    const file = new File([arq.blob], arq.nome, { type: arq.blob.type });
+    if (navigator.canShare?.({ files: [file] })) {
+      try { await navigator.share({ files: [file], title: 'Minha colinha', text: `Minha colinha para ${DATA_ELEICAO}. Para Deputada Distrital: ${CANDIDATA.numero}, ${CANDIDATA.nome}.` }); return 'ok'; }
+      catch (e) { if (e.name === 'AbortError') return 'cancelado'; }
+    }
+    this.baixar(arq); return 'baixado';
+  },
+  /* números no fragmento (#): o navegador não envia essa parte ao servidor */
+  CODIGOS: { federal: 'f', senador1: 's1', senador2: 's2', governador: 'g', presidente: 'p' },
+  link() {
+    const p = new URLSearchParams();
+    Object.entries(this.CODIGOS).forEach(([id, cod]) => { const v = Estado.atual.votos[id]; if (v) p.set(cod, v === 'BRANCO' ? 'b' : v === 'NULO' ? 'n' : v); });
+    const base = location.href.split('#')[0], q = p.toString();
+    return q ? `${base}#${q}` : base;
+  },
+  lerLink() {
+    const h = location.hash.replace(/^#/, ''); if (!h) return false;
+    const p = new URLSearchParams(h), votos = {}; let achou = false;
+    Object.entries(this.CODIGOS).forEach(([id, cod]) => { const v = p.get(cod); if (v) { votos[id] = v === 'b' ? 'BRANCO' : v === 'n' ? 'NULO' : v; achou = true; } });
+    if (achou) Estado.carregar({ nome: 'Colinha recebida', votos });
+    return achou;
+  },
+  async copiar(t) {
+    try { if (navigator.clipboard && window.isSecureContext) { await navigator.clipboard.writeText(t); return true; } } catch (e) {}
+    try { const ta = document.createElement('textarea'); ta.value = t; ta.style.cssText = 'position:fixed;opacity:0'; document.body.appendChild(ta); ta.select(); const ok = document.execCommand('copy'); ta.remove(); return ok; } catch (e) { return false; }
+  }
+};
+
+const PaginaPassar = {
+  raf: null, gerando: false,
+  iniciar() {
+    $('#bt-compartilhar').innerHTML = IC.enviar + 'Compartilhar';
+    $('#bt-png').innerHTML = IC.baixar + 'Imagem';
+    $('#bt-video').innerHTML = IC.video + 'Vídeo';
+    $('#bt-copiar').innerHTML = IC.link + 'Copiar link';
+    $('#pg-passar').addEventListener('change', e => { if (e.target.matches('input')) this.atualizar(); });
+    $('#bt-png').addEventListener('click', async () => { try { Exportacao.baixar(await Exportacao.png()); UI.toast('Imagem baixada. É só mandar no WhatsApp.'); } catch (e) { UI.toast('Não deu para gerar a imagem neste navegador.', 'erro'); } });
+    $('#bt-video').addEventListener('click', () => this.gerarVideo(false));
+    $('#bt-compartilhar').addEventListener('click', () => this.compartilhar());
+    $('#bt-copiar').addEventListener('click', async () => {
+      const link = Exportacao.link(), ok = await Exportacao.copiar(link), campo = $('#link-manual');
+      if (ok) { campo.hidden = true; UI.toast('Link copiado. Quem abrir recebe a colinha preenchida.'); }
+      else { campo.hidden = false; campo.value = link; campo.select(); UI.toast('Copie o link no campo abaixo.'); }
+    });
+    Estado.aoMudar(() => { Exportacao.cachePNG = null; Exportacao.cacheVideo = null; });
+  },
+  async entrar() { await Arte.preparar(); this.atualizar(); },
+  sair() { cancelAnimationFrame(this.raf); this.raf = null; },
+  atualizar() {
+    const cfg = Exportacao.cfg(), cv = $('#previa'), { W, H } = Arte.FORMATOS[cfg.formato];
+    if (cv.width !== W || cv.height !== H) { cv.width = W; cv.height = H; }
+    $('#previa-caixa').classList.toggle('stories', cfg.formato === 'stories');
+    const ctx = cv.getContext('2d');
+    cancelAnimationFrame(this.raf); this.raf = null;
+    if (cfg.tipo === 'animada') {
+      const t0 = performance.now();
+      const loop = agora => { Arte.desenhar(ctx, cfg, ((agora - t0) / 1000) % (Arte.DURACAO + 1)); this.raf = requestAnimationFrame(loop); };
+      this.raf = requestAnimationFrame(loop);
+    } else Arte.desenhar(ctx, cfg, Infinity);
+    const mime = Exportacao.suportaVideo(), bv = $('#bt-video');
+    if (!mime) { bv.disabled = true; $('#nota-video').textContent = 'Este navegador não grava vídeo. Use a imagem.'; }
+    else if (cfg.tipo !== 'animada') { bv.disabled = true; $('#nota-video').textContent = 'Escolha “Animada” em Tipo para liberar o vídeo.'; }
+    else { bv.disabled = this.gerando; $('#nota-video').textContent = `Vídeo de ${Arte.DURACAO} segundos, gerado no seu aparelho${mime.includes('mp4') ? ' (MP4 neste navegador)' : ' (WebM)'}.`; }
+    const n = Estado.preenchidos();
+    const inval = CARGOS.filter(c => { const r = Estado.resultado(c.id); return r.status !== 'vazio' && !Regras.valido(r); }).length;
+    $('#passar-status').textContent = `${n} de 6 cargos na colinha.` + (inval ? ` ${inval} com número incompleto ou inválido fica${inval > 1 ? 'm' : ''} de fora.` : '');
+  },
+  async gerarVideo(paraCompartilhar) {
+    if (this.gerando) return null;
+    this.gerando = true; const bv = $('#bt-video'); bv.disabled = true;
+    try {
+      const arq = await Exportacao.video(Exportacao.cfg(), p => { bv.innerHTML = IC.video + `${Math.round(p * 100)}%`; });
+      if (!paraCompartilhar) { Exportacao.baixar(arq); UI.toast('Vídeo baixado.'); }
+      return arq;
+    } catch (e) { UI.toast('Não deu para gerar o vídeo neste navegador. Use a imagem.', 'erro'); return null; }
+    finally { this.gerando = false; bv.innerHTML = IC.video + 'Vídeo'; this.atualizar(); }
+  },
+  async compartilhar() {
+    const cfg = Exportacao.cfg();
+    let arq;
+    if (cfg.tipo === 'animada' && Exportacao.suportaVideo()) {
+      if (Exportacao.cacheVideo?.k !== Exportacao.chave(cfg)) {
+        // o vídeo leva uns segundos e o navegador exige um toque recente para abrir o compartilhamento
+        if (await this.gerarVideo(true)) { $('#bt-compartilhar').innerHTML = IC.enviar + 'Compartilhar vídeo pronto'; UI.toast('Vídeo pronto. Toque em Compartilhar de novo.'); }
+        return;
+      }
+      arq = Exportacao.cacheVideo;
+    } else arq = await Exportacao.png(cfg);
+    const r = await Exportacao.compartilhar(arq);
+    $('#bt-compartilhar').innerHTML = IC.enviar + 'Compartilhar';
+    if (r === 'baixado') UI.toast('Este navegador não compartilha arquivos daqui. Baixamos para você enviar.');
+  }
+};
+
+/* =========================================================
+   MÓDULO 12 · IMPRESSÃO (cola de bolso)
+========================================================= */
+const Impressao = {
+  cola(votos) {
+    const linhas = CARGOS.map((c, i) => {
+      const r = Regras.resolver(c.id, votos[c.id], votos), ok = Regras.valido(r);
+      let num = '', desc = 'Escreva o número à mão';
+      if (r.status === 'candidato') { num = r.candidato.numero; desc = `${r.candidato.nome} · ${r.candidato.sigla}`; }
+      if (r.status === 'legenda') { num = r.partido.numero; desc = `Legenda ${r.partido.sigla} (só o partido)`; }
+      if (r.status === 'branco') desc = 'Voto em branco: aperte BRANCO';
+      if (r.status === 'nulo') { num = '0'.repeat(c.digitos); desc = 'Voto nulo'; }
+      const qtd = r.status === 'branco' ? 0 : ok ? num.length : c.digitos;
+      return `<div class="imp-linha${c.fixo ? ' fixo' : ''}"><span class="imp-ord">${i + 1}</span>
+        <div class="imp-txt"><b>${esc(tituloCargo(c))}</b><span>${esc(desc)}</span></div>
+        <div class="imp-nums">${Array.from({ length: qtd }, (_, k) => `<span class="imp-dig">${esc(num[k] || '')}</span>`).join('')}</div></div>`;
+    }).join('');
+    return `<div class="imp-cola"><div class="imp-cab"><b>Minha colinha</b><span>Eleições 2026 · DF<br>${DATA_ELEICAO}</span></div>${linhas}
+      <div class="imp-rod"><b>${esc(LEGAL)}</b><br>Dayse Amarilio · Deputada Distrital · PSB 40222<br>Colinha não oficial, sem ligação com o TSE. Dados de candidatos: base pública do TSE. O celular não entra na cabine: leve esta cola em papel.</div></div>`;
+  },
+  imprimir() {
+    const c = this.cola(Estado.atual.votos);
+    $('#impressao').innerHTML = `<p class="imp-aviso">Recorte na linha tracejada. Duas cópias: uma para você, outra para passar a cola.</p><div class="imp-folha">${c}${c}</div>`;
+    window.print();
+  }
+};
+
+/* =========================================================
+   MÓDULO 13 · MINHAS COLINHAS
+========================================================= */
+const PaginaMinhas = {
+  editando: null, apagando: null,
+  iniciar() {
+    const ul = $('#lista-salvas');
+    ul.addEventListener('click', e => {
+      const b = e.target.closest('[data-acao]'); if (!b) return;
+      const id = b.dataset.id, a = b.dataset.acao;
+      if (a === 'abrir') { const col = Armazenamento.obter(id); if (col) { Estado.carregar(col); UI.ir('home'); UI.toast(`“${col.nome}” aberta.`); } }
+      else if (a === 'renomear') { this.editando = id; this.apagando = null; this.render(); setTimeout(() => $('#ren-' + id)?.focus(), 30); }
+      else if (a === 'apagar') { this.apagando = id; this.editando = null; this.render(); }
+      else if (a === 'cancelar') { this.editando = this.apagando = null; this.render(); }
+      else if (a === 'confirmar-apagar') { Armazenamento.apagar(id); if (Estado.atual.id === id) Estado.atual.id = null; this.apagando = null; this.render(); UI.toast('Colinha apagada.'); }
+    });
+    ul.addEventListener('submit', e => {
+      e.preventDefault();
+      const f = e.target, nome = f.nome.value.trim(); if (!nome) return;
+      Armazenamento.renomear(f.dataset.id, nome);
+      if (Estado.atual.id === f.dataset.id) Estado.atual.nome = nome;
+      this.editando = null; this.render(); UI.toast('Nome atualizado.');
+    });
+  },
+  entrar() { this.editando = this.apagando = null; this.render(); },
+  render() {
+    $('#aviso-memoria').hidden = Armazenamento.disponivel;
+    const lista = Armazenamento.listar();
+    if (!lista.length) { $('#lista-salvas').innerHTML = `<li class="vazio-bloco">Nenhuma colinha salva ainda.<button class="bt bt-principal" type="button" data-ir="home">Montar minha colinha</button></li>`; return; }
+    $('#lista-salvas').innerHTML = lista.map((col, i) => {
+      const v = normalizarVotos(col.votos);
+      const nums = CARGOS.map(c => `<span class="${c.fixo ? 'fixo' : v[c.id] ? '' : 'vazio'}" title="${esc(tituloCargo(c))}">${esc(v[c.id] === 'BRANCO' ? 'BR' : v[c.id] === 'NULO' ? 'NU' : v[c.id] || '·'.repeat(c.digitos))}</span>`).join('');
+      const data = new Date(col.atualizadaEm).toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
+      let acoes;
+      if (this.editando === col.id) acoes = `<form class="renomear" data-id="${col.id}"><label class="sr" for="ren-${col.id}">Novo nome</label><input id="ren-${col.id}" name="nome" maxlength="40" value="${esc(col.nome)}"><button class="bt bt-principal" type="submit" style="min-height:44px;border-radius:12px">Salvar</button><button class="bt" type="button" data-acao="cancelar" style="min-height:44px;border-radius:12px">Cancelar</button></form>`;
+      else if (this.apagando === col.id) acoes = `<div class="salva-acoes"><button class="bt" type="button" data-acao="confirmar-apagar" data-id="${col.id}" style="border-color:#B42318;color:#FF8A7A">Sim, apagar</button><button class="bt" type="button" data-acao="cancelar">Cancelar</button></div>`;
+      else acoes = `<div class="salva-acoes"><button class="bt bt-principal" type="button" data-acao="abrir" data-id="${col.id}">Abrir</button><button class="bt" type="button" data-acao="renomear" data-id="${col.id}">Renomear</button><button class="bt" type="button" data-acao="apagar" data-id="${col.id}">Apagar</button></div>`;
+      return `<li class="salva" style="animation-delay:${i * 50}ms"><p class="salva-nome">${esc(col.nome)}</p><p class="salva-data">Atualizada em ${data}</p><div class="salva-nums">${nums}</div>${acoes}</li>`;
+    }).join('');
+  }
+};
+
+/* =========================================================
+   MÓDULO 14 · SONS DA URNA (Web Audio API)
+========================================================= */
+const Som = (() => {
+  let ctx = null;
+  const ac = () => { if (!ctx) { const C = window.AudioContext || window.webkitAudioContext; if (!C) return null; ctx = new C(); } if (ctx.state === 'suspended') ctx.resume(); return ctx; };
+  function tom(f, ini, dur, vol = .09) {
+    const c = ac(); if (!c) return;
+    const o = c.createOscillator(), g = c.createGain(), t = c.currentTime + ini;
+    o.type = 'square'; o.frequency.value = f;
+    g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(vol, t + .006);
+    g.gain.setValueAtTime(vol, t + Math.max(.01, dur - .015)); g.gain.exponentialRampToValueAtTime(.0001, t + dur);
+    o.connect(g); g.connect(c.destination); o.start(t); o.stop(t + dur + .02);
+  }
+  return {
+    tecla() { tom(1180, 0, .075); },
+    confirma() { tom(1180, 0, .09); tom(1180, .13, .09); },
+    erro() { tom(440, 0, .12, .07); },
+    fim() { const seq = [1400, 1050, 1400, 1050, 1400, 1050, 1400]; seq.forEach((f, i) => tom(f, i * .075, .07)); tom(1050, seq.length * .075, .55); }
+  };
+})();
+
+/* =========================================================
+   MÓDULO 15 · SIMULADOR DE VOTAÇÃO
+========================================================= */
+const Simulador = (() => {
+  let st = null, timers = [];
+  const agendar = (fn, ms) => timers.push(setTimeout(fn, ms));
+  const limpar = () => { timers.forEach(clearTimeout); timers = []; };
+  const cargo = () => CARGOS[st.passo];
+  function iniciar() {
+    $('#teclado').innerHTML = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map(n => `<button class="tecla${n === 0 ? ' zero' : ''}" type="button" data-tecla="${n}" aria-label="Tecla ${n}">${n}</button>`).join('');
+    $('#sim-com-cola').addEventListener('click', () => comecar('cola'));
+    $('#sim-zero').addEventListener('click', () => comecar('zero'));
+    $('#sim').addEventListener('click', e => {
+      const b = e.target.closest('[data-tecla]'); if (b) tecla(b.dataset.tecla);
+      if (e.target.closest('[data-sim="repetir"]')) comecar(st?.modo || 'cola');
+    });
+    document.addEventListener('keydown', e => {
+      if (!st || st.fim || !UI.pilha.includes('simulador') || e.target.matches('input,textarea') || e.metaKey || e.ctrlKey || e.altKey) return;
+      if (/^[0-9]$/.test(e.key)) { tecla(e.key); e.preventDefault(); }
+      else if (e.key === 'Enter') { tecla('confirma'); e.preventDefault(); }
+      else if (e.key === 'Backspace' || e.key === 'Delete') { tecla('corrige'); e.preventDefault(); }
+      else if (e.key.toLowerCase() === 'b') { tecla('branco'); e.preventDefault(); }
+    });
+  }
+  function apertar(k) { const b = $(`[data-tecla="${k}"]`); if (b) { b.classList.add('apertada'); setTimeout(() => b.classList.remove('apertada'), 130); } }
+  function comecar(modo) {
+    limpar();
+    st = { modo, passo: 0, digitos: '', branco: false, regs: [], fim: false, dica: '' };
+    $('#sim-intro').hidden = true; $('#sim').hidden = false; $('#sim-fim').hidden = true;
+    render();
+    if (modo === 'cola') daCola(500);
+  }
+  function tecla(k) {
+    if (!st || st.fim) return;
+    limpar();
+    if (/^\d$/.test(k)) digito(k); else if (k === 'corrige') corrige(); else if (k === 'branco') branco(); else if (k === 'confirma') confirma();
+  }
+  function digito(d) {
+    if (st.branco) { st.dica = 'Voto em branco marcado. Aperte CORRIGE para digitar um número.'; return render(); }
+    if (st.digitos.length >= cargo().digitos) return;
+    st.digitos += d; st.dica = ''; Som.tecla(); render();
+  }
+  function corrige() { st.digitos = ''; st.branco = false; st.dica = ''; Som.tecla(); render(); }
+  function branco() {
+    if (st.digitos) { st.dica = 'Para votar em branco, aperte CORRIGE antes e depois BRANCO.'; return render(); }
+    st.branco = true; st.dica = ''; Som.tecla(); render();
+  }
+  function avaliar() {
+    const c = cargo(), n = st.digitos;
+    if (st.branco) return { tipo: 'branco' };
+    if (!n) return { tipo: 'vazio' };
+    const partido = c.prop && n.length >= 2 ? Dados.partido(n.slice(0, 2)) : null;
+    if (n.length < c.digitos) {
+      if (c.prop && n.length >= 2) return partido ? { tipo: 'parcial-partido', partido } : { tipo: 'parcial-errado' };
+      return { tipo: 'parcial' };
+    }
+    const k = Dados.porNumero(c, n);
+    if (k) return c.id === 'senador2' && st.regs[2]?.numero === n ? { tipo: 'repetido', k } : { tipo: 'candidato', k };
+    return c.prop && partido ? { tipo: 'errado-legenda', partido } : { tipo: 'errado' };
+  }
+  function confirma() {
+    const c = cargo(), a = avaliar(), n = st.digitos;
+    const incompleto = () => { st.dica = `Número incompleto: ${c.nome} tem ${c.digitos} dígitos.`; Som.erro(); render(); };
+    let reg;
+    switch (a.tipo) {
+      case 'vazio': st.dica = 'Digite o número ou aperte BRANCO.'; Som.erro(); return render();
+      case 'parcial': return incompleto();
+      case 'parcial-partido': if (n.length !== 2) return incompleto(); reg = { tipo: 'Legenda', texto: a.partido.sigla }; break;
+      case 'parcial-errado': if (n.length !== 2) return incompleto(); reg = { tipo: 'Nulo' }; break;
+      case 'repetido': st.dica = 'Esse nome já recebeu seu voto na 1ª vaga. Aperte CORRIGE.'; Som.erro(); return render();
+      case 'branco': reg = { tipo: 'Branco' }; break;
+      case 'candidato': reg = { tipo: 'Candidato', texto: `${a.k.nome} · ${a.k.sigla}` }; break;
+      case 'errado-legenda': reg = { tipo: 'Legenda', texto: a.partido.sigla }; break;
+      default: reg = { tipo: 'Nulo' };
+    }
+    st.regs[st.passo] = { cargo: c, numero: st.branco ? '' : n, ...reg };
+    st.passo++; st.digitos = ''; st.branco = false; st.dica = '';
+    if (st.passo >= CARGOS.length) { st.fim = true; Som.fim(); return render(); }
+    Som.confirma(); render();
+    if (st.modo === 'cola') daCola(700);
+  }
+  function daCola(espera) {
+    if (!st || st.fim) return;
+    const v = Estado.atual.votos[cargo().id] || '';
+    if (!v) { st.dica = 'Sem número na sua cola para este cargo. Digite ou aperte BRANCO.'; return render(); }
+    if (v === 'BRANCO') { agendar(() => { apertar('branco'); branco(); st.dica = 'Confira e aperte CONFIRMA.'; render(); }, espera); return; }
+    const num = v === 'NULO' ? '0'.repeat(cargo().digitos) : v;
+    [...num].forEach((d, k) => agendar(() => { if (st && !st.fim) { apertar(d); digito(d); } }, espera + k * 260));
+    agendar(() => { if (st && !st.fim) { st.dica = 'Confira na tela e aperte CONFIRMA.'; render(); } }, espera + num.length * 260 + 100);
+  }
+  function render() {
+    const visor = $('#visor');
+    if (st.fim) {
+      visor.innerHTML = '<div class="v-fim">FIM</div><div class="v-votou">VOTOU</div>';
+      $('#sim-cola').innerHTML = '<span>Treino concluído. Na urna de verdade, termina assim.</span>';
+      $('#sim-msg').textContent = '';
+      $('#sim-fim').hidden = false;
+      $('#sim-fim').innerHTML = `<ol class="resumo">${st.regs.map(r => `<li><span>${esc(tituloCargo(r.cargo))}</span><span><b>${esc(r.numero)}</b> ${esc(r.tipo === 'Candidato' ? r.texto : r.tipo === 'Legenda' ? 'Legenda ' + r.texto : r.tipo)}</span></li>`).join('')}</ol>
+        <div class="saidas"><button class="bt bt-principal" type="button" data-sim="repetir">Treinar de novo</button><button class="bt" type="button" data-ir="home">Voltar à colinha</button></div>`;
+      return;
+    }
+    const c = cargo(), a = avaliar(), n = st.digitos, mostrar = n.length > 0 || st.branco;
+    const cx = Array.from({ length: c.digitos }, (_, k) => `<span class="v-cx${k === n.length ? ' atual' : ''}">${esc(n[k] || '')}</span>`).join('');
+    const lin = (r, v) => `<div class="v-linha">${r}: <b>${esc(v)}</b></div>`;
+    let dados = '', foto = '';
+    if (a.tipo === 'branco') dados = '<div class="v-grande v-pisca">VOTO EM BRANCO</div>';
+    else if (a.tipo === 'parcial-partido') dados = lin('Partido', a.partido.sigla) + `<div class="v-linha">${esc(a.partido.nome)}</div>`;
+    else if (a.tipo === 'parcial-errado' && n.length === 2) dados = '<div class="v-grande">NÚMERO ERRADO</div><div class="v-grande v-pisca">VOTO NULO</div>';
+    else if (a.tipo === 'candidato' || a.tipo === 'repetido') {
+      dados = lin('Nome', a.k.nome) + lin('Partido', a.k.sigla) + (a.tipo === 'repetido' ? '<div class="v-grande">JÁ VOTADO NA 1ª VAGA</div>' : '');
+      foto = `<div class="v-foto"><div class="quadro" data-ini="${esc(iniciais(a.k.nome))}"><img src="${esc(a.k.foto)}" alt="" onerror="this.remove()"></div>${esc(c.nome)}</div>`;
+    }
+    else if (a.tipo === 'errado-legenda') dados = '<div class="v-grande">NÚMERO ERRADO</div>' + lin('Partido', a.partido.sigla) + '<div class="v-grande v-pisca">VOTO DE LEGENDA</div>';
+    else if (a.tipo === 'errado') dados = '<div class="v-grande">NÚMERO ERRADO</div><div class="v-grande v-pisca">VOTO NULO</div>';
+    visor.innerHTML = `<div class="v-topo">${mostrar ? 'SEU VOTO PARA' : ''}</div><div class="v-cargo">${esc(c.nome)}</div><div class="v-vaga">${esc(c.vaga || '')}</div>
+      <div class="v-corpo"><div class="v-dados">${st.branco ? '' : `<div class="v-num">Número: <span class="v-cxs">${cx}</span></div>`}${dados}</div>${foto}</div>
+      ${mostrar ? '<div class="v-rodape">Aperte a tecla:<br><b>CONFIRMA</b> para CONFIRMAR este voto<br><b>CORRIGE</b> para REINICIAR este voto</div>' : ''}`;
+    const v = Estado.atual.votos[c.id];
+    $('#sim-cola').innerHTML = `<span>${st.passo + 1} de 6 · ${esc(tituloCargo(c))}</span><span>Sua cola: <b>${esc(v === 'BRANCO' ? 'BRANCO' : v === 'NULO' ? 'NULO' : v || 'vazio')}</b></span>`;
+    $('#sim-msg').textContent = st.dica;
+  }
+  return { iniciar, entrar() { st = null; limpar(); $('#sim').hidden = true; $('#sim-intro').hidden = false; }, sair() { limpar(); } };
+})();
+
+/* =========================================================
+   INICIALIZAÇÃO
+========================================================= */
+UI.registrar('passar', PaginaPassar);
+UI.registrar('minhas', PaginaMinhas);
+UI.registrar('simulador', Simulador);
+Armazenamento.carregar();
+UI.iniciar();
+const recebida = Exportacao.lerLink();
+if (!recebida) { const r = Armazenamento.lerRascunho(); if (r?.votos) Estado.atual = { id: r.id || null, nome: r.nome || '', votos: normalizarVotos(r.votos) }; }
+Home.iniciar();
+Busca.iniciar();
+PaginaPassar.iniciar();
+PaginaMinhas.iniciar();
+Simulador.iniciar();
+if (recebida) UI.toast('Colinha recebida pelo link. Toque em Salvar para guardar.');
+</script>
+</body>
+</html>
