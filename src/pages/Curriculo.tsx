@@ -9,8 +9,8 @@ import logoTarea from "@/assets/logo-tarea.png";
 import logoUnb from "@/assets/logo-unb.jpeg";
 
 const QuatroLogo = () => (
-  <div className="w-[72px] h-[72px] flex-shrink-0 flex items-center justify-center border border-primary/40 bg-primary/10">
-    <span className="font-display text-[2.1rem] leading-none tracking-[0.04em] text-primary">Q4</span>
+  <div className="w-[72px] h-[72px] flex-shrink-0 overflow-hidden">
+    <img src="/img/logos/quatro.png" alt="Quatro Comunicação" className="w-full h-full object-cover" />
   </div>
 );
 
