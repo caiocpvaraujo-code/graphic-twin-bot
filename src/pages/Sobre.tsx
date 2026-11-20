@@ -66,7 +66,7 @@ const Sobre = () => {
                 Produzo audiovisual{" "}
                 <strong className="text-foreground font-medium">desde 2016</strong>.
                 Comecei fazendo conteúdo curto no celular e nunca parei. Como voluntário no
-                Jovens Líderes pela Paz, fiz criação e mídia num projeto que{" "}
+                Jovens Líderes pela Paz, fiz criação e mídia em um projeto que{" "}
                 <strong className="text-foreground font-medium">
                   venceu o Prêmio LED, da TV Globo
                 </strong>
